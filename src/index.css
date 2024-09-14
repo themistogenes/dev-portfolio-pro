@@ -48,6 +48,11 @@ table {
 }
 /* End Reset CSS */
 
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
 div {
   border: 1px solid black;
 }
@@ -79,4 +84,39 @@ div {
 
 h4 {
   text-align: center;
+}
+
+#footerDiv {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  width: 100%;
+  max-width: 100%;
+}
+
+#terminalDiv {
+  flex-basis: 100%;
+}
+
+#terminalOutputDiv {
+
+}
+
+#terminalInputDiv {
+  display: flex;
+  justify-content: center;
+}
+
+#terminalInputDiv input {
+  width: 100%;
+}
+
+#terminalInputDiv button {
+}
+
+#footerDiv button {
+  display: block;
+  margin-right: 5px;
 }
