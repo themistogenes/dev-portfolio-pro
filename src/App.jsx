@@ -1,17 +1,28 @@
+import { useState } from "react"
+
 function App() {
+  const [showNavModal, setShowNavModal] = useState(false);
+
+  function toggleNavModal() {
+    setShowNavModal(!showNavModal);
+  }
 
   return (
     <>
     <div id="containerDiv">
       <div id="navigationDiv">
-        <button id="navigateButton">Navigate</button>
-        <div id="navigationModal">
-          <button id="contactMeButton">Contact Me</button>
-          <button id="aboutMeButton">About Me</button>
-          <button id="toolsetButton">Toolset</button>
-          <button id="projectsButton">Projects</button>
-          <button id="terminalButton">Terminal</button>
-        </div>
+        <button id="navigateButton" onClick={toggleNavModal}>Navigate</button>
+        {
+          showNavModal && (
+            <div id="navigationModal">
+              <button id="contactMeButton">Contact Me</button>
+              <button id="aboutMeButton">About Me</button>
+              <button id="toolsetButton">Toolset</button>
+              <button id="projectsButton">Projects</button>
+              <button id="terminalButton">Terminal</button>
+            </div>
+          )
+        }
       </div>
       <div id="headerDiv">
         <h1>Justin Alimaras</h1>
