@@ -15,11 +15,51 @@ function App() {
         {
           showNavModal && (
             <div id="navigationModal">
-              <button id="contactMeButton">Contact Me</button>
-              <button id="aboutMeButton">About Me</button>
-              <button id="toolsetButton">Toolset</button>
-              <button id="projectsButton">Projects</button>
-              <button id="terminalButton">Terminal</button>
+              <button 
+                id="contactMeButton" 
+                onClick={() => {
+                  window.location.href="#contactMeDiv";
+                  setShowNavModal(false);
+                }}
+              >
+                Contact Me
+              </button>
+              <button 
+                id="aboutMeButton"
+                onClick={() => {
+                  window.location.href="#aboutMeDiv";
+                  setShowNavModal(false);
+                }}
+              >
+                About Me
+              </button>
+              <button 
+                id="toolsetButton"
+                onClick={() => {
+                  window.location.href="#toolsetDiv";
+                  setShowNavModal(false);
+                }}
+              >
+                Toolset
+              </button>
+              <button 
+                id="projectsButton"
+                onClick={() => {
+                  window.location.href="#projectsDiv";
+                  setShowNavModal(false);
+                }}
+              >
+                Projects
+              </button>
+              <button 
+                id="terminalButton"
+                onClick={() => {
+                  window.location.href="#terminalDiv";
+                  setShowNavModal(false);
+                }}
+              >
+                Terminal
+              </button>
             </div>
           )
         }
