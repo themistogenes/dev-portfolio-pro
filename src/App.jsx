@@ -1,8 +1,24 @@
 import { useState } from "react"
 
+import React, { useRef, useEffect } from 'react';
+
+// Another way to scroll to the end of the terminalOutputDiv
+// https://stackoverflow.com/questions/37620694/how-to-scroll-to-bottom-in-react
+// const MyComponent = () => {
+//   const divRef = useRef(null);
+
+//   useEffect(() => {
+//     divRef.current.scrollIntoView({ behavior: 'smooth' });
+//   });
+
+//   return <div ref={divRef} />;
+// }
+
 function App() {
   const [showNavModal, setShowNavModal] = useState(false);
   const [showTerminal, setShowTerminal] = useState(true);
+  const [terminalInput, setTerminalInput] = useState('');
+  const [terminalOutput, setTerminalOutput] = useState(['Try typing commands to see a list of available commands...'])
 
   function toggleNavModal() {
     setShowNavModal(!showNavModal);
@@ -10,6 +26,18 @@ function App() {
 
   function toggleShowTerminal() {
     setShowTerminal(!showTerminal);
+  }
+
+  function handleTerminalInput() {
+    setTerminalInput('');
+    console.log('terminalInput: ', terminalInput);
+    
+    if (terminalInput === 'commands') {
+      setTerminalOutput([...terminalOutput, 'lalala']);
+    } else {
+      setTerminalOutput([...terminalOutput, 'Sorry, I don\'t recognize that command.']);
+    }
+    window.location.href="#terminalOutputDivEnd";
   }
 
   return (
@@ -94,11 +122,32 @@ function App() {
           showTerminal && (
             <div id="terminalDiv">
               <div id="terminalOutputDiv">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, nulla, vitae iure inventore sequi iste dolores ea aut, eum deleniti minima facere. Ut explicabo inventore dolorem cupiditate aliquid esse quisquam.</p>
+                {
+                  terminalOutput.map((item, index) => (
+                    <p key={index}>{item}</p>
+                  ))
+                }
+                <span id="terminalOutputDivEnd">End</span>
               </div>
               <div id="terminalInputDiv">
-                <input type="text" />
-                <button>Enter</button>
+                <input 
+                  type="text"
+                  placeholder="Type here..." 
+                  value={terminalInput} 
+                  onChange={(e) => {
+                    setTerminalInput(e.target.value);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      handleTerminalInput();
+                    }
+                  }}
+                />
+                <button
+                  onClick={handleTerminalInput}
+                >
+                  Enter
+                </button>
               </div>
             </div>
           )
@@ -106,7 +155,7 @@ function App() {
           <button
             onClick={toggleShowTerminal}
           >
-            Show Terminal
+            Show/Hide Terminal
           </button>
         </div>
       </div>
