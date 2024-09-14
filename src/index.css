@@ -68,3 +68,15 @@ div {
   margin: 0 auto;
   width: 40vw;
 }
+
+#headerDiv h1 {
+  text-align: center;
+}
+
+#headerDiv h2 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
