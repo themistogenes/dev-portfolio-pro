@@ -1,3 +1,4 @@
+/* Start Reset CSS*
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -44,4 +45,22 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+/* End Reset CSS */
+
+div {
+  border: 1px solid black;
+}
+
+#navigateButton {
+  display: block;
+  margin: 0 auto;
+  width: 60vw;
+}
+
+#navigationModal {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 40vw;
 }
