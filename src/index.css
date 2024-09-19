@@ -61,12 +61,25 @@ div {
   border: 1px solid white;
 }
 
+#headerDiv, 
+#contactMeDiv, 
+#aboutMeDiv,
+#toolsetDiv,
+#projectsDiv {
+  margin: 4px 5vw;
+}
+
 button {
   border: 0px;
   border-radius: 2px;
   padding: 4px;
   font-family: "Share Tech Mono", monospace;
   font-size: 1rem;
+}
+
+#navigationDiv {
+  position: sticky;
+  top: 0;
 }
 
 #navigateButton {
@@ -86,6 +99,10 @@ button {
   width: 40vw;
 }
 
+#headerDiv {
+  padding: 10px 0;
+}
+
 #headerDiv h1 {
   text-align: center;
 }
@@ -96,6 +113,7 @@ button {
 
 h4 {
   text-align: center;
+  padding: 10px;
 }
 
 #navigationDiv {
@@ -142,7 +160,7 @@ h4 {
 
 #footerDiv {
   /* position: absolute; */
-  position: fixed;
+  position: sticky;
   bottom: 0;
   display: flex;
   flex-wrap: wrap;
