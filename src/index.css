@@ -321,31 +321,31 @@ h4 {
   }
   12% {
     margin-right: 25%;
-    margin-left: 75%;
+    margin-left: 50%;
   }
   24% {
     margin-right: 50%;
-    margin-left: 50%;
+    margin-left: 0%;
   }
   36% {
     margin-right: 75%;
-    margin-left: 25%;
+    margin-left: -50%;
   }
   50% {
     margin-right: 100%;
-    margin-left: 0%;
+    margin-left: -100%;
   }
   64% {
     margin-right: 75%;
-    margin-left: 25%;
+    margin-left: -50%;
   }
   76% {
     margin-right: 50%;
-    margin-left: 50%;
+    margin-left: 0%;
   }
   88% {
     margin-right: 25%;
-    margin-left: 75%;
+    margin-left: 50%;
   }
   100% {
     margin-right: 0%;
@@ -356,9 +356,8 @@ h4 {
 #toolsetScrollerDiv {
   display: flex;
   margin-left: 100%;
-  margin-right: 0%;
   width: fit-content;
-  animation: toolsetScroll 20s linear infinite;
+  animation: toolsetScroll 35s linear infinite;
 }
 
 #toolsetScrollerDiv img {
