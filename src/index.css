@@ -78,9 +78,9 @@ body {
   color: white; /* alternatives: lavender (purple), ghostwhite (gray), honeydew &mintcream (green) */
 }
 
-/* div {
+div {
   border: 1px solid white;
-} */
+}
 
 #headerDiv,
 #meanderDiv,
@@ -266,11 +266,13 @@ h4 {
 }
 
 #contactMeLeftDiv {
-  flex-basis: 40%;
+  flex-basis: fit-content;
+  padding: 0 10px 0 10px;
 }
 
 #contactMeRightDiv {
-  flex-basis: 40%
+  flex-basis: fit-content;
+  padding: 0 10px 0 10px;
 }
 
 #aboutMeHeaderSmall {
