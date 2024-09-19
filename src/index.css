@@ -63,7 +63,6 @@ div {
   border: 1px solid white;
 }
 
-#headerDiv, 
 #contactMeDiv, 
 #aboutMeDiv,
 #toolsetDiv,
@@ -78,6 +77,11 @@ button {
   padding: 4px;
   font-family: "Share Tech Mono", monospace;
   font-size: 1rem;
+}
+
+h4 {
+  text-align: center;
+  padding: 10px;
 }
 
 #navigationDiv {
@@ -100,23 +104,6 @@ button {
   flex-direction: column;
   margin: 0 auto;
   width: 40vw;
-}
-
-#headerDiv {
-  padding: 10px 0;
-}
-
-#headerDiv h1 {
-  text-align: center;
-}
-
-#headerDiv h2 {
-  text-align: center;
-}
-
-h4 {
-  text-align: center;
-  padding: 10px;
 }
 
 #navigationDiv {
@@ -146,12 +133,34 @@ h4 {
 }
 
 #meanderDiv {
-  margin: 0;
-  width: 100%;
-  height: 3.1rem;
+  margin: 0 5vw;
+  height: 2.3rem;
   background-image: url(assets/meanderGreen.svg);
   background-repeat: repeat-x;
-  background-size: 50px 50px; 
+  background-size: 35px 35px; 
+}
+
+#headerDiv {
+  margin: 0 5vw;
+  padding: 10px 0;
+
+  background: url(assets/greekTempleXXL.jpg);
+  background-color: chartreuse;
+  background-blend-mode: luminosity;
+  /* tested alternatives:
+  multiply, darken, lighten, hard-light, difference, exclusion, luminosity */
+  background-position: 55% 55%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+#headerDiv h1 {
+  text-align: center;
+}
+
+#headerDiv h2 {
+  text-align: center;
 }
 
 #aboutMeDiv {
