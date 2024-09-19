@@ -100,8 +100,8 @@ function App() {
         </div>
         <div id="meanderDiv"></div>
         <div id="headerDiv">
-          <h1>Justin Alimaras</h1>
-          <h2>
+          <h1 className="outline">Justin Alimaras</h1>
+          <h2 className="outline">
             <div className="typedTextDiv">
               <p className="typedText">Web & Software Developer</p>
             </div>

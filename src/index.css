@@ -162,21 +162,24 @@ h4 {
   background-repeat: no-repeat;
   background-attachment: scroll;
 
-  color: indigo;
+  color: rgb(36, 36, 36);
+}
+
+.outline {
+  text-shadow: -1px -1px 0 chartreuse, 1px -1px 0 chartreuse, -1px 1px 0 chartreuse, 1px 1px 0 chartreuse;
 }
 
 #headerDiv h1 {
   text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 #headerDiv h2 {
   text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-
-/* @keyframes typing {
-  0% {width: 0%}
-  100% {width: 100%}
-} */
 
 @keyframes typing {
   0% {width: 0%}
@@ -187,7 +190,7 @@ h4 {
 
 @keyframes blinkingCursor {
   0% {border-color: transparent}
-  50% {border-color: indigo}
+  50% {border-color: rgb(36, 36, 36)}
   100% {border-color: transparent}
 }
 
