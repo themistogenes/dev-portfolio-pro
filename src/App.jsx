@@ -1,6 +1,6 @@
 import { useState } from "react"
-
 import React, { useRef, useEffect } from 'react';
+import aboutMePic from "./assets/aboutMePic.png";
 
 // Another way to scroll to the end of the terminalOutputDiv
 // https://stackoverflow.com/questions/37620694/how-to-scroll-to-bottom-in-react
@@ -106,8 +106,15 @@ function App() {
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit error nihil necessitatibus, molestiae dolorum, eaque fugit molestias doloremque, sequi delectus omnis repellendus nam praesentium pariatur facere? Voluptates iure libero ex.</p>
         </div>
         <div id="aboutMeDiv">
-          <h4>About Me</h4>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit error nihil necessitatibus, molestiae dolorum, eaque fugit molestias doloremque, sequi delectus omnis repellendus nam praesentium pariatur facere? Voluptates iure libero ex.</p>
+          <div id="aboutMeTextDiv">
+            <h4>About Me</h4>
+            <p>
+            I am a web & software developer. For a long time I studied Classics (Greek and Roman Studies) formally. Once free of the shackles of academia, I found sustenance in a large warehouse, laboring at night by fluorescent lighting. The yarn I brought into the labyrinth, that I might one day find my way out, was a desire to code. That desire evolved into a new passion. Joy in Classics comes from appreciation, that is, from reading dead languages and marveling at the deeds of bygone times. What I enjoy about coding is creation, bringing new web projects and applications to life. I specialize in the M.E.R.N. stack.
+            </p>
+          </div>
+          <div id="aboutMePicDiv">
+            <img id="aboutMePic" src={aboutMePic} alt="picture of Justin Alimaras" />
+          </div>
         </div>
         <div id="toolsetDiv">
           <h4>Toolset</h4>

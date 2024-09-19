@@ -124,8 +124,25 @@ h4 {
   border-radius: 2px;
 }
 
+#aboutMeDiv {
+  display: flex;
+}
+
+#aboutMeTextDiv {
+  flex-basis: 60%;
+}
+
+#aboutMePicDiv {
+  flex-basis: 40%;
+}
+
+#aboutMePic {
+  width: 100%;
+}
+
 #footerDiv {
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   bottom: 0;
   display: flex;
   flex-wrap: wrap;
