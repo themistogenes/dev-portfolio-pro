@@ -54,7 +54,7 @@ body {
   font-family: "Share Tech Mono", monospace;
   font-size: 1rem;
   background-color: black;
-  color: white;
+  color: white; /* alternatives: lavender (purple), ghostwhite (gray), honeydew &mintcream (green) */
 }
 
 div {
@@ -133,7 +133,6 @@ h4 {
   width: 100%;
   max-width: 100%;
   background-color: rgb(36, 36, 36);
-  color: white;
 }
 
 #footerDiv button {
@@ -149,7 +148,7 @@ h4 {
 
 #terminalDiv {
   flex-basis: 100%;
-  color: lavender;
+  color: chartreuse;
 }
 
 #terminalOutputDiv {
@@ -170,7 +169,7 @@ h4 {
   border-style: none;
   border-width: 0px;
   background-color: rgb(36, 36, 36);
-  color: lavender;
+  color: chartreuse;
   font-family: "Share Tech Mono", monospace;
   font-size: 1rem;
 }
