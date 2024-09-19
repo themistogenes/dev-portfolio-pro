@@ -164,7 +164,9 @@ function App() {
           </div>
           <div id="toolsetDiv">
             <h4>Toolset</h4>
+            <div id="toolsetScrollerDiv">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit error nihil necessitatibus, molestiae dolorum, eaque fugit molestias doloremque, sequi delectus omnis repellendus nam praesentium pariatur facere? Voluptates iure libero ex.</p>
+            </div>
           </div>
           <div id="projectsDiv">
             <h4>Projects</h4>

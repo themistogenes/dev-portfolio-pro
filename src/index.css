@@ -310,6 +310,62 @@ h4 {
   box-shadow: 2px 2px 2px rgba(127, 255, 0, .5);
 }
 
+#toolsetDiv {
+  overflow-x: hidden;
+}
+
+@keyframes toolsetScroll {
+  0% {
+    margin-right: 0;
+    margin-left: 100%;
+  }
+  12% {
+    margin-right: 25%;
+    margin-left: 75%;
+  }
+  24% {
+    margin-right: 50%;
+    margin-left: 50%;
+  }
+  36% {
+    margin-right: 75%;
+    margin-left: 25%;
+  }
+  50% {
+    margin-right: 100%;
+    margin-left: 0%;
+  }
+  64% {
+    margin-right: 75%;
+    margin-left: 25%;
+  }
+  76% {
+    margin-right: 50%;
+    margin-left: 50%;
+  }
+  88% {
+    margin-right: 25%;
+    margin-left: 75%;
+  }
+  100% {
+    margin-right: 0%;
+    margin-left: 100%;
+  }
+}
+
+#toolsetScrollerDiv {
+  display: block;
+  margin-left: 100%;
+  margin-right: 0%;
+  width: fit-content;
+  animation: toolsetScroll 20s linear infinite;
+}
+
+#toolsetScrollerDiv p {
+  border: 1px solid yellow;
+  width: 100px;
+}
+
 .swiper {
   z-index: 0;
   cursor: grab;
