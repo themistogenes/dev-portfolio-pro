@@ -123,7 +123,8 @@ function App() {
                 <ul>
                   <li>
                       <span className="material-symbols-outlined">location_on</span> 
-                      Location: Cincinnati, OH, USA</li>
+                      Location: <button>Cincinnati, OH</button>
+                  </li>
                   <li>
                     <span className="material-symbols-outlined">code_blocks</span>
                     GitHub: <button>themistogenes</button>
