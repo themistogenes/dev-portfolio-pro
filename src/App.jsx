@@ -85,13 +85,13 @@ function App() {
                   Projects
                 </button>
                 <button 
-                  id="terminalButton"
+                  id="expCertButton"
                   onClick={() => {
-                    window.location.href="#terminalDiv";
+                    window.location.href="#expCertDiv";
                     setShowNavModal(false);
                   }}
                 >
-                  Terminal
+                  Experience & Certification
                 </button>
               </div>
             )
