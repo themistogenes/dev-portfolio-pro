@@ -208,9 +208,6 @@ li {
   background: url(assets/greekTempleXXL.jpg);
   background-color: rgba(127, 255, 0, .75);
   background-blend-mode: luminosity;
-  /* tested alternatives:
-  multiply, darken, lighten, hard-light, difference, exclusion, luminosity */
-  /* background-position: 55% 55%; */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -289,7 +286,7 @@ li {
   display: flex;
   align-items:center;
   gap: 10px;
-  row-gap: 10px;;
+  row-gap: 10px;
 }
 
 #aboutMeTextDiv {
@@ -389,7 +386,6 @@ li {
 
 .swiper-slide {
   z-index: 0;
-  /* border: 1px solid rgb(36, 36, 36); */
   text-align: left;
 }
 
@@ -424,7 +420,6 @@ li {
 }
 
 #footerDiv {
-  /* position: absolute; */
   position: sticky;
   bottom: 0;
   display: flex;
@@ -468,7 +463,6 @@ li {
   width: 100%;
   border-style: none;
   border-width: 0px;
-  /* background-color: rgb(36, 36, 36); */
   background-color: rgb(50, 50, 50);
   color: chartreuse;
   font-family: "Share Tech Mono", monospace;
