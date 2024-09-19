@@ -2,6 +2,7 @@ import { useState } from "react"
 import React, { useRef, useEffect } from 'react'
 import aboutMePic from "./assets/aboutMePic.png"
 import pillarIcon from "./assets/pillarIcon.png"
+import Slider from "./components/Slider"
 
 // Another way to scroll to the end of the terminalOutputDiv
 // https://stackoverflow.com/questions/37620694/how-to-scroll-to-bottom-in-react
@@ -167,7 +168,7 @@ function App() {
           </div>
           <div id="projectsDiv">
             <h4>Projects</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit error nihil necessitatibus, molestiae dolorum, eaque fugit molestias doloremque, sequi delectus omnis repellendus nam praesentium pariatur facere? Voluptates iure libero ex.</p>
+            <Slider />
           </div>
           <div id="expCertDiv">
             <h4>Experience & Certifications</h4>
