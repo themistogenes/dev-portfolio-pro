@@ -62,6 +62,9 @@ div {
 }
 
 button {
+  border: 0px;
+  border-radius: 2px;
+  padding: 4px;
   font-family: "Share Tech Mono", monospace;
   font-size: 1rem;
 }
@@ -102,12 +105,23 @@ h4 {
 #navigationDiv button {
   background-color: indigo;
   color: white;
+  border: 0px;
+  padding: 4px 0;
   cursor: pointer;
 }
 
 #navigationDiv button:hover {
   background-color: chartreuse;
   color: black;
+}
+
+#navigateButton {
+  border-radius: 2px;
+}
+
+#navigationModal {
+  border: 0px;
+  border-radius: 2px;
 }
 
 #footerDiv {
