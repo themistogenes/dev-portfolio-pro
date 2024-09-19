@@ -1,4 +1,4 @@
-/* Start Reset CSS*
+/* ===== Start Reset CSS ===== */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,6 +47,15 @@ table {
 	border-spacing: 0;
 }
 /* End Reset CSS */
+
+/* ===== Custom Scrollbars ===== */
+* {
+  scrollbar-color: chartreuse black;
+}
+#terminalOutputDiv {
+  scrollbar-color: gray rgb(36, 36, 36);
+  scrollbar-width: thin;
+}
 
 #loadingMask {
   background-color: black;
@@ -327,7 +336,7 @@ h4 {
 #terminalOutputDiv {
   min-height: 20vh;
   max-height: 20vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   border-bottom-width: 0px;
 }
 
