@@ -78,9 +78,9 @@ body {
   color: white; /* alternatives: lavender (purple), ghostwhite (gray), honeydew &mintcream (green) */
 }
 
-/* div {
+div {
   border: 1px solid white;
-} */
+}
 
 #headerDiv,
 #meanderDiv,
@@ -136,9 +136,15 @@ h4 {
   margin: 0 4px;
 }
 
+.boldOverline {
+  font-weight: bold;
+  text-decoration: overline ;
+}
+
 #navigationDiv {
   position: sticky;
   top: 0;
+  z-index: 5;
 }
 
 #navigateButton {
@@ -319,7 +325,38 @@ h4 {
   height: 100px;
   border-radius: 0;
   opacity: 1;
-  
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  z-index: 0;
+  /* border: 1px solid rgb(36, 36, 36); */
+  text-align: left;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-slide p {
+  margin: 10px 0;
+}
+
+.swiper-slide button {
+  margin: 6px 0;
+  margin-right: 20px;
+} 
+
+.swiper-slide button a {
+  color: white;
+  text-decoration: none;
+}
+
+.swiper-slide button a:hover {
+  color: indigo;
 }
 
 #expCertDiv li:nth-of-type(1) {
