@@ -140,6 +140,7 @@ function App() {
             </div>
           </div>
         </div>  
+        <h4 id="aboutMeHeaderSmall">About Me</h4>
         <div id="aboutMeDiv">
           <div id="aboutMeTextDiv">
             <h4>About Me</h4>
