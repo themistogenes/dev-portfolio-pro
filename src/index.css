@@ -680,4 +680,8 @@ li {
     display: block;
     max-width: 50vw;
   }
+
+  #expCertDiv {
+    text-align: center;
+  }
 }
