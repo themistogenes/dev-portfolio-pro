@@ -163,6 +163,7 @@ h4 {
   background-attachment: scroll;
 
   color: rgb(36, 36, 36);
+  opacity: .75;
 }
 
 .outline {
