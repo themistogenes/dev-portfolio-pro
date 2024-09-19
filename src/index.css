@@ -77,6 +77,14 @@ button {
   padding: 4px;
   font-family: "Share Tech Mono", monospace;
   font-size: 1rem;
+  background-color: indigo;
+  color: chartreuse;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: chartreuse;
+  color: indigo;
 }
 
 h4 {
@@ -120,7 +128,7 @@ h4 {
 
 #navigationDiv button:hover {
   background-color: chartreuse;
-  color: black;
+  color: indigo;
 }
 
 #navigateButton {
@@ -201,6 +209,19 @@ h4 {
   animation: typing 8s steps(24, end) forwards 1, blinkingCursor 1s infinite;
 }
 
+#contactMeInfoDiv {
+  display: flex;
+  justify-content: center;
+}
+
+#contactMeLeftDiv {
+  flex-basis: 40%;
+}
+
+#contactMeRightDiv {
+  flex-basis: 40%
+}
+
 #aboutMeDiv {
   display: flex;
 }
@@ -239,7 +260,7 @@ h4 {
 
 #footerDiv button:hover {
   background-color: chartreuse;
-  color: black;
+  color: indigo;
   cursor: pointer;
 }
 

@@ -110,7 +110,21 @@ function App() {
         <div id="meanderDiv"></div>
         <div id="contactMeDiv">
           <h4>Contact Me</h4>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit error nihil necessitatibus, molestiae dolorum, eaque fugit molestias doloremque, sequi delectus omnis repellendus nam praesentium pariatur facere? Voluptates iure libero ex.</p>
+          <div id="contactMeInfoDiv">
+            <div id="contactMeLeftDiv">
+              <ul>
+                <li>Location: Cincinnati, OH, USA</li>
+                <li>GitHub: <button>themistogenes</button></li>
+                <li>Email: <button>jalimaras@gmail.com</button></li>
+              </ul>
+            </div>
+            <div id="contactMeRightDiv">
+              <ul>
+              <li>LinkedIn: <button>Justin Alimaras</button></li>
+              <li>Resume: <button>Download PDF</button></li>
+              </ul>
+            </div>
+          </div>
         </div>  
         <div id="aboutMeDiv">
           <div id="aboutMeTextDiv">
