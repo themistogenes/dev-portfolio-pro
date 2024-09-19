@@ -153,6 +153,8 @@ h4 {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
+
+  color: indigo;
 }
 
 #headerDiv h1 {
