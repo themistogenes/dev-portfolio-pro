@@ -166,20 +166,22 @@ function App() {
           <div id="dev-initials-frieze"></div>
           <h2>   
             <table id="dev-initials-table">
-              <tr>
-                <td id="pillar-icon-left">
-                  <img id="pillar-icon" src={pillarIcon} />
-                </td>
-                <td id="dev-initial-j">
-                  J
-                </td>
-                <td id="dev-initial-a">
-                  A
-                </td>
-                <td id="pillar-icon-right">
-                  <img id="pillar-icon" src={pillarIcon} />
-                </td>     
-              </tr>
+              <tbody>
+                <tr>
+                  <td id="pillar-icon-left">
+                    <img id="pillar-icon" src={pillarIcon} />
+                  </td>
+                  <td id="dev-initial-j">
+                    J
+                  </td>
+                  <td id="dev-initial-a">
+                    A
+                  </td>
+                  <td id="pillar-icon-right">
+                    <img id="pillar-icon" src={pillarIcon} />
+                  </td>     
+                </tr>
+              </tbody>
             </table>
           </h2>
           <div id="dev-initials-upper-step"></div>
