@@ -53,7 +53,7 @@ table {
   scrollbar-color: chartreuse black;
 }
 #terminalOutputDiv {
-  scrollbar-color: gray rgb(36, 36, 36);
+  scrollbar-color: rgb(50, 50, 50) rgb(36, 36, 36);
   scrollbar-width: thin;
 }
 
@@ -78,9 +78,9 @@ body {
   color: white; /* alternatives: lavender (purple), ghostwhite (gray), honeydew &mintcream (green) */
 }
 
-div {
+/* div {
   border: 1px solid white;
-}
+} */
 
 #headerDiv,
 #meanderDiv,
@@ -93,14 +93,6 @@ div {
   margin: 4px auto;
   width: 60vw;
 }
-
-/* #contactMeDiv, 
-#aboutMeDiv,
-#toolsetDiv,
-#projectsDiv,
-#expCertDiv {
-  margin: 4px 5vw;
-} */
 
 button {
   border: 0px;
@@ -123,6 +115,14 @@ h4 {
   padding: 10px;
   font-family: "Silkscreen", system-ui;
   color: chartreuse;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+li {
+  line-height: 1.5rem;
 }
 
 .material-symbols-outlined {
@@ -468,7 +468,8 @@ h4 {
   width: 100%;
   border-style: none;
   border-width: 0px;
-  background-color: rgb(36, 36, 36);
+  /* background-color: rgb(36, 36, 36); */
+  background-color: rgb(50, 50, 50);
   color: chartreuse;
   font-family: "Share Tech Mono", monospace;
   font-size: 1rem;
