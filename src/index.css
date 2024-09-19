@@ -165,6 +165,42 @@ h4 {
   text-align: center;
 }
 
+/* @keyframes typing {
+  0% {width: 0%}
+  100% {width: 100%}
+} */
+
+@keyframes typing {
+  0% {width: 0%}
+  33% {width: 100%}
+  66% {width: 0%}
+  100% {width: 100%}
+}
+
+@keyframes blinkingCursor {
+  0% {border-color: transparent}
+  50% {border-color: indigo}
+  100% {border-color: transparent}
+}
+
+.typedTextDiv {
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.typedText {
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  max-width: fit-content;
+  border-right: 5px solid;
+  animation: typing 10s steps(24, end) forwards 2, blinkingCursor 1s infinite;
+}
+
 #aboutMeDiv {
   display: flex;
 }
