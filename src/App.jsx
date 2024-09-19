@@ -44,7 +44,7 @@ function App() {
   return (
     <>
       <div id="loadingMask"></div>
-      <div id="containerDiv">
+      
         <div id="navigationDiv">
           <button id="navigateButton" onClick={toggleNavModal}>Navigate</button>
           {
@@ -99,130 +99,138 @@ function App() {
             )
           }
         </div>
-        <div id="meanderDiv"></div>
-        <div id="headerDiv">
-          <h1 className="outline">Justin Alimaras</h1>
-          <h2 className="outline">
-            <div className="typedTextDiv">
-              <p className="typedText">Web & Software Developer</p>
-            </div>
-          </h2>
-        </div>
-        <div id="meanderDiv"></div>
-        <div id="contactMeDiv">
-          <h4>Contact Me</h4>
-          <div id="contactMeInfoDiv">
-            <div id="contactMeLeftDiv">
-              <ul>
+        <div 
+          id="containerDiv" 
+          onClick={() => {
+            setShowNavModal(false);
+            setShowTerminal(false);
+          }}
+        >
+          <div id="meanderDiv"></div>
+          <div id="headerDiv">
+            <h1 className="outline">Justin Alimaras</h1>
+            <h2 className="outline">
+              <div className="typedTextDiv">
+                <p className="typedText">Web & Software Developer</p>
+              </div>
+            </h2>
+          </div>
+          <div id="meanderDiv"></div>
+          <div id="contactMeDiv">
+            <h4>Contact Me</h4>
+            <div id="contactMeInfoDiv">
+              <div id="contactMeLeftDiv">
+                <ul>
+                  <li>
+                      <span className="material-symbols-outlined">location_on</span> 
+                      Location: Cincinnati, OH, USA</li>
+                  <li>
+                    <span className="material-symbols-outlined">code_blocks</span>
+                    GitHub: <button>themistogenes</button>
+                  </li>
+                  <li>
+                    <span className="material-symbols-outlined">mail</span>
+                    Email: <button>jalimaras@gmail.com</button>
+                  </li>
+                </ul>
+              </div>
+              <div id="contactMeRightDiv">
+                <ul>
                 <li>
-                    <span className="material-symbols-outlined">location_on</span> 
-                    Location: Cincinnati, OH, USA</li>
-                <li>
-                  <span className="material-symbols-outlined">code_blocks</span>
-                  GitHub: <button>themistogenes</button>
+                  <span className="material-symbols-outlined">group</span>
+                  LinkedIn: <button>Justin Alimaras</button>
                 </li>
                 <li>
-                  <span className="material-symbols-outlined">mail</span>
-                  Email: <button>jalimaras@gmail.com</button>
+                  <span className="material-symbols-outlined">description</span>
+                    Resume: <button>Download PDF</button>
                 </li>
-              </ul>
+                </ul>
+              </div>
             </div>
-            <div id="contactMeRightDiv">
-              <ul>
+          </div>  
+          <h4 id="aboutMeHeaderSmall">About Me</h4>
+          <div id="aboutMeDiv">
+            <div id="aboutMeTextDiv">
+              <h4>About Me</h4>
+              <p>
+              I am a web & software developer. For a long time I studied Classics (Greek and Roman Studies) formally. Once free of the shackles of academia, I found sustenance in a large warehouse, laboring at night by fluorescent lighting. The yarn I brought into the labyrinth, that I might one day find my way out, was a desire to code. That desire evolved into a new passion. Joy in Classics comes from appreciation, that is, from reading dead languages and marveling at the deeds of bygone times. What I enjoy about coding is creation, bringing new web projects and applications to life. I specialize in the M.E.R.N. stack.
+              </p>
+            </div>
+            <div id="aboutMePicDiv">
+              <img id="aboutMePic" src={aboutMePic} alt="picture of Justin Alimaras" />
+            </div>
+          </div>
+          <div id="toolsetDiv">
+            <h4>Toolset</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit error nihil necessitatibus, molestiae dolorum, eaque fugit molestias doloremque, sequi delectus omnis repellendus nam praesentium pariatur facere? Voluptates iure libero ex.</p>
+          </div>
+          <div id="projectsDiv">
+            <h4>Projects</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit error nihil necessitatibus, molestiae dolorum, eaque fugit molestias doloremque, sequi delectus omnis repellendus nam praesentium pariatur facere? Voluptates iure libero ex.</p>
+          </div>
+          <div id="expCertDiv">
+            <h4>Experience & Certifications</h4>
+            <ul>
               <li>
-                <span className="material-symbols-outlined">group</span>
-                LinkedIn: <button>Justin Alimaras</button>
+                <span className="material-symbols-outlined">history_edu</span>
+                Node.js API Masterclass with Express & MongoDB, Brad Traversy
               </li>
               <li>
-                <span className="material-symbols-outlined">description</span>
-                  Resume: <button>Download PDF</button>
+              <span className="material-symbols-outlined">history_edu</span>
+                Next.js from Scratch, Brad Traversy
               </li>
-              </ul>
+              <li>
+                <span className="material-symbols-outlined">history_edu</span>
+                MERN Stack from Scratch: eCommerce, Brad Traversy
+              </li>
+              <li>
+                <span className="material-symbols-outlined">history_edu</span>
+                Modern JavaScript from the Beginning, Brad Traversy
+              </li>
+              <li>
+                <span className="material-symbols-outlined">history_edu</span>
+                React Front to Back, Brad Traversy
+              </li>
+              <li>
+                <span className="material-symbols-outlined">history_edu</span>
+                The Web Developer Bootcamp (online bootcamp), Colt Steele
+              </li>
+              <li>
+                <span className="material-symbols-outlined">history_edu</span>
+                Full Stack Development with MERN: Professional Certificate in Coding (8 month online bootcamp), M.I.T.
+              </li>
+            </ul>
+          </div>
+          <div id="dev-initials-div">
+            <div id="dev-logo-div">
+              <div id="dev-initials-triangle"></div>
+            <div id="dev-initials-inner-triangle-border">
+              <div id="dev-initials-inner-triangle"></div>
             </div>
-          </div>
-        </div>  
-        <h4 id="aboutMeHeaderSmall">About Me</h4>
-        <div id="aboutMeDiv">
-          <div id="aboutMeTextDiv">
-            <h4>About Me</h4>
-            <p>
-            I am a web & software developer. For a long time I studied Classics (Greek and Roman Studies) formally. Once free of the shackles of academia, I found sustenance in a large warehouse, laboring at night by fluorescent lighting. The yarn I brought into the labyrinth, that I might one day find my way out, was a desire to code. That desire evolved into a new passion. Joy in Classics comes from appreciation, that is, from reading dead languages and marveling at the deeds of bygone times. What I enjoy about coding is creation, bringing new web projects and applications to life. I specialize in the M.E.R.N. stack.
-            </p>
-          </div>
-          <div id="aboutMePicDiv">
-            <img id="aboutMePic" src={aboutMePic} alt="picture of Justin Alimaras" />
-          </div>
-        </div>
-        <div id="toolsetDiv">
-          <h4>Toolset</h4>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit error nihil necessitatibus, molestiae dolorum, eaque fugit molestias doloremque, sequi delectus omnis repellendus nam praesentium pariatur facere? Voluptates iure libero ex.</p>
-        </div>
-        <div id="projectsDiv">
-          <h4>Projects</h4>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit error nihil necessitatibus, molestiae dolorum, eaque fugit molestias doloremque, sequi delectus omnis repellendus nam praesentium pariatur facere? Voluptates iure libero ex.</p>
-        </div>
-        <div id="expCertDiv">
-          <h4>Experience & Certifications</h4>
-          <ul>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              Node.js API Masterclass with Express & MongoDB, Brad Traversy
-            </li>
-            <li>
-            <span className="material-symbols-outlined">history_edu</span>
-              Next.js from Scratch, Brad Traversy
-            </li>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              MERN Stack from Scratch: eCommerce, Brad Traversy
-            </li>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              Modern JavaScript from the Beginning, Brad Traversy
-            </li>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              React Front to Back, Brad Traversy
-            </li>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              The Web Developer Bootcamp (online bootcamp), Colt Steele
-            </li>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              Full Stack Development with MERN: Professional Certificate in Coding (8 month online bootcamp), M.I.T.
-            </li>
-          </ul>
-        </div>
-        <div id="dev-initials-div">
-          <div id="dev-logo-div">
-            <div id="dev-initials-triangle"></div>
-          <div id="dev-initials-inner-triangle-border">
-            <div id="dev-initials-inner-triangle"></div>
-          </div>
-          <div id="dev-initials-frieze"></div>
-          <h2>   
-            <table id="dev-initials-table">
-              <tbody>
-                <tr>
-                  <td id="pillar-icon-left">
-                    <img id="pillar-icon" src={pillarIcon} />
-                  </td>
-                  <td id="dev-initial-j">
-                    J
-                  </td>
-                  <td id="dev-initial-a">
-                    A
-                  </td>
-                  <td id="pillar-icon-right">
-                    <img id="pillar-icon" src={pillarIcon} />
-                  </td>     
-                </tr>
-              </tbody>
-            </table>
-          </h2>
-          <div id="dev-initials-upper-step"></div>
-          <div id="dev-initials-lower-step"></div>
+            <div id="dev-initials-frieze"></div>
+            <h2>   
+              <table id="dev-initials-table">
+                <tbody>
+                  <tr>
+                    <td id="pillar-icon-left">
+                      <img id="pillar-icon" src={pillarIcon} />
+                    </td>
+                    <td id="dev-initial-j">
+                      J
+                    </td>
+                    <td id="dev-initial-a">
+                      A
+                    </td>
+                    <td id="pillar-icon-right">
+                      <img id="pillar-icon" src={pillarIcon} />
+                    </td>     
+                  </tr>
+                </tbody>
+              </table>
+            </h2>
+            <div id="dev-initials-upper-step"></div>
+            <div id="dev-initials-lower-step"></div>
+            </div>
           </div>
         </div>
         <div id="footerDiv">
@@ -266,7 +274,7 @@ function App() {
             Show/Hide Terminal
           </button>
         </div>
-      </div>
+      
     </>
   )
 }
