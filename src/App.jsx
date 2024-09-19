@@ -43,6 +43,7 @@ function App() {
 
   return (
     <>
+      <div id="loadingMask"></div>
       <div id="containerDiv">
         <div id="navigationDiv">
           <button id="navigateButton" onClick={toggleNavModal}>Navigate</button>
@@ -163,13 +164,34 @@ function App() {
         <div id="expCertDiv">
           <h4>Experience & Certifications</h4>
           <ul>
-            <li>Node.js API Masterclass with Express & MongoDB, Brad Traversy</li>
-            <li>Next.js from Scratch, Brad Traversy</li>
-            <li>MERN Stack from Scratch: eCommerce, Brad Traversy</li>
-            <li>Modern JavaScript from the Beginning, Brad Traversy</li>
-            <li>React Front to Back, Brad Traversy</li>
-            <li>The Web Developer Bootcamp (online bootcamp), Colt Steele</li>
-            <li>Full Stack Development with MERN: Professional Certificate in Coding (8 month online bootcamp), M.I.T.</li>
+            <li>
+              <span className="material-symbols-outlined">history_edu</span>
+              Node.js API Masterclass with Express & MongoDB, Brad Traversy
+            </li>
+            <li>
+            <span className="material-symbols-outlined">history_edu</span>
+              Next.js from Scratch, Brad Traversy
+            </li>
+            <li>
+              <span className="material-symbols-outlined">history_edu</span>
+              MERN Stack from Scratch: eCommerce, Brad Traversy
+            </li>
+            <li>
+              <span className="material-symbols-outlined">history_edu</span>
+              Modern JavaScript from the Beginning, Brad Traversy
+            </li>
+            <li>
+              <span className="material-symbols-outlined">history_edu</span>
+              React Front to Back, Brad Traversy
+            </li>
+            <li>
+              <span className="material-symbols-outlined">history_edu</span>
+              The Web Developer Bootcamp (online bootcamp), Colt Steele
+            </li>
+            <li>
+              <span className="material-symbols-outlined">history_edu</span>
+              Full Stack Development with MERN: Professional Certificate in Coding (8 month online bootcamp), M.I.T.
+            </li>
           </ul>
         </div>
         <div id="dev-initials-div">
