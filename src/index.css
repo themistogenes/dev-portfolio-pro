@@ -172,6 +172,11 @@ h4 {
   background-size: 35px 35px; 
 }
 
+@keyframes stars {
+  0% {}
+  100% {background-position: 55% 55%;}
+}
+
 #headerDiv {
   margin: 0 5vw;
   padding: 10px 0;
@@ -181,12 +186,13 @@ h4 {
   background-blend-mode: luminosity;
   /* tested alternatives:
   multiply, darken, lighten, hard-light, difference, exclusion, luminosity */
-  background-position: 55% 55%;
+  /* background-position: 55% 55%; */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
 
   color: rgb(36, 36, 36);
+  animation: stars 10s linear forwards;
 }
 
 .outline {
