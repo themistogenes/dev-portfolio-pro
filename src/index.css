@@ -69,17 +69,29 @@ body {
   color: white; /* alternatives: lavender (purple), ghostwhite (gray), honeydew &mintcream (green) */
 }
 
-div {
+/* div {
   border: 1px solid white;
+} */
+
+#headerDiv,
+#meanderDiv,
+#contactMeDiv, 
+#aboutMeDiv,
+#toolsetDiv,
+#projectsDiv,
+#expCertDiv,
+#dev-initials-div {
+  margin: 4px auto;
+  width: 60vw;
 }
 
-#contactMeDiv, 
+/* #contactMeDiv, 
 #aboutMeDiv,
 #toolsetDiv,
 #projectsDiv,
 #expCertDiv {
   margin: 4px 5vw;
-}
+} */
 
 button {
   border: 0px;
@@ -103,7 +115,6 @@ h4 {
   font-family: "Silkscreen", system-ui;
   color: chartreuse;
 }
-
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -165,7 +176,6 @@ h4 {
 }
 
 #meanderDiv {
-  margin: 0 5vw;
   height: 2.3rem;
   background-image: url(assets/meanderGreen.svg);
   background-repeat: repeat-x;
@@ -178,7 +188,6 @@ h4 {
 }
 
 #headerDiv {
-  margin: 0 5vw;
   padding: 10px 0;
 
   background: url(assets/greekTempleXXL.jpg);
@@ -342,9 +351,6 @@ h4 {
   outline: none;
 }
 
-#terminalInputDiv button {
-}
-
 #footerDiv button {
   display: block;
   margin-right: 5px;
@@ -501,6 +507,18 @@ h4 {
 }
 
 @media screen and (max-width: 1000px) {
+  #headerDiv,
+  #meanderDiv,
+  #contactMeDiv, 
+  #aboutMeDiv,
+  #toolsetDiv,
+  #projectsDiv,
+  #expCertDiv,
+  #dev-initials-div {
+  margin: 4px 5vw;
+  width: auto;
+  }
+
   #contactMeInfoDiv {
     flex-wrap: wrap;
   }
