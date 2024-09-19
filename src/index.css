@@ -269,10 +269,11 @@ h4 {
 
 #aboutMePicDiv {
   flex-basis: 40%;
+  text-align: right;
 }
 
 #aboutMePic {
-  display: block;
+  display: inline;
   margin: 0 auto;
   width: 100%;
   max-width: 25vw;
@@ -531,9 +532,11 @@ h4 {
 
   #aboutMePicDiv {
     flex-basis: 100%;
+    text-align: auto;
   }
 
   #aboutMePic {
+    display: block;
     max-width: 50vw;
   }
 }
