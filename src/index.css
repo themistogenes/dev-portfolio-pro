@@ -51,10 +51,19 @@ table {
 body {
   overflow-x: hidden;
   box-sizing: border-box;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
 }
 
 div {
-  border: 1px solid black;
+  border: 1px solid white;
+}
+
+button {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1rem;
 }
 
 #navigateButton {
@@ -86,6 +95,21 @@ h4 {
   text-align: center;
 }
 
+#navigationDiv {
+  background-color: rgb(36, 36, 36);
+}
+
+#navigationDiv button {
+  background-color: indigo;
+  color: white;
+  cursor: pointer;
+}
+
+#navigationDiv button:hover {
+  background-color: chartreuse;
+  color: black;
+}
+
 #footerDiv {
   position: absolute;
   bottom: 0;
@@ -94,25 +118,51 @@ h4 {
   justify-content: end;
   width: 100%;
   max-width: 100%;
+  background-color: rgb(36, 36, 36);
+  color: white;
+}
+
+#footerDiv button {
+  background-color: indigo;
+  color: white;
+}
+
+#footerDiv button:hover {
+  background-color: chartreuse;
+  color: black;
+  cursor: pointer;
 }
 
 #terminalDiv {
   flex-basis: 100%;
+  color: lavender;
 }
 
 #terminalOutputDiv {
   min-height: 20vh;
   max-height: 20vh;
   overflow-y: scroll;
+  border-bottom-width: 0px;
 }
 
 #terminalInputDiv {
   display: flex;
   justify-content: center;
+  border-top-width: 0px;
 }
 
 #terminalInputDiv input {
   width: 100%;
+  border-style: none;
+  border-width: 0px;
+  background-color: rgb(36, 36, 36);
+  color: lavender;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1rem;
+}
+
+#terminalInputDiv input:focus {
+  outline: none;
 }
 
 #terminalInputDiv button {
