@@ -97,14 +97,16 @@ function App() {
             )
           }
         </div>
+        <div id="meanderDiv"></div>
         <div id="headerDiv">
           <h1>Justin Alimaras</h1>
           <h2>Web & Software Developer</h2>
         </div>
+        <div id="meanderDiv"></div>
         <div id="contactMeDiv">
           <h4>Contact Me</h4>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit error nihil necessitatibus, molestiae dolorum, eaque fugit molestias doloremque, sequi delectus omnis repellendus nam praesentium pariatur facere? Voluptates iure libero ex.</p>
-        </div>
+        </div>  
         <div id="aboutMeDiv">
           <div id="aboutMeTextDiv">
             <h4>About Me</h4>
@@ -123,6 +125,18 @@ function App() {
         <div id="projectsDiv">
           <h4>Projects</h4>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit error nihil necessitatibus, molestiae dolorum, eaque fugit molestias doloremque, sequi delectus omnis repellendus nam praesentium pariatur facere? Voluptates iure libero ex.</p>
+        </div>
+        <div id="expCertDiv">
+          <h4>Experience & Certifications</h4>
+          <ul>
+            <li>Node.js API Masterclass with Express & MongoDB, Brad Traversy</li>
+            <li>Next.js from Scratch, Brad Traversy</li>
+            <li>MERN Stack from Scratch: eCommerce, Brad Traversy</li>
+            <li>Modern JavaScript from the Beginning, Brad Traversy</li>
+            <li>React Front to Back, Brad Traversy</li>
+            <li>The Web Developer Bootcamp (online bootcamp), Colt Steele</li>
+            <li>Full Stack Development with MERN: Professional Certificate in Coding (8 month online bootcamp), M.I.T.</li>
+          </ul>
         </div>
         <div id="footerDiv">
         {
