@@ -113,15 +113,29 @@ function App() {
           <div id="contactMeInfoDiv">
             <div id="contactMeLeftDiv">
               <ul>
-                <li>Location: Cincinnati, OH, USA</li>
-                <li>GitHub: <button>themistogenes</button></li>
-                <li>Email: <button>jalimaras@gmail.com</button></li>
+                <li>
+                    <span className="material-symbols-outlined">location_on</span> 
+                    Location: Cincinnati, OH, USA</li>
+                <li>
+                  <span className="material-symbols-outlined">code_blocks</span>
+                  GitHub: <button>themistogenes</button>
+                </li>
+                <li>
+                  <span className="material-symbols-outlined">mail</span>
+                  Email: <button>jalimaras@gmail.com</button>
+                </li>
               </ul>
             </div>
             <div id="contactMeRightDiv">
               <ul>
-              <li>LinkedIn: <button>Justin Alimaras</button></li>
-              <li>Resume: <button>Download PDF</button></li>
+              <li>
+                <span className="material-symbols-outlined">group</span>
+                LinkedIn: <button>Justin Alimaras</button>
+              </li>
+              <li>
+                <span className="material-symbols-outlined">description</span>
+                  Resume: <button>Download PDF</button>
+              </li>
               </ul>
             </div>
           </div>
