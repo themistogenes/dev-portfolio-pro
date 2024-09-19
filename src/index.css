@@ -306,6 +306,20 @@ h4 {
 
 .swiper {
   z-index: 0;
+  cursor: grab;
+  padding: 20px 0;
+}
+
+.swiper-scrollbar {
+  background: rgb(36, 36, 36);
+}
+
+.swiper-scrollbar-drag {
+  background: chartreuse;
+  height: 100px;
+  border-radius: 0;
+  opacity: 1;
+  
 }
 
 #expCertDiv li:nth-of-type(1) {
@@ -381,6 +395,7 @@ h4 {
   font-family: "Caesar Dressing";
   color: chartreuse;
   text-shadow: 2px 2px 2px #ff00c1;
+  cursor: grab;
 }
 
 #dev-logo-div {
