@@ -1,6 +1,7 @@
 import { useState } from "react"
-import React, { useRef, useEffect } from 'react';
-import aboutMePic from "./assets/aboutMePic.png";
+import React, { useRef, useEffect } from 'react'
+import aboutMePic from "./assets/aboutMePic.png"
+import pillarIcon from "./assets/pillarIcon.png"
 
 // Another way to scroll to the end of the terminalOutputDiv
 // https://stackoverflow.com/questions/37620694/how-to-scroll-to-bottom-in-react
@@ -141,6 +142,35 @@ function App() {
             <li>The Web Developer Bootcamp (online bootcamp), Colt Steele</li>
             <li>Full Stack Development with MERN: Professional Certificate in Coding (8 month online bootcamp), M.I.T.</li>
           </ul>
+        </div>
+        <div id="dev-initials-div">
+          <div id="dev-logo-div">
+            <div id="dev-initials-triangle"></div>
+          <div id="dev-initials-inner-triangle-border">
+            <div id="dev-initials-inner-triangle"></div>
+          </div>
+          <div id="dev-initials-frieze"></div>
+          <h2>   
+            <table id="dev-initials-table">
+              <tr>
+                <td id="pillar-icon-left">
+                  <img id="pillar-icon" src={pillarIcon} />
+                </td>
+                <td id="dev-initial-j">
+                  J
+                </td>
+                <td id="dev-initial-a">
+                  A
+                </td>
+                <td id="pillar-icon-right">
+                  <img id="pillar-icon" src={pillarIcon} />
+                </td>     
+              </tr>
+            </table>
+          </h2>
+          <div id="dev-initials-upper-step"></div>
+          <div id="dev-initials-lower-step"></div>
+          </div>
         </div>
         <div id="footerDiv">
         {
