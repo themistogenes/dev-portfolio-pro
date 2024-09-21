@@ -197,6 +197,176 @@ li {
   background-size: 35px 35px; 
 }
 
+@keyframes borderTrace {
+  0% {
+    width: 0;
+    height: 0;
+    border-top: 4px solid yellowgreen;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+  }
+  10% {
+    width: 15vw;
+    height: 0;
+    border-top: 4px solid yellowgreen;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+  }
+  20% {
+    width: 30vw;
+    height: 0;
+    border-top: 4px solid yellowgreen;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+  }
+  30% {
+    width: 45%;
+    height: 0;
+    border-top: 4px solid yellowgreen;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+  }
+  40% {
+    width: 60vw;
+    height: 0;
+    border-top: 4px solid yellowgreen;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+  }
+  40.1% {
+    border-top: none;
+  }
+  42% {
+    width: 60vw;
+    height: 20px;
+    border-top: none;
+    border-right: 4px solid yellowgreen;
+    border-bottom: none;
+    border-left: none;
+  }
+  44% {
+    width: 60vw;
+    height: 40px;
+    border-top: none;
+    border-right: 4px solid yellowgreen;
+    border-bottom: none;
+    border-left: none;
+  }
+  46% {
+    width: 60vw;
+    height: 60px;
+    border-top: none;
+    border-right: 4px solid yellowgreen;
+    border-bottom: none;
+    border-left: none;
+  }
+  48% {
+    width: 60vw;
+    height: 76px;
+    border-top: none;
+    border-right: 4px solid yellowgreen;
+    border-bottom: none;
+    border-left: none;
+  }
+  48.1% {
+    border-right: none;
+    border-bottom: 4px solid yellowgreen;
+  }
+  60% {
+    width: 45vw;
+    height: 76px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 4px solid yellowgreen;
+    border-left: none;
+  }
+  70% {
+    width: 30vw;
+    height: 76px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 4px solid yellowgreen;
+    border-left: none;
+  }
+  80% {
+    width: 15vw;
+    height: 76px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 4px solid yellowgreen;
+    border-left: none;
+  }
+  90% {
+    width: 0vw;
+    height: 76px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 4px solid yellowgreen;
+    border-left: none;
+  }
+  90.1% {
+    border-bottom: none;
+  }
+  92% {
+    width: 0vw;
+    height: 76px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 4px solid yellowgreen;
+  }
+  94% {
+    width: 0vw;
+    height: 60px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 4px solid yellowgreen;
+  }
+  96% {
+    width: 0vw;
+    height: 40px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 4px solid yellowgreen;
+  }
+  98% {
+    width: 0vw;
+    height: 20px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 4px solid yellowgreen;
+  }
+  100% {
+    width: 0vw;
+    height: 0px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 4px solid yellowgreen;
+  }
+}
+
+#headerDiv::after {
+  content: "";
+  position: absolute;
+  top: 70px;
+
+  /* adjust for ipad sizes */
+  margin: 0 auto 0 auto;
+  max-width: 59.75vw;
+
+  max-height: 76px;
+  animation: borderTrace 8s linear infinite;
+}
+
 @keyframes stars {
   0% {}
   100% {background-position: 55% 55%;}
@@ -638,8 +808,170 @@ li {
   #projectsDiv,
   #expCertDiv,
   #dev-initials-div {
-  margin: 4px 5vw;
-  width: auto;
+    margin: 4px 5vw;
+    width: auto;
+  }
+
+  @keyframes borderTrace {
+    0% {
+      width: 0;
+      height: 0;
+      border-top: 4px solid yellowgreen;
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+    }
+    10% {
+      width: 25vw;
+      height: 0;
+      border-top: 4px solid yellowgreen;
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+    }
+    20% {
+      width: 50vw;
+      height: 0;
+      border-top: 4px solid yellowgreen;
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+    }
+    30% {
+      width: 75vw;
+      height: 0;
+      border-top: 4px solid yellowgreen;
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+    }
+    40% {
+      width: 90vw;
+      height: 0;
+      border-top: 4px solid yellowgreen;
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+    }
+    40.1% {
+      border-top: none;
+    }
+    42% {
+      width: 90vw;
+      height: 20px;
+      border-top: none;
+      border-right: 4px solid yellowgreen;
+      border-bottom: none;
+      border-left: none;
+    }
+    44% {
+      width: 90vw;
+      height: 40px;
+      border-top: none;
+      border-right: 4px solid yellowgreen;
+      border-bottom: none;
+      border-left: none;
+    }
+    46% {
+      width: 90vw;
+      height: 60px;
+      border-top: none;
+      border-right: 4px solid yellowgreen;
+      border-bottom: none;
+      border-left: none;
+    }
+    48% {
+      width: 90vw;
+      height: 76px;
+      border-top: none;
+      border-right: 4px solid yellowgreen;
+      border-bottom: none;
+      border-left: none;
+    }
+    48.1% {
+      border-right: none;
+      border-bottom: 4px solid yellowgreen;
+    }
+    60% {
+      width: 75vw;
+      height: 76px;
+      border-top: none;
+      border-right: none;
+      border-bottom: 4px solid yellowgreen;
+      border-left: none;
+    }
+    70% {
+      width: 50vw;
+      height: 76px;
+      border-top: none;
+      border-right: none;
+      border-bottom: 4px solid yellowgreen;
+      border-left: none;
+    }
+    80% {
+      width: 25vw;
+      height: 76px;
+      border-top: none;
+      border-right: none;
+      border-bottom: 4px solid yellowgreen;
+      border-left: none;
+    }
+    90% {
+      width: 0vw;
+      height: 76px;
+      border-top: none;
+      border-right: none;
+      border-bottom: 4px solid yellowgreen;
+      border-left: none;
+    }
+    90.1% {
+      border-bottom: none;
+    }
+    92% {
+      width: 0vw;
+      height: 76px;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      border-left: 4px solid yellowgreen;
+    }
+    94% {
+      width: 0vw;
+      height: 60px;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      border-left: 4px solid yellowgreen;
+    }
+    96% {
+      width: 0vw;
+      height: 40px;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      border-left: 4px solid yellowgreen;
+    }
+    98% {
+      width: 0vw;
+      height: 20px;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      border-left: 4px solid yellowgreen;
+    }
+    100% {
+      width: 0vw;
+      height: 0px;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      border-left: 4px solid yellowgreen;
+    }
+  }
+
+  #headerDiv::after {
+    margin: auto;
+    max-width: 89vw;
   }
 
   #contactMeInfoDiv {
