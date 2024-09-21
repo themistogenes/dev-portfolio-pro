@@ -546,6 +546,12 @@ li {
   margin-right: 20px;
 }
 
+#toolsetScrollerDiv img:hover {
+  box-sizing: border-box;
+  border: 2px solid yellowgreen;
+  border-radius: 2px;
+}
+
 .swiper {
   z-index: 0;
   cursor: grab;
