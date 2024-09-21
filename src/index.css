@@ -364,7 +364,7 @@ li {
   max-width: 59.75vw;
 
   max-height: 76px;
-  animation: borderTrace 8s linear infinite;
+  animation: borderTrace 30s linear infinite;
 }
 
 @keyframes stars {
