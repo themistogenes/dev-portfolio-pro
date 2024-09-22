@@ -82,7 +82,7 @@ body {
   border: 1px solid white;
 } */
 
-#headerDiv,
+/* #headerDiv, */
 #meanderDiv,
 #contactMeDiv, 
 #aboutMeDiv,
@@ -197,7 +197,7 @@ li {
   background-size: 35px 35px; 
 }
 
-@keyframes borderTrace {
+/* @keyframes borderTrace {
   0% {
     width: 0;
     height: 0;
@@ -352,19 +352,91 @@ li {
     border-bottom: none;
     border-left: 4px solid yellowgreen;
   }
-}
+} */
 
-#headerDiv::after {
+/* #headerDiv::after {
   content: "";
   position: absolute;
-  top: 70px;
+  top: 70px; */
 
   /* adjust for ipad sizes */
-  margin: 0 auto 0 auto;
+  /* margin: 0 auto 0 auto;
   max-width: 59.75vw;
 
   max-height: 76px;
   animation: borderTrace 30s linear infinite;
+} */
+
+@keyframes borderTrace {
+  0% {
+    background: linear-gradient(90deg, yellowgreen 0 25%, black 25% 100%);
+    padding: 4.25px 0 0 0;
+    /* border: 0 0 4.25px 0 solid black; */
+  }
+  10% {
+    background: linear-gradient(90deg, yellowgreen 0 50%, black 50% 100%);
+    padding: 4.25px 0 0 0;
+    /* border: 0 0 4.25px 0 solid black; */
+  }
+  20% {
+    background: linear-gradient(90deg, yellowgreen 0 75%, black 75% 100%);
+    padding: 4.25px 0 0 0;
+    /* border: 0 0 4.25px 0 solid black; */
+  }
+  30% {
+    background: yellowgreen;
+    padding: 4.25px 0 0 0;
+    /* border: 0 0 4.25px 0 solid black; */
+  }
+  40% {
+    background: linear-gradient(180deg, yellowgreen 0 50%, black 50% 100%);
+    padding: 0 4.25px 0 0;
+    /* border: 0 0 0 4.25px solid black; */
+  }
+  47.5% {
+    background: yellowgreen;
+    padding: 0 4.25px 0 0;
+    /* border: 0 0 0 4.25px solid black; */
+  }
+  52.5% {
+    background: linear-gradient(90deg, black 0 75%, yellowgreen 75% 100%);
+    padding: 0 0 4.25px 0;
+    /* border: 4.25px 0 0 0 solid black; */
+  }
+  60% {
+    background: linear-gradient(90deg, black 0 50%, yellowgreen 50% 100%);
+    padding: 0 0 4.25px 0;
+    /* border: 4.25px 0 0 0 solid black; */
+  }
+  70% {
+    background: linear-gradient(90deg, black 0 25%, yellowgreen 25% 100%);
+    padding: 0 0 4.25px 0;
+    /* border: 4.25px 0 0 0 solid black; */
+  }
+  80% {
+    background: yellowgreen;
+    padding: 0 0 4.25px 0;
+    /* border: 4.25px 0 0 0 solid black; */
+  }
+  90% {
+    background: linear-gradient(180deg, black 0 50%, yellowgreen 50% 100%);
+    padding: 0 0 0 4.25px;
+    /* border: 0 4.25px 0 0 solid black; */
+  }
+  100% {
+    background: yellowgreen;
+    padding: 0 0 0 4.25px;
+    /* border: 0 4.25px 0 0 solid black; */
+  }
+}
+
+#headerBorderDiv {
+  margin: 4px auto;
+  box-sizing: border-box;
+  width: 60vw;
+  height: 80.25px;
+  max-height: 80.25px;
+  animation: borderTrace 8s linear infinite;
 }
 
 @keyframes stars {
@@ -822,7 +894,12 @@ li {
 }
 
 @media screen and (max-width: 1000px) {
-  #headerDiv,
+  #headerBorderDiv {
+    margin: 4px 5vw;
+    width: auto;
+  }
+
+  /* #headerDiv, */
   #meanderDiv,
   #contactMeDiv, 
   #aboutMeDiv,
@@ -834,7 +911,7 @@ li {
     width: auto;
   }
 
-  @keyframes borderTrace {
+  /* @keyframes borderTrace {
     0% {
       width: 0;
       height: 0;
@@ -994,7 +1071,7 @@ li {
   #headerDiv::after {
     margin: auto;
     max-width: 89vw;
-  }
+  } */
 
   #contactMeInfoDiv {
     flex-wrap: wrap;
