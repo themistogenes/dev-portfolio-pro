@@ -324,6 +324,10 @@ li {
   padding: 0 10px 0 10px;
 }
 
+#contactMeDiv li {
+  line-height: 2rem;
+}
+
 #aboutMeHeaderSmall {
   display: none;
 }
