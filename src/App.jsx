@@ -117,15 +117,17 @@ function App() {
         }}
       >
         <div id="meanderDiv"></div>
-        <div id="headerBorderDiv">
-          <div id="headerDiv">
+        <div id="headerDiv">
+          <span>
+            <br />
             <h1 className="outline">Justin Alimaras</h1>
             <h2 className="outline">
               <div className="typedTextDiv">
                 <p className="typedText">Web & Software Developer</p>
               </div>
             </h2>
-          </div>
+            <br />
+          </span>
         </div>
         <div id="meanderDiv"></div>
         <div id="contactMeDiv">
