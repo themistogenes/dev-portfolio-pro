@@ -14,18 +14,6 @@ import nextJSIcon from "./assets/icons8/icons8-nextjs-48.png"
 import nodeJSIcon from "./assets/icons8/icons8-nodejs-64.png"
 import reactIcon from "./assets/icons8/icons8-react-native-50.png"
 
-// Another way to scroll to the end of the terminalOutputDiv
-// https://stackoverflow.com/questions/37620694/how-to-scroll-to-bottom-in-react
-// const MyComponent = () => {
-//   const divRef = useRef(null);
-
-//   useEffect(() => {
-//     divRef.current.scrollIntoView({ behavior: 'smooth' });
-//   });
-
-//   return <div ref={divRef} />;
-// }
-
 function App() {
   const [showNavModal, setShowNavModal] = useState(false);
   const [showTerminal, setShowTerminal] = useState(true);
