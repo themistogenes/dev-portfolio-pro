@@ -454,6 +454,10 @@ li {
   margin-bottom: 30px;
 }
 
+.swiper-slide:hover {
+  box-shadow: 0 0px 16px rgba(154, 205, 50, .25);
+}
+
 .swiper-slide img {
   width: 100%;
 }
