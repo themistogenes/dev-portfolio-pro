@@ -451,6 +451,7 @@ li {
 .swiper-slide {
   z-index: 0;
   text-align: left;
+  margin-bottom: 30px;
 }
 
 .swiper-slide img {
