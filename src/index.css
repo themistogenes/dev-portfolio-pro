@@ -86,12 +86,25 @@ body {
 #projectsDiv,
 #expCertDiv,
 #dev-initials-div {
-  margin: 4px auto;
   width: 60vw;
 }
 
+#headerDiv,
+#meanderDiv {
+  margin: 0 auto;
+}
+
+#contactMeDiv, 
+#aboutMeDiv,
+#toolsetDiv,
+#projectsDiv,
+#expCertDiv,
+#dev-initials-div {
+  margin: 5vh auto;
+}
+
 button {
-  border: 0px;
+  border: 0;
   border-radius: 2px;
   padding: 4px;
   font-family: "Share Tech Mono", monospace;
@@ -132,9 +145,13 @@ li {
   margin: 0 4px;
 }
 
-.boldOverline {
+.bold {
   font-weight: bold;
-  text-decoration: overline ;
+}
+
+.boldGreen {
+  font-weight: bold;
+  color: chartreuse;
 }
 
 #navigationDiv {
@@ -167,7 +184,7 @@ li {
 #navigationDiv button {
   background-color: indigo;
   color: white;
-  border: 0px;
+  border: 0;
   padding: 4px 0;
   cursor: pointer;
 }
@@ -182,7 +199,7 @@ li {
 }
 
 #navigationModal {
-  border: 0px;
+  border: 0;
   border-radius: 2px;
 }
 
@@ -414,7 +431,6 @@ li {
 .swiper {
   z-index: 0;
   cursor: grab;
-  padding: 20px 0;
 }
 
 .swiper-scrollbar {
@@ -498,19 +514,19 @@ li {
   min-height: 20vh;
   max-height: 20vh;
   overflow-y: auto;
-  border-bottom-width: 0px;
+  border-bottom-width: 0;
 }
 
 #terminalInputDiv {
   display: flex;
   justify-content: center;
-  border-top-width: 0px;
+  border-top-width: 0;
 }
 
 #terminalInputDiv input {
   width: 100%;
   border-style: none;
-  border-width: 0px;
+  border-width: 0;
   background-color: rgb(50, 50, 50);
   color: chartreuse;
   font-family: "Share Tech Mono", monospace;
@@ -547,8 +563,8 @@ li {
 #dev-initials-triangle {
   margin-left: auto;
   margin-right: auto;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border-style: solid;
   border-width: 0 49px 19px 49px;
   border-color: transparent transparent #ff00c1 transparent;
@@ -566,8 +582,8 @@ li {
 }
 
 #dev-initials-inner-triangle {
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border-style: solid;
   border-width: 0 40px 15px 40px;
   border-color: transparent transparent black transparent;
@@ -680,11 +696,6 @@ li {
 }
 
 @media screen and (max-width: 1000px) {
-  #headerBorderDiv {
-    margin: 4px 5vw;
-    width: auto;
-  }
-
   #headerDiv,
   #meanderDiv,
   #contactMeDiv, 
@@ -693,20 +704,36 @@ li {
   #projectsDiv,
   #expCertDiv,
   #dev-initials-div {
-    margin: 4px 5vw;
     width: auto;
+  }
+
+  #headerDiv,
+  #meanderDiv {
+    margin: 0 auto;
+  }
+
+  #contactMeDiv, 
+  #aboutMeDiv,
+  #toolsetDiv,
+  #projectsDiv,
+  #expCertDiv,
+  #dev-initials-div {
+    margin: 2vh 5vw;
   }
 
   #contactMeInfoDiv {
     flex-wrap: wrap;
+    text-align: center;
   }
 
   #contactMeLeftDiv {
     flex-basis: 100%;
+    padding: 0;
   }
 
   #contactMeRightDiv {
     flex-basis: 100%;
+    padding: 0;
   }
 
   #aboutMeHeaderSmall {
@@ -716,6 +743,7 @@ li {
   #aboutMeDiv {
     flex-wrap: wrap;
     flex-direction: column-reverse;
+    margin-top: 0;
   }
 
   #aboutMeTextDiv {
