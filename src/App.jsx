@@ -18,7 +18,8 @@ function App() {
   const [showNavModal, setShowNavModal] = useState(false);
   const [showTerminal, setShowTerminal] = useState(true);
   const [terminalInput, setTerminalInput] = useState('');
-  const [terminalOutput, setTerminalOutput] = useState(['Try typing commands to see a list of available commands...'])
+  const [terminalOutput, setTerminalOutput] = useState(['Try typing commands to see a list of available commands...']);
+  const [showVideo, setShowVideo] = useState(true);
 
   function toggleNavModal() {
     setShowNavModal(!showNavModal);
@@ -215,6 +216,13 @@ function App() {
             </li>
           </ul>
         </div>
+        {
+          showVideo && (
+            <div id="videoDiv">
+
+            </div>
+          )
+        }
         <div id="dev-initials-div">
           <div id="dev-logo-div">
             <div id="dev-initials-triangle"></div>
