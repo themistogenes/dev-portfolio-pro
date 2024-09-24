@@ -219,7 +219,11 @@ function App() {
         {
           showVideo && (
             <div id="videoDiv">
-
+              <h4>Video</h4>
+              <div id="videoClipDiv">
+                <iframe src="https://www.youtube.com/embed/sEBsURFVTLI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <div id="videoScreenDiv"></div>
+              </div>
             </div>
           )
         }
