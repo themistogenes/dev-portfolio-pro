@@ -234,7 +234,7 @@ function App() {
             <div id="videoDiv">
               <h4>Video</h4>
               <div id="videoClipDiv">
-                <iframe src="https://www.youtube.com/embed/sEBsURFVTLI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              <iframe src="https://www.youtube.com/embed/sEBsURFVTLI?si=lHksngFkm5QzktHf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 <div id="videoScreenDiv"></div>
               </div>
             </div>
