@@ -94,6 +94,19 @@ function App() {
               >
                 Experience & Certification
               </button>
+              {
+                showVideo && (
+                  <button 
+                  id="videoButton"
+                  onClick={() => {
+                    window.location.href="#videoDiv";
+                    setShowNavModal(false);
+                  }}
+                >
+                  Video
+                </button>
+                )
+              }
             </div>
           )
         }
