@@ -85,6 +85,7 @@ body {
 #toolsetDiv,
 #projectsDiv,
 #expCertDiv,
+#videoDiv,
 #dev-initials-div {
   width: 60vw;
 }
@@ -99,6 +100,7 @@ body {
 #toolsetDiv,
 #projectsDiv,
 #expCertDiv,
+#videoDiv,
 #dev-initials-div {
   margin: 5vh auto;
 }
@@ -492,6 +494,10 @@ li {
   margin: 4px 0;
 }
 
+#videoDiv {
+  
+}
+
 #footerDiv {
   position: sticky;
   bottom: 0;
@@ -712,6 +718,7 @@ li {
   #toolsetDiv,
   #projectsDiv,
   #expCertDiv,
+  #videoDiv,
   #dev-initials-div {
     width: auto;
   }
@@ -726,6 +733,7 @@ li {
   #toolsetDiv,
   #projectsDiv,
   #expCertDiv,
+  #videoDiv,
   #dev-initials-div {
     margin: 2vh 5vw;
   }
