@@ -20,6 +20,7 @@ function App() {
   const [terminalInput, setTerminalInput] = useState('');
   const [terminalOutput, setTerminalOutput] = useState(['Try typing commands to see a list of available commands...']);
   const [showVideo, setShowVideo] = useState(true);
+  const [showGame, setShowGame] = useState(true);
 
   function toggleNavModal() {
     setShowNavModal(!showNavModal);
@@ -237,6 +238,13 @@ function App() {
               <iframe src="https://www.youtube.com/embed/sEBsURFVTLI?si=lHksngFkm5QzktHf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 <div id="videoScreenDiv"></div>
               </div>
+            </div>
+          )
+        }
+        {
+          showGame && (
+            <div id="gameDiv">
+              <h4>Game</h4>
             </div>
           )
         }

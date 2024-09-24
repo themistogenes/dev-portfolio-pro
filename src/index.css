@@ -86,6 +86,7 @@ body {
 #projectsDiv,
 #expCertDiv,
 #videoDiv,
+#gameDiv,
 #dev-initials-div {
   width: 60vw;
 }
@@ -101,6 +102,7 @@ body {
 #projectsDiv,
 #expCertDiv,
 #videoDiv,
+#gameDiv,
 #dev-initials-div {
   margin: 5vh auto;
 }
@@ -808,6 +810,7 @@ li {
   #projectsDiv,
   #expCertDiv,
   #videoDiv,
+  #gameDiv
   #dev-initials-div {
     width: auto;
   }
@@ -823,6 +826,7 @@ li {
   #projectsDiv,
   #expCertDiv,
   #videoDiv,
+  #gameDiv
   #dev-initials-div {
     margin: 2vh 5vw;
   }
