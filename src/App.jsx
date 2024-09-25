@@ -288,39 +288,6 @@ function App() {
             </div>
           )
         }
-        {/* 
-          <div id="dev-initials-div">
-            <div id="dev-logo-div">
-              <div id="dev-initials-triangle"></div>
-            <div id="dev-initials-inner-triangle-border">
-              <div id="dev-initials-inner-triangle"></div>
-            </div>
-            <div id="dev-initials-frieze"></div>
-            <h2>   
-              <table id="dev-initials-table">
-                <tbody>
-                  <tr>
-                    <td id="pillar-icon-left">
-                      <img id="pillar-icon" src={pillarIcon} />
-                    </td>
-                    <td id="dev-initial-j">
-                      J
-                    </td>
-                    <td id="dev-initial-a">
-                      A
-                    </td>
-                    <td id="pillar-icon-right">
-                      <img id="pillar-icon" src={pillarIcon} />
-                    </td>     
-                  </tr>
-                </tbody>
-              </table>
-            </h2>
-            <div id="dev-initials-upper-step"></div>
-            <div id="dev-initials-lower-step"></div>
-            </div>
-          </div>
-        */}
         <div id="signatureDiv">
           <div id="signaturePicDiv">
             <img id="signaturePic" src={periclesIcon} />

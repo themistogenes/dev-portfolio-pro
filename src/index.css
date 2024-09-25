@@ -493,7 +493,7 @@ li {
   text-decoration: none;
 }
 
-.swiper-slide button a:hover {
+.swiper-slide button:hover a {
   color: indigo;
 }
 
@@ -689,158 +689,9 @@ li {
   outline: none;
 }
 
-#dev-initials-div {
-  margin-top: 10vh;
-  margin-bottom: 5vh;
-  text-align: center;
-  font-family: "Caesar Dressing";
-  color: chartreuse;
-  text-shadow: 2px 2px 2px #ff00c1;
-  cursor: grab;
-}
-
-#dev-logo-div {
-  margin: 0 auto;
-  padding: 0;
-  height: fit-content;
-  width: fit-content;
-  transform: scale(.85);
-}
-
-#dev-initials-triangle {
-  margin-left: auto;
-  margin-right: auto;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 49px 19px 49px;
-  border-color: transparent transparent #ff00c1 transparent;
-  transform: rotate(0deg);
-  position: relative;
-  z-index: 2;
-}
-
-#dev-initials-inner-triangle-border {
-  margin-top: -16px;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-  background: none;
-}
-
-#dev-initials-inner-triangle {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 40px 15px 40px;
-  border-color: transparent transparent black transparent;
-  transform: rotate(0deg);
-  position: relative;
-  z-index: 2;
-}
-
-#dev-initials-frieze {
-  margin-top: 1px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  height: 5px;
-  background-color: #ff00c1;
-  position: relative;
-  z-index: 2;
-}
-
-#dev-initials-table {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#pillar-icon {
-  height: 2.5rem;
-}
-
-@keyframes setup-pillar-icon-left {
-  0% {transform: rotate(-.25turn)}
-  100% {transform: rotate(0)}
-}
-
-#pillar-icon-left {
-  animation: setup-pillar-icon-left 5s;
-}
-
-#pillar-icon-left:hover {
-  transform: rotate(-.25turn);
-  transition: transform .5s;
-}
-
-@keyframes setup-pillar-icon-right {
-  0% {transform: rotate(.25turn)}
-  100% {transform: rotate(0)}
-}
-
-#pillar-icon-right {
-  position: relative;
-  z-index: 0;
-  animation: setup-pillar-icon-right 5s;
-}
-
-#pillar-icon-right:hover {
-  transform: rotate(.25turn);
-  transition: transform .5s;
-}
-
-@keyframes setup-dev-initial-j {
-  0% {transform: rotate(-.10turn)}
-  100% {transform: rotate(0)}
-}
-
-#dev-initial-j {
-  font-size: 40px;
-  animation: setup-dev-initial-j 5s;
-}
-
-#dev-initial-j:hover {
-  transform: rotate(-.10turn);
-  transition: transform .5s;
-}
-
-@keyframes setup-dev-initial-a {
-  0% {transform: rotate(.50turn)}
-  100% {transform: rotate(0)}
-}
-
-#dev-initial-a {
-  position: relative;
-  z-index: 1;
-  font-size: 40px;
-  animation: setup-dev-initial-a 5s;
-}
-
-#dev-initial-a:hover {
-  transform: rotate(.50turn);
-  transition: transform 1s;
-}
-
-#dev-initials-upper-step {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  height: 3px;
-  background-color: #ff00c1;
-  position: relative;
-  z-index: 2;
-}
-
-#dev-initials-lower-step {
-  margin-top: 1px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 110px;
-  height: 3px;
-  background-color: #ff00c1;
-  position: relative;
-  z-index: 2;
-}
+/* =========================== */
+/* ===== Smaller Screens ===== */
+/* =========================== */
 
 @media screen and (max-width: 1000px) {
   #headerDiv,
