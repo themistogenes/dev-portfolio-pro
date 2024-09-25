@@ -502,11 +502,12 @@ li {
 }
 
 #expCertDiv li {
-  margin: 4px 0;
+  border: 2px solid transparent;
+  margin: 2px 0;
 }
 
 #expCertDiv li:hover {
-  box-sizing: border-box;
+  
   border: 2px solid chartreuse;
   border-radius: 2px;
   background-color: rgba(127, 255, 0, 0.25);
