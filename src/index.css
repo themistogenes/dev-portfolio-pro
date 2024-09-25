@@ -625,9 +625,11 @@ li {
 }
 
 #signaturePic {
+  box-sizing: border-box;
   border: 2px solid chartreuse;
   border-radius: 100%;
   height: 3rem;
+  padding: 10%;
   animation: rotate 4s linear infinite;
 }
 
