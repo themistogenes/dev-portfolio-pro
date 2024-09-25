@@ -505,6 +505,15 @@ li {
   margin: 4px 0;
 }
 
+#expCertDiv li:hover {
+  box-sizing: border-box;
+  border: 2px solid chartreuse;
+  border-radius: 2px;
+  background-color: rgba(127, 255, 0, 0.25);
+  
+  
+}
+
 #videoClipDiv {
   margin: 0 auto;
   width: fit-content;
