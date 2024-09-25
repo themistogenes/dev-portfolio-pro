@@ -107,6 +107,12 @@ body {
   margin: 5vh auto;
 }
 
+/*
+div {
+  border: 1px solid white;
+}
+*/
+
 button {
   border: 0;
   border-radius: 2px;
@@ -502,7 +508,7 @@ li {
   height: 215px;
   padding: 25px;
   background-image: url("assets/videoMonitorLarge.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
@@ -587,6 +593,16 @@ li {
   background-color: white;
   pointer-events: none;
   animation: blink 1s infinite;
+}
+
+#gameClipDiv {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+#gameClipDiv iframe {
+  width: 500px;
+  height: 500px;
 }
 
 #footerDiv {
@@ -876,5 +892,29 @@ li {
 
   #expCertDiv {
     text-align: center;
+  }
+
+  #videoClipDiv {
+    width: auto;
+  }
+
+  #videoClipDiv iframe {
+    width: 100%;
+  }
+
+  #gameDiv {
+    text-align: center;
+  }
+  
+  #gameClipDiv {
+    width: auto;
+  }
+
+  #gameClipDiv iframe {
+    position: relative;
+    left: -10vw;
+    margin: 0 auto;
+    width: 80vw;
+    height: 120vw;
   }
 }

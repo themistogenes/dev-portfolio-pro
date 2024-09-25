@@ -235,7 +235,7 @@ function App() {
             <div id="videoDiv">
               <h4>Video</h4>
               <div id="videoClipDiv">
-              <iframe src="https://www.youtube.com/embed/sEBsURFVTLI?si=lHksngFkm5QzktHf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <iframe src="https://www.youtube.com/embed/sEBsURFVTLI?si=lHksngFkm5QzktHf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 <div id="videoScreenDiv"></div>
               </div>
             </div>
@@ -245,6 +245,10 @@ function App() {
           showGame && (
             <div id="gameDiv">
               <h4>Game</h4>
+              <div id="gameClipDiv">
+                <p>Tap/Click around to move</p>
+                <iframe src="./src/game/index.html" frameBorder="0"></iframe>
+              </div>
             </div>
           )
         }
