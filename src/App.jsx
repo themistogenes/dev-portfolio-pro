@@ -46,7 +46,26 @@ function App() {
     <>
       <div id="loadingMask"></div>
       <div id="navigationDiv">
-        <button id="navigateButton" onClick={toggleNavModal}>Navigate</button>
+        <button id="navigateButton" onClick={toggleNavModal}>
+          Navigate
+          {
+            showNavModal ? (
+              <span 
+                id="arrow-up-icon"
+                className="material-symbols-outlined"
+              >
+                  arrow_drop_up
+              </span>
+            ) : (
+              <span 
+                id="arrow-down-icon"  
+                className="material-symbols-outlined"
+              >
+                arrow_drop_down
+              </span>
+            )
+          } 
+        </button>
         {
           showNavModal && (
             <div id="navigationModal">

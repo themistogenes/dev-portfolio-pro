@@ -168,12 +168,37 @@ li {
   position: sticky;
   top: 0;
   z-index: 5;
+  background-color: rgb(36, 36, 36);
 }
 
 #navigateButton {
   display: block;
   margin: 0 auto;
+  border-radius: 2px;
   width: 60vw;
+}
+
+#navigationDiv button,
+#navigationDiv button #arrow-up-icon, 
+#navigationDiv button #arrow-down-icon {
+  background-color: indigo;
+  color: white;
+  border: 0;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+#navigationDiv button:hover,
+#navigationDiv button:hover #arrow-up-icon, 
+#navigationDiv button:hover #arrow-down-icon {
+  background-color: chartreuse;
+  color: indigo;
+}
+
+#navigationDiv button #arrow-up-icon,
+#navigationDiv button #arrow-down-icon {
+  padding: 0;
+  line-height: .75rem;
 }
 
 #navigationModal {
@@ -185,30 +210,6 @@ li {
   flex-direction: column;
   margin: 0 auto;
   width: 40vw;
-}
-
-#navigationDiv {
-  background-color: rgb(36, 36, 36);
-}
-
-#navigationDiv button {
-  background-color: indigo;
-  color: white;
-  border: 0;
-  padding: 4px 0;
-  cursor: pointer;
-}
-
-#navigationDiv button:hover {
-  background-color: chartreuse;
-  color: indigo;
-}
-
-#navigateButton {
-  border-radius: 2px;
-}
-
-#navigationModal {
   border: 0;
   border-radius: 2px;
 }
