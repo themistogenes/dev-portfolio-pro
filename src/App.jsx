@@ -13,6 +13,10 @@ import mongoDBIcon from "./assets/icons8/icons8-mongo-db-48.png"
 import nextJSIcon from "./assets/icons8/icons8-nextjs-48.png"
 import nodeJSIcon from "./assets/icons8/icons8-nodejs-64.png"
 import reactIcon from "./assets/icons8/icons8-react-native-50.png"
+import greekHelmetMultiColorIcon from "./assets/icons8/icons8-greek-helmet-96.png"
+import greekHelmetIcon from "./assets/icons8/icons8-greek-helmet-100.png"
+import brokenPillarIcon from "./assets/icons8/icons8-greek-pillar-base-100.png"
+import periclesIcon from "./assets/icons8/icons8-pericles-96.png"
 
 function App() {
   const [showNavModal, setShowNavModal] = useState(false);
@@ -284,35 +288,45 @@ function App() {
             </div>
           )
         }
-        <div id="dev-initials-div">
-          <div id="dev-logo-div">
-            <div id="dev-initials-triangle"></div>
-          <div id="dev-initials-inner-triangle-border">
-            <div id="dev-initials-inner-triangle"></div>
+        {/* 
+          <div id="dev-initials-div">
+            <div id="dev-logo-div">
+              <div id="dev-initials-triangle"></div>
+            <div id="dev-initials-inner-triangle-border">
+              <div id="dev-initials-inner-triangle"></div>
+            </div>
+            <div id="dev-initials-frieze"></div>
+            <h2>   
+              <table id="dev-initials-table">
+                <tbody>
+                  <tr>
+                    <td id="pillar-icon-left">
+                      <img id="pillar-icon" src={pillarIcon} />
+                    </td>
+                    <td id="dev-initial-j">
+                      J
+                    </td>
+                    <td id="dev-initial-a">
+                      A
+                    </td>
+                    <td id="pillar-icon-right">
+                      <img id="pillar-icon" src={pillarIcon} />
+                    </td>     
+                  </tr>
+                </tbody>
+              </table>
+            </h2>
+            <div id="dev-initials-upper-step"></div>
+            <div id="dev-initials-lower-step"></div>
+            </div>
           </div>
-          <div id="dev-initials-frieze"></div>
-          <h2>   
-            <table id="dev-initials-table">
-              <tbody>
-                <tr>
-                  <td id="pillar-icon-left">
-                    <img id="pillar-icon" src={pillarIcon} />
-                  </td>
-                  <td id="dev-initial-j">
-                    J
-                  </td>
-                  <td id="dev-initial-a">
-                    A
-                  </td>
-                  <td id="pillar-icon-right">
-                    <img id="pillar-icon" src={pillarIcon} />
-                  </td>     
-                </tr>
-              </tbody>
-            </table>
-          </h2>
-          <div id="dev-initials-upper-step"></div>
-          <div id="dev-initials-lower-step"></div>
+        */}
+        <div id="signatureDiv">
+          <div id="signaturePicDiv">
+            <img id="signaturePic" src={periclesIcon} />
+          </div>
+          <div id="signatureTextDiv">
+            <p>Built by <button id="signatureButton">Themistogenes</button> a.k.a. Justin</p>
           </div>
         </div>
       </div>
@@ -369,6 +383,10 @@ function App() {
       {/* CSS icon by Icons8: https://icons8.com/icon/38272/css3 */}
       {/* javaScript icon by Icons8: https://icons8.com/icon/106036/javascript-logo */}
 
+      {/* Greek Helmet icon (multi-color) by Icons8: https://icons8.com/icon/ZaOCyh5XGHMQ/greek-helmet */}
+      {/* Greek Helmet icon (single color) by Icons8: https://icons8.com/icon/GSiELqDFNtdO/greek-helmet */}
+      {/* Pericles icon (single color) by Icons8: https://icons8.com/icon/2DeY03FlmllF/pericles */}
+      {/* Greek pillar base icon by Icons8: https://icons8.com/icon/60859/greek-pillar-base */}
     </>
   )
 }

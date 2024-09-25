@@ -87,6 +87,7 @@ body {
 #expCertDiv,
 #videoDiv,
 #gameDiv,
+#signatureDiv,
 #dev-initials-div {
   width: 60vw;
 }
@@ -103,6 +104,7 @@ body {
 #expCertDiv,
 #videoDiv,
 #gameDiv,
+#signatureDiv,
 #dev-initials-div {
   margin: 5vh auto;
 }
@@ -606,6 +608,29 @@ li {
   height: 500px;
 }
 
+#signatureDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#signaturePic {
+  border: 2px solid chartreuse;
+  border-radius: 100%;
+  height: 3rem;
+  animation: rotate 4s linear infinite;
+}
+
 #footerDiv {
   position: sticky;
   bottom: 0;
@@ -618,6 +643,8 @@ li {
 }
 
 #footerDiv button {
+  display: block;
+  margin-right: 5px;
   background-color: indigo;
   color: white;
 }
@@ -658,11 +685,6 @@ li {
 
 #terminalInputDiv input:focus {
   outline: none;
-}
-
-#footerDiv button {
-  display: block;
-  margin-right: 5px;
 }
 
 #dev-initials-div {
@@ -827,7 +849,8 @@ li {
   #projectsDiv,
   #expCertDiv,
   #videoDiv,
-  #gameDiv
+  #gameDiv,
+  #signatureDiv,
   #dev-initials-div {
     width: auto;
   }
@@ -843,7 +866,8 @@ li {
   #projectsDiv,
   #expCertDiv,
   #videoDiv,
-  #gameDiv
+  #gameDiv,
+  #signatureDiv,
   #dev-initials-div {
     margin: 2vh 5vw;
   }
@@ -874,7 +898,7 @@ li {
   }
 
   #aboutMeTextDiv {
-    flex-basis: 100%
+    flex-basis: 100%;
   }
 
   #aboutMeTextDiv h4 {
@@ -912,10 +936,16 @@ li {
   }
 
   #gameClipDiv iframe {
-    position: relative;
-    left: -10vw;
     margin: 0 auto;
     width: 80vw;
     height: 120vw;
+  }
+
+  #signatureDiv {
+    flex-direction: column;
+  }
+
+  #signatureTextDiv {
+    text-align: center;
   }
 }
