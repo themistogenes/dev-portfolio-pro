@@ -104,7 +104,20 @@ function App() {
                     setShowNavModal(false);
                   }}
                 >
-                  Video
+                  *unlocked* Video
+                </button>
+                )
+              }
+              {
+                showGame && (
+                  <button 
+                  id="gameButton"
+                  onClick={() => {
+                    window.location.href="#gameDiv";
+                    setShowNavModal(false);
+                  }}
+                >
+                  *unlocked* Game
                 </button>
                 )
               }
