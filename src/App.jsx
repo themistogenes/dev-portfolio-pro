@@ -598,6 +598,8 @@ function App() {
       {/* Pericles icon (single color) by Icons8: https://icons8.com/icon/2DeY03FlmllF/pericles */}
       {/* Greek pillar base icon by Icons8: https://icons8.com/icon/60859/greek-pillar-base */}
       {/* Sound icon by Icons8: https://icons8.com/icon/Zp6GOGzBD2LK/audio */}
+
+      {/* Theme song: "Generic Futuristic Hero's Theme", by Marc Armitage */}
     </>
   )
 }
