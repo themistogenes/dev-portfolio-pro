@@ -352,6 +352,12 @@ li {
   animation: typing 8s steps(24, end) forwards 1, blinkingCursor 1s infinite;
 }
 
+#contactMeDiv {
+  border: 2px solid rgba(127, 255, 0, 0.25);
+  border-radius: 2px;
+  padding-bottom: 10px;
+}
+
 #contactMeInfoDiv {
   display: flex;
   justify-content: center;
