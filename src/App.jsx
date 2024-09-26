@@ -127,7 +127,7 @@ function App() {
                     setShowNavModal(false);
                   }}
                 >
-                  *unlocked* Video
+                  <span className="gray">*unlocked*</span> Video
                 </button>
                 )
               }
@@ -140,7 +140,20 @@ function App() {
                     setShowNavModal(false);
                   }}
                 >
-                  *unlocked* Game
+                  <span className="gray">*unlocked*</span> Game
+                </button>
+                )
+              }
+              {
+                showMusic && (
+                  <button 
+                  id="musicButton"
+                  onClick={() => {
+                    window.location.href="#musicDiv";
+                    setShowNavModal(false);
+                  }}
+                >
+                  <span className="gray">*unlocked*</span> Music
                 </button>
                 )
               }

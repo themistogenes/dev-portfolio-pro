@@ -111,11 +111,11 @@ body {
   margin: 5vh auto;
 }
 
-
-/* div {
+/*
+div {
   border: 1px solid white;
-} */
-
+}
+*/
 
 button {
   border: 0;
@@ -166,6 +166,13 @@ li {
 .boldGreen {
   font-weight: bold;
   color: chartreuse;
+}
+
+.gray {
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: gray;
 }
 
 #navigationDiv {
@@ -340,7 +347,11 @@ li {
 }
 
 #contactMeDiv li {
-  line-height: 2rem;
+  line-height: 2.5rem;
+}
+
+#contactMeDiv button:hover {
+  box-shadow: 2px 4px 0 gray;
 }
 
 #aboutMeHeaderSmall {
@@ -635,6 +646,10 @@ li {
   gap: 5px;
 }
 
+#signatureButton:hover {
+  box-shadow: 2px 4px 0 gray;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -745,6 +760,10 @@ li {
   #signatureDiv,
   #dev-initials-div {
     margin: 2vh 5vw;
+  }
+
+  .gray {
+    position: static;
   }
 
   #contactMeInfoDiv {
