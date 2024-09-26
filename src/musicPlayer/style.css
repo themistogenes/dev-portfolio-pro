@@ -78,7 +78,7 @@ body {
 
 .action-btn {
   background-color: black;
-  border: 2px solid rgb(127, 255, 0, .1);
+  border: 2px solid rgb(255, 255, 255, .1);
   color: white;
   font-size: 20px;
   cursor: pointer;
@@ -96,7 +96,12 @@ body {
   outline: 0;
 }
 
-.action-btn i:hover {
+.action-btn:hover {
+  border: 2px solid rgba(127, 255, 0, .25);
+}
+
+.action-btn:hover i {
+  border: none;
   color: chartreuse;
 }
 
