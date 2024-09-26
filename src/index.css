@@ -250,7 +250,7 @@ li {
   width: 40vw;
   border: 0;
   border-radius: 2px;
-  box-shadow: 0 0 0 .5px white;
+  box-shadow: 0 0 0 .5px gray;
 }
 
 #meanderDiv {
@@ -724,6 +724,7 @@ li {
   width: 100%;
   max-width: 100%;
   background-color: rgb(36, 36, 36);
+  box-shadow: 0 0 0 .5px gray;
 }
 
 #footerDiv button {
