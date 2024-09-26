@@ -129,7 +129,7 @@ function App() {
         `${terminalInput} > Sorry, I don\'t recognize that command.`
       ]);
     }
-    
+
   }
 
   return (
@@ -421,8 +421,7 @@ function App() {
                   terminalOutput.map((item, index) => (
                     <p key={index}>{item}</p>
                   ))
-                }
-                <span id="terminalOutputDivEnd">End</span>                
+                }             
               </div>
             </div>
             <div id="terminalInputDiv">
