@@ -78,7 +78,7 @@ body {
 
 .action-btn {
   background-color: black;
-  border: 2px solid transparent;
+  border: 2px solid rgb(127, 255, 0, .1);
   color: white;
   font-size: 20px;
   cursor: pointer;
@@ -96,12 +96,9 @@ body {
   outline: 0;
 }
 
-.action-btn:hover,
-.action-btn.action-btn-big:hover {
-  background-color: black;
+.action-btn i:hover {
   color: chartreuse;
-  border: 2px solid chartreuse;
-} 
+}
 
 .music-info {
   background-color: rgb(36, 36, 36);
