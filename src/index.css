@@ -196,6 +196,10 @@ li {
   color: gray;
 }
 
+.grayText {
+  color: gray;
+}
+
 #navigationDiv {
   position: sticky;
   top: 0;
@@ -729,6 +733,9 @@ li {
   max-height: 20vh;
   overflow-y: auto;
   border-bottom-width: 0;
+
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 #terminalInputDiv {

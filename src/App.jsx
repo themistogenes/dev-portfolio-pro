@@ -1,5 +1,4 @@
-import { useState } from "react"
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useState, useEffect } from "react"
 import Slider from "./components/Slider"
 import aboutMePic from "./assets/aboutMePic.png"
 import bootstrapIcon from "./assets/icons8/icons8-bootstrap-50.png"
@@ -21,10 +20,11 @@ function App() {
   const [showNavModal, setShowNavModal] = useState(false);
   const [showTerminal, setShowTerminal] = useState(true);
   const [terminalInput, setTerminalInput] = useState('');
-  const [terminalOutput, setTerminalOutput] = useState(['Try typing commands to see a list of available commands...']);
-  const [showVideo, setShowVideo] = useState(true);
-  const [showGame, setShowGame] = useState(true);
-  const [showMusic, setMusic] = useState(true);
+  const [terminalOutput, setTerminalOutput] = useState(['Try saying \'hello\'...']);
+  const [showVideo, setShowVideo] = useState(false);
+  const [showGame, setShowGame] = useState(false);
+  const [showMusic, setShowMusic] = useState(false);
+  const [unlock, setUnlock] = useState(false);
 
   function toggleNavModal() {
     setShowNavModal(!showNavModal);
@@ -38,12 +38,98 @@ function App() {
     setTerminalInput('');
     console.log('terminalInput: ', terminalInput);
     
-    if (terminalInput === 'commands') {
-      setTerminalOutput([...terminalOutput, 'lalala']);
-    } else {
-      setTerminalOutput([...terminalOutput, 'Sorry, I don\'t recognize that command.']);
+    if (terminalInput === 'hello') {
+      setTerminalOutput([...terminalOutput, 'hello > Type \'commands\' to view a list of commands.'])
+    } 
+    
+    else if (terminalInput === 'commands') {
+      setTerminalOutput([
+        ...terminalOutput,
+        'commands > hello, commands, clear, music, video, game, unlock, reload'
+      ]);
     }
-    window.location.href="#terminalOutputDivEnd";
+    
+    else if (terminalInput === 'music') {
+      if (!showMusic) {
+        setTerminalOutput([
+          ...terminalOutput,
+          'music > Enjoy the music.'
+        ]);
+      } else {
+        setTerminalOutput([
+          ...terminalOutput,
+          'music > Music off.'
+        ]);
+      }
+      setShowMusic(!showMusic);
+      () => {window.location.href('#musicDiv')}
+    }
+    
+    else if (terminalInput === 'video') {
+      if (!showVideo) {
+        setTerminalOutput([
+          ...terminalOutput,
+          'video > Enjoy the video.'
+        ]);
+      } else {
+        setTerminalOutput([
+          ...terminalOutput,
+          'video > Video off.'
+        ]);
+      }
+      setShowVideo(!showVideo);
+      () => {window.location.href('#videoDiv')}
+    }
+    
+    else if (terminalInput === 'game') {
+      if (!showGame) {
+        setTerminalOutput([
+          ...terminalOutput,
+          'game > Enjoy the game.'
+        ]);
+      } else {
+        setTerminalOutput([
+          ...terminalOutput,
+          'game > Game off.'
+        ]);
+      }
+      setShowGame(!showGame);
+      () => {window.location.href('#gameDiv')}
+    }
+    
+    else if (terminalInput === 'clear') {
+      setTerminalOutput([
+        'Try saying \'hello\'...'
+      ]);
+    }
+    
+    else if (terminalInput === 'unlock') {
+      if (!unlock) {
+        setTerminalOutput([
+          ...terminalOutput,
+          'unlock > Enjoy all the unlocked features.'
+        ]);
+        setShowVideo(true);
+        setShowGame(true);
+        setShowMusic(true);
+        setUnlock(true);
+      } else {
+        setTerminalOutput([
+          ...terminalOutput,
+          'unlock > All features are already unlocked!'
+        ]);
+      }
+    }
+    
+    else if (terminalInput === 'reload') {
+      window.location.reload();
+    } else {
+      setTerminalOutput([
+        ...terminalOutput, 
+        `${terminalInput} > Sorry, I don\'t recognize that command.`
+      ]);
+    }
+    
   }
 
   return (
@@ -330,12 +416,14 @@ function App() {
         showTerminal && (
           <div id="terminalDiv">
             <div id="terminalOutputDiv">
-              {
-                terminalOutput.map((item, index) => (
-                  <p key={index}>{item}</p>
-                ))
-              }
-              <span id="terminalOutputDivEnd">End</span>
+              <div id="terminalOutputContent">
+                {
+                  terminalOutput.map((item, index) => (
+                    <p key={index}>{item}</p>
+                  ))
+                }
+                <span id="terminalOutputDivEnd">End</span>                
+              </div>
             </div>
             <div id="terminalInputDiv">
               <input 
