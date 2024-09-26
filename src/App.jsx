@@ -454,7 +454,8 @@ function App() {
               <iframe src="./src/musicPlayer/index.html" frameBorder="0" scrolling="no"></iframe>
             </div>
           </div>
-        )}
+          )
+        }
         { showChat && (
           <div id="chatDiv">
             <div id="chatClipDiv">
@@ -462,7 +463,8 @@ function App() {
             <iframe src="./src/chat/index.html" frameBorder="0" scrolling="yes"></iframe>
             </div>
           </div>
-        )}
+          )
+        }
         <div id="signatureDiv">
           <div id="signaturePicDiv">
             <img id="signaturePic" src={periclesIcon} />
