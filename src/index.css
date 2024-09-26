@@ -87,6 +87,7 @@ body {
 #expCertDiv,
 #videoDiv,
 #gameDiv,
+#musicDiv,
 #signatureDiv,
 #dev-initials-div {
   width: 60vw;
@@ -104,16 +105,17 @@ body {
 #expCertDiv,
 #videoDiv,
 #gameDiv,
+#musicDiv,
 #signatureDiv,
 #dev-initials-div {
   margin: 5vh auto;
 }
 
-/*
+
 div {
   border: 1px solid white;
 }
-*/
+
 
 button {
   border: 0;
@@ -615,6 +617,16 @@ li {
   height: 500px;
 }
 
+#musicClipDiv {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+#musicClipDiv iframe {
+  width: 500px;
+  height: 250px;
+}
+
 #signatureDiv {
   display: flex;
   justify-content: center;
@@ -710,6 +722,7 @@ li {
   #expCertDiv,
   #videoDiv,
   #gameDiv,
+  #musicDiv,
   #signatureDiv,
   #dev-initials-div {
     width: auto;
@@ -727,6 +740,7 @@ li {
   #expCertDiv,
   #videoDiv,
   #gameDiv,
+  #musicDiv,
   #signatureDiv,
   #dev-initials-div {
     margin: 2vh 5vw;
@@ -801,6 +815,17 @@ li {
     height: 120vw;
   }
 
+  #musicClipDiv {
+    width: auto;
+  }
+
+  #musicClipDiv iframe {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+  }
+
   #signatureDiv {
     flex-direction: column;
   }
@@ -809,3 +834,5 @@ li {
     text-align: center;
   }
 }
+
+/* TODO: #musicClipDiv causing overflow X */

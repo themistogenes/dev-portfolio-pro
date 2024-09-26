@@ -2,7 +2,6 @@ import { useState } from "react"
 import React, { useRef, useEffect } from 'react'
 import Slider from "./components/Slider"
 import aboutMePic from "./assets/aboutMePic.png"
-import pillarIcon from "./assets/pillarIcon.png"
 import bootstrapIcon from "./assets/icons8/icons8-bootstrap-50.png"
 import cssIcon from "./assets/icons8/icons8-css3-50.png"
 import expressJSIcon from "./assets/icons8/icons8-express-js-50.png"
@@ -25,6 +24,7 @@ function App() {
   const [terminalOutput, setTerminalOutput] = useState(['Try typing commands to see a list of available commands...']);
   const [showVideo, setShowVideo] = useState(true);
   const [showGame, setShowGame] = useState(true);
+  const [showMusic, setMusic] = useState(true);
 
   function toggleNavModal() {
     setShowNavModal(!showNavModal);
@@ -288,6 +288,14 @@ function App() {
             </div>
           )
         }
+        { showMusic && (
+          <div id="musicDiv">
+            <div id="musicClipDiv">
+              <h4>Music</h4>
+              <iframe src="./src/musicPlayer/index.html" frameBorder="0" scrolling="no"></iframe>
+            </div>
+          </div>
+        )}
         <div id="signatureDiv">
           <div id="signaturePicDiv">
             <img id="signaturePic" src={periclesIcon} />
