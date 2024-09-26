@@ -389,6 +389,32 @@ li {
   animation: typing 8s steps(24, end) forwards 1, blinkingCursor 1s infinite;
 }
 
+#soundDiv {
+  background-image: url("./assets/icons8/icons8-sound-64-indigo.png");
+  background-position: center;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: black;
+  border: 2px solid indigo;
+  border-radius: 100%;
+  width: 16px;
+  height: 16px;
+  padding: 10px;
+  position: fixed;
+  z-index: 11;
+  top: 32px;
+  right: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#soundDiv:hover {
+  background-image: url("./assets/icons8/icons8-sound-64-green.png");
+  border: 2px solid chartreuse;
+}
+
 #contactMeDiv {
   border: 2px solid rgba(127, 255, 0, 0.25);
   border-radius: 2px;

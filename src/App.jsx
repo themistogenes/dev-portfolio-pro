@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import Slider from "./components/Slider"
+import themeSong from "./assets/themeSong.flac"
 import helmetGreen from "./assets/helmetGreen.png"
 import aboutMePic from "./assets/aboutMePic.png"
 import bootstrapIcon from "./assets/icons8/icons8-bootstrap-50.png"
@@ -25,6 +26,8 @@ function App() {
   const [showMusic, setShowMusic] = useState(false);
   const [showChat, setShowChat] = useState(false);
   const [unlock, setUnlock] = useState(false);
+  const [themeIsPlaying, setThemeIsPlaying] = useState(false);
+  const [timeAtPause, setTimeAtPause] = useState(0);
 
   function toggleNavModal() {
     setShowNavModal(!showNavModal);
@@ -45,8 +48,23 @@ function App() {
     else if (terminalInput === 'commands') {
       setTerminalOutput([
         ...terminalOutput,
-        'commands > hello, commands, clear, music, video, game, chat, unlock, lock, hide, screensaver, reload'
+        'commands > hello, commands, clear, theme, music, video, game, chat, unlock, lock, hide, screensaver, reload'
       ]);
+    }
+
+    else if (terminalInput === 'theme') {
+      if (!themeIsPlaying) {
+        setTerminalOutput([
+          ...terminalOutput,
+          'theme > Enjoy the theme song.'
+        ]);
+      } else {
+        setTerminalOutput([
+          ...terminalOutput,
+          'theme > Theme song off.'
+        ]);
+      }
+      handleTheme();
     }
     
     else if (terminalInput === 'music') {
@@ -55,6 +73,10 @@ function App() {
           ...terminalOutput,
           'music > Enjoy the music.'
         ]);
+        // Turn off theme song if it's already playing
+        if (themeIsPlaying) {
+          handleTheme();
+        }
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -178,6 +200,34 @@ function App() {
     }
 
   }
+
+  const theme = useRef(new Audio(themeSong)).current;
+
+  function handleTheme() {    
+    if (themeIsPlaying) {
+      setThemeIsPlaying(false);
+      setTimeAtPause(theme.currentTime);
+      theme.pause();
+      // console.log('Theme song has been paused.');
+    } else {
+      setThemeIsPlaying(true);
+      if (timeAtPause > 5) {
+        setTimeAtPause(theme.currentTime)
+        // console.log('Theme song re-started after pause.');
+      } else {
+        theme.currentTime = 5;
+        // console.log('Theme song starting from beginning.');
+      }
+      theme.loop = true;
+      theme.play();
+      // console.log('Theme song has been turned on.');
+    }
+  }
+
+  useEffect(() => {
+    // console.log('themeIsPlaying', themeIsPlaying);
+    // console.log('timeAtPause', timeAtPause);
+  }, [themeIsPlaying, timeAtPause]);
 
   return (
     <>
@@ -343,6 +393,7 @@ function App() {
           </span>
         </div>
         <div id="meanderDiv"></div>
+        <div id="soundDiv" onClick={handleTheme}></div>
         <div id="contactMeDiv">
           <h4>Contact Me</h4>
           <div id="contactMeInfoDiv">
@@ -542,11 +593,11 @@ function App() {
       {/* HTML icon by Icons8: https://icons8.com/icon/7hA5Ny9rDAmV/html-5p */}
       {/* CSS icon by Icons8: https://icons8.com/icon/38272/css3 */}
       {/* javaScript icon by Icons8: https://icons8.com/icon/106036/javascript-logo */}
-
       {/* Greek Helmet icon (multi-color) by Icons8: https://icons8.com/icon/ZaOCyh5XGHMQ/greek-helmet */}
       {/* Greek Helmet icon (single color) by Icons8: https://icons8.com/icon/GSiELqDFNtdO/greek-helmet */}
       {/* Pericles icon (single color) by Icons8: https://icons8.com/icon/2DeY03FlmllF/pericles */}
       {/* Greek pillar base icon by Icons8: https://icons8.com/icon/60859/greek-pillar-base */}
+      {/* Sound icon by Icons8: https://icons8.com/icon/Zp6GOGzBD2LK/audio */}
     </>
   )
 }
