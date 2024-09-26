@@ -112,9 +112,9 @@ body {
 }
 
 
-div {
+/* div {
   border: 1px solid white;
-}
+} */
 
 
 button {
@@ -623,6 +623,7 @@ li {
 }
 
 #musicClipDiv iframe {
+  box-sizing: border-box;
   width: 500px;
   height: 250px;
 }
@@ -834,5 +835,3 @@ li {
     text-align: center;
   }
 }
-
-/* TODO: #musicClipDiv causing overflow X */
