@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+</head>
+<body>
+  <div id="chat-lounge-div">
+    <div id="lounge-text-div">
+      <div id="name-display"></div>
+      <div id="inputs-div">
+        <input id="email" type="email" placeholder="Email" />
+        <input id="password" type="password" placeholder="Password" />
+      </div>
+      <div id="buttons-div">
+        <button id="login">Login</button>
+        <button id="signup">SignUp</button>
+        <button id="logout" style="display: none">Logout</button>  
+      </div>
+      <!-- <br /> -->
+      <!-- <button id="read">Update Chat</button> -->
+      <!-- <br /> -->
+      <br />
+      <div id="status"></div>
+      <div id="chat-box" class="chat chat-viewer"></div>
+      <input
+        id="message"
+        type="text"
+        class="chat chat-sender"
+        placeholder="Type a message here..."
+      />
+      <button id="write" style="display: none">Send</button>
+    </div>
+  </div>
+  <script src="chat.js"></script>
+</body>
+</html>

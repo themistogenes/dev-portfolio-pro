@@ -24,6 +24,7 @@ function App() {
   const [showVideo, setShowVideo] = useState(false);
   const [showGame, setShowGame] = useState(false);
   const [showMusic, setShowMusic] = useState(false);
+  const [showChat, setShowChat] = useState(false);
   const [unlock, setUnlock] = useState(false);
 
   function toggleNavModal() {
@@ -36,7 +37,7 @@ function App() {
 
   function handleTerminalInput() {
     setTerminalInput('');
-    console.log('terminalInput: ', terminalInput);
+    // console.log('terminalInput: ', terminalInput);
     
     if (terminalInput === 'hello') {
       setTerminalOutput([...terminalOutput, 'hello > Type \'commands\' to view a list of commands.'])
@@ -45,7 +46,7 @@ function App() {
     else if (terminalInput === 'commands') {
       setTerminalOutput([
         ...terminalOutput,
-        'commands > hello, commands, clear, music, video, game, unlock, reload'
+        'commands > hello, commands, clear, music, video, game, chat, unlock, lock, hide, reload'
       ]);
     }
     
@@ -96,13 +97,29 @@ function App() {
       setShowGame(!showGame);
       () => {window.location.href('#gameDiv')}
     }
+
+    else if (terminalInput === 'chat') {
+      if (!showChat) {
+        setTerminalOutput([
+          ...terminalOutput,
+          'chat > Enjoy the chat.'
+        ]);
+      } else {
+        setTerminalOutput([
+          ...terminalOutput,
+          'chat > Chat off.'
+        ]);
+      }
+      setShowChat(!showChat);
+      () => {window.location.href('#chatDiv')}
+    }
     
     else if (terminalInput === 'clear') {
       setTerminalOutput([
         'Terminal was cleared.'
       ]);
     }
-    
+  
     else if (terminalInput === 'unlock') {
       if (!unlock) {
         setTerminalOutput([
@@ -112,13 +129,36 @@ function App() {
         setShowVideo(true);
         setShowGame(true);
         setShowMusic(true);
+        setShowChat(true);
         setUnlock(true);
+        () => {window.location.href('#navigationDiv')};
       } else {
         setTerminalOutput([
           ...terminalOutput,
           'unlock > All features are already unlocked!'
         ]);
       }
+    }
+
+    else if (terminalInput === 'lock') {
+      setTerminalOutput([
+        ...terminalOutput,
+        'lock > All features are now locked.'
+      ]);
+      setUnlock(false);
+      setShowVideo(false);
+      setShowGame(false);
+      setShowMusic(false);
+      setShowChat(false);
+      setUnlock(false);
+    } 
+
+    else if (terminalInput === 'hide') {
+      setTerminalOutput([
+        ...terminalOutput,
+        'hide > If that\'s really what you want, I\'ll hide.'
+      ]);
+      setShowTerminal(false);
     }
     
     else if (terminalInput === 'reload') {
@@ -247,6 +287,19 @@ function App() {
                   }}
                 >
                   <span className="gray">*unlocked*</span> Music
+                </button>
+                )
+              }
+              {
+                showChat && (
+                  <button 
+                  id="chatButton"
+                  onClick={() => {
+                    window.location.href="#chatDiv";
+                    setShowNavModal(false);
+                  }}
+                >
+                  <span className="gray">*unlocked*</span> Chat
                 </button>
                 )
               }
@@ -402,6 +455,14 @@ function App() {
             </div>
           </div>
         )}
+        { showChat && (
+          <div id="chatDiv">
+            <div id="chatClipDiv">
+              <h4>Chat</h4>
+            <iframe src="./src/chat/index.html" frameBorder="0" scrolling="yes"></iframe>
+            </div>
+          </div>
+        )}
         <div id="signatureDiv">
           <div id="signaturePicDiv">
             <img id="signaturePic" src={periclesIcon} />
@@ -450,7 +511,7 @@ function App() {
         <button
           onClick={toggleShowTerminal}
         >
-          Show/Hide Terminal
+          {showTerminal ? ('Hide Terminal') : ('Terminal')}
         </button>
       </div>
 
