@@ -99,7 +99,7 @@ function App() {
     
     else if (terminalInput === 'clear') {
       setTerminalOutput([
-        'Try saying \'hello\'...'
+        'Terminal was cleared.'
       ]);
     }
     
