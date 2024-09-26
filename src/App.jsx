@@ -48,7 +48,14 @@ function App() {
 
   return (
     <>
-      <div id="loadingMask"></div>
+      <div id="loadingMask">
+        <div id="loadingDiv">
+          <p>Loading portfolio...</p>
+          <div id="loadingBar">
+            <div id="loadingProgress"></div>
+          </div>
+        </div>
+      </div>
       <div id="navigationDiv">
         <button id="navigateButton" onClick={toggleNavModal}>
           Navigate
