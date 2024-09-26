@@ -1,5 +1,6 @@
-import React, { useRef, useState, useEffect } from "react"
+import React, { useRef, useState } from "react"
 import Slider from "./components/Slider"
+import helmetGreen from "./assets/helmetGreen.png"
 import aboutMePic from "./assets/aboutMePic.png"
 import bootstrapIcon from "./assets/icons8/icons8-bootstrap-50.png"
 import cssIcon from "./assets/icons8/icons8-css3-50.png"
@@ -11,9 +12,6 @@ import mongoDBIcon from "./assets/icons8/icons8-mongo-db-48.png"
 import nextJSIcon from "./assets/icons8/icons8-nextjs-48.png"
 import nodeJSIcon from "./assets/icons8/icons8-nodejs-64.png"
 import reactIcon from "./assets/icons8/icons8-react-native-50.png"
-import greekHelmetMultiColorIcon from "./assets/icons8/icons8-greek-helmet-96.png"
-import greekHelmetIcon from "./assets/icons8/icons8-greek-helmet-100.png"
-import brokenPillarIcon from "./assets/icons8/icons8-greek-pillar-base-100.png"
 import periclesIcon from "./assets/icons8/icons8-pericles-96.png"
 
 function App() {
@@ -21,6 +19,7 @@ function App() {
   const [showTerminal, setShowTerminal] = useState(true);
   const [terminalInput, setTerminalInput] = useState('');
   const [terminalOutput, setTerminalOutput] = useState(['Try saying \'hello\'...']);
+  const [showScreensaver, setShowScreensaver] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
   const [showGame, setShowGame] = useState(false);
   const [showMusic, setShowMusic] = useState(false);
@@ -46,7 +45,7 @@ function App() {
     else if (terminalInput === 'commands') {
       setTerminalOutput([
         ...terminalOutput,
-        'commands > hello, commands, clear, music, video, game, chat, unlock, lock, hide, reload'
+        'commands > hello, commands, clear, music, video, game, chat, unlock, lock, hide, screensaver, reload'
       ]);
     }
     
@@ -160,6 +159,14 @@ function App() {
       ]);
       setShowTerminal(false);
     }
+
+    else if (terminalInput === 'screensaver') {
+      setTerminalOutput([
+        ...terminalOutput,
+        'screensaver > I\'ll be here when you get back.'
+      ]);
+      setShowScreensaver(true);
+    }
     
     else if (terminalInput === 'reload') {
       window.location.reload();
@@ -182,6 +189,14 @@ function App() {
           </div>
         </div>
       </div>
+      { showScreensaver && (
+          <div id="screensaverContainerDiv" onClick={() => {setShowScreensaver(false)}}>
+            <div id="screensaverDiv">
+              <img id="screensaverPic" src={helmetGreen} />
+            </div>
+          </div>
+        )
+      }
       <div id="navigationDiv">
         <button id="navigateButton" onClick={toggleNavModal}>
           Navigate
