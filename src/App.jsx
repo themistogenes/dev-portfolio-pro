@@ -169,6 +169,7 @@ function App() {
         setShowGame(true);
         setShowMusic(true);
         setShowChat(true);
+        setShowSelfDestruct(true);
         setUnlock(true);
         () => {window.location.href('#navigationDiv')};
       } else {
@@ -391,6 +392,19 @@ function App() {
                   }}
                 >
                   <span className="gray">*unlocked*</span> Chat
+                </button>
+                )
+              }
+              {
+                showSelfDestruct && (
+                  <button 
+                  id="selfDestructButton"
+                  onClick={() => {
+                    window.location.href="#selfDestructDiv";
+                    setShowNavModal(false);
+                  }}
+                >
+                  <span className="gray">*unlocked*</span> Self-Destruct
                 </button>
                 )
               }
