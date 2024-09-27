@@ -781,6 +781,64 @@ li {
   transform: translateY(0px) translateX(0px);
 }
 
+#afterSelfDestructDiv {
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes systemError {
+  0% {
+    color: rgba(127, 255, 0, 1);
+  }
+  10% {
+    color: rgba(127, 255, 0, .5);
+    text-shadow: 2px 2px 1px white;
+  }
+  20% {
+    color: rgba(127, 255, 0, .75);
+  }
+  30% {
+    color: rgba(127, 255, 0, .25);
+    text-shadow: 1px -1px .5px white;
+  }
+  40% {
+    color: rgba(127, 255, 0, 0);
+  }
+  50% {
+    color: rgba(127, 255, 0, .75);
+    text-shadow: -2px 2px 1px white;
+  }
+  60% {
+    color: rgba(127, 255, 0, .25);
+  }
+  70% {
+    color: rgba(127, 255, 0, .50);
+    text-shadow: 1px 1px .5px white;
+  }
+  80% {
+    color: rgba(127, 255, 0, 0);
+  }
+  90% {
+    color: rgba(127, 255, 0, .50);
+    text-shadow: 1px -1px .5px white;
+  }
+  100% {
+    color: rgba(127, 255, 0, 1);
+  }
+}
+
+#afterSelfDestructTextDiv {
+  text-align: center;
+  font-family: "Silkscreen", system-ui;
+  font-size: 4rem;
+  color: chartreuse;
+  animation: systemError 5s linear infinite;
+}
+
 #signatureDiv {
   display: flex;
   justify-content: center;

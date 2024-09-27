@@ -16,6 +16,7 @@ import reactIcon from "./assets/icons8/icons8-react-native-50.png"
 import periclesIcon from "./assets/icons8/icons8-pericles-96.png"
 
 function App() {
+  const [isSelfDestructing, setIsSelfDestructing] = useState(false);
   const [showNavModal, setShowNavModal] = useState(false);
   const [showTerminal, setShowTerminal] = useState(true);
   const [terminalInput, setTerminalInput] = useState('');
@@ -25,7 +26,7 @@ function App() {
   const [showGame, setShowGame] = useState(false);
   const [showMusic, setShowMusic] = useState(false);
   const [showChat, setShowChat] = useState(false);
-  const [showSelfDestruct, setShowSelfDestruct] = useState(true);
+  const [showSelfDestruct, setShowSelfDestruct] = useState(false);
   const [unlock, setUnlock] = useState(false);
   const [themeIsPlaying, setThemeIsPlaying] = useState(false);
   const [timeAtPause, setTimeAtPause] = useState(0);
@@ -49,7 +50,7 @@ function App() {
     else if (terminalInput === 'commands') {
       setTerminalOutput([
         ...terminalOutput,
-        'commands > hello, commands, clear, theme, music, video, game, chat, unlock, lock, hide, screensaver, reload'
+        'commands > hello, commands, clear, theme, music, video, game, chat, unlock, lock, hide, screensaver, reload, selfdestruct'
       ]);
     }
 
@@ -134,6 +135,22 @@ function App() {
       }
       setShowChat(!showChat);
       () => {window.location.href('#chatDiv')}
+    }
+
+    else if (terminalInput === 'selfdestruct') {
+      if (!showSelfDestruct) {
+        setTerminalOutput([
+          ...terminalOutput,
+          'selfdestruct > I\'d be careful if I were you...'
+        ]);
+      } else {
+        setTerminalOutput([
+          ...terminalOutput,
+          'selfdestruct > I\'m glad you changed your mind.'
+        ]);
+      }
+      setShowSelfDestruct(!showSelfDestruct);
+      () => {window.location.href('#selfDestructDiv')}
     }
     
     else if (terminalInput === 'clear') {
@@ -226,7 +243,8 @@ function App() {
   }
 
   function handleSelfDestruct() {
-    console.log('self destruct');
+    setTerminalOutput([...terminalOutput, 'So long!']);
+    setIsSelfDestructing(true);
   }
 
   useEffect(() => {
@@ -252,6 +270,9 @@ function App() {
           </div>
         )
       }
+  {
+    !isSelfDestructing ? (
+    <>
       <div id="navigationDiv">
         <button id="navigateButton" onClick={toggleNavModal}>
           Navigate
@@ -599,7 +620,16 @@ function App() {
         >
           {showTerminal ? ('Hide Terminal') : ('Terminal')}
         </button>
+      </div>      
+    </>
+    ) : (
+      <div id="afterSelfDestructDiv">
+        <div id="afterSelfDestructTextDiv">
+          System Error
+        </div>
       </div>
+    )
+  }
 
       {/* Next.js icon by Icons8: https://icons8.com/icon/gwR0hbBi5JeZ/next.js */}
       {/* Firebase icon by Icons8: https://icons8.com/icon/3Gh7IUPjoIx4/firebase */}
