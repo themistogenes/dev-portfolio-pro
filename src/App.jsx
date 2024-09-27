@@ -25,6 +25,7 @@ function App() {
   const [showGame, setShowGame] = useState(false);
   const [showMusic, setShowMusic] = useState(false);
   const [showChat, setShowChat] = useState(false);
+  const [showSelfDestruct, setShowSelfDestruct] = useState(true);
   const [unlock, setUnlock] = useState(false);
   const [themeIsPlaying, setThemeIsPlaying] = useState(false);
   const [timeAtPause, setTimeAtPause] = useState(0);
@@ -42,7 +43,7 @@ function App() {
     // console.log('terminalInput: ', terminalInput);
     
     if (terminalInput === 'hello') {
-      setTerminalOutput([...terminalOutput, 'hello > Type \'commands\' to view a list of commands.'])
+      setTerminalOutput([...terminalOutput, 'hello > I don\'t have all day.  Type \'commands\' to view a list of commands.'])
     } 
     
     else if (terminalInput === 'commands') {
@@ -222,6 +223,10 @@ function App() {
       theme.play();
       // console.log('Theme song has been turned on.');
     }
+  }
+
+  function handleSelfDestruct() {
+    console.log('self destruct');
   }
 
   useEffect(() => {
@@ -527,6 +532,19 @@ function App() {
             <div id="chatClipDiv">
               <h4>Chat</h4>
             <iframe src="./src/chat/index.html" frameBorder="0" scrolling="yes"></iframe>
+            </div>
+          </div>
+          )
+        }
+        { showSelfDestruct && (
+          <div id="selfDestructDiv">
+            <div id="self-destruct-div">
+              <h4>Are you sure?</h4>
+              <button id="self-destruct-button" onClick={handleSelfDestruct}>
+                <span id="sd-button-front">
+                  Self-Destruct
+                </span>
+              </button>
             </div>
           </div>
           )

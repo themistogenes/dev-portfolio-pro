@@ -140,6 +140,7 @@ body {
 #gameDiv,
 #musicDiv,
 #chatDiv,
+#selfDestructDiv,
 #signatureDiv,
 #dev-initials-div {
   width: 60vw;
@@ -159,6 +160,7 @@ body {
 #gameDiv,
 #musicDiv,
 #chatDiv,
+#selfDestructDiv,
 #signatureDiv,
 #dev-initials-div {
   margin: 5vh auto;
@@ -742,6 +744,43 @@ li {
   height: 500px;
 }
 
+#self-destruct-div {
+  text-align: center;
+}
+
+#self-destruct-button {
+  border-radius: 50%;
+  border: 5px solid black;
+  border-style: outset;
+  background-color: darkred;
+  margin-top: 10px;
+  padding: 0; 
+}
+
+#self-destruct-button:hover {
+  filter: brightness(75%);
+}
+
+#sd-button-front {
+  display: block;
+  border-radius: 50%;
+  /* width: 10rem;
+  height: 10rem; */
+  padding: 4rem 1rem;
+  background-color: red;
+  color: black;
+  font-weight: bold;
+  transform: translateY(-10px) translateX(-5px);
+}
+
+#self-destruct-button:hover #sd-button-front {
+  color: darkred;
+}
+
+#self-destruct-button:active #sd-button-front {
+  transform: translateY(0px) translateX(0px);
+}
+
 #signatureDiv {
   display: flex;
   justify-content: center;
@@ -847,6 +886,7 @@ li {
   #gameDiv,
   #musicDiv,
   #chatDiv,
+  #selfDestructDiv,
   #signatureDiv,
   #dev-initials-div {
     width: auto;
@@ -866,6 +906,7 @@ li {
   #gameDiv,
   #musicDiv,
   #chatDiv,
+  #selfDestructDiv,
   #signatureDiv,
   #dev-initials-div {
     margin: 2vh 5vw;
