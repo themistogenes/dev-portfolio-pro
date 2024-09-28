@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react"
 import Slider from "./components/Slider"
 import themeSong from "./assets/themeSong.flac"
 import helmetGreen from "./assets/helmetGreen.png"
+import goldUnlockIcon from "./assets/icons8/icons8-unlock-48-gold.png"
 import aboutMePic from "./assets/aboutMePic.png"
 import bootstrapIcon from "./assets/icons8/icons8-bootstrap-50.png"
 import cssIcon from "./assets/icons8/icons8-css3-50.png"
@@ -401,7 +402,8 @@ function App() {
                         setShowNavModal(false);
                       }}
                     >
-                      <span className="gray">*unlocked*</span> Video
+                      <img src={goldUnlockIcon} className="unlockIcon" />
+                      Video
                     </button>
                     )
                   }
@@ -414,7 +416,8 @@ function App() {
                         setShowNavModal(false);
                       }}
                     >
-                      <span className="gray">*unlocked*</span> Game
+                      <img src={goldUnlockIcon} className="unlockIcon" />
+                      Game
                     </button>
                     )
                   }
@@ -427,7 +430,8 @@ function App() {
                         setShowNavModal(false);
                       }}
                     >
-                      <span className="gray">*unlocked*</span> Music
+                      <img src={goldUnlockIcon} className="unlockIcon" />
+                      Music
                     </button>
                     )
                   }
@@ -440,7 +444,8 @@ function App() {
                         setShowNavModal(false);
                       }}
                     >
-                      <span className="gray">*unlocked*</span> Chat
+                      <img src={goldUnlockIcon} className="unlockIcon" />
+                      Chat
                     </button>
                     )
                   }
@@ -453,7 +458,8 @@ function App() {
                         setShowNavModal(false);
                       }}
                     >
-                      <span className="gray">*unlocked*</span> Self-Destruct
+                      <img src={goldUnlockIcon} className="unlockIcon" />
+                      Self-Destruct
                     </button>
                     )
                   }
@@ -726,6 +732,9 @@ function App() {
           Pericles icon (single color) by Icons8: https://icons8.com/icon/2DeY03FlmllF/pericles
           Greek pillar base icon by Icons8: https://icons8.com/icon/60859/greek-pillar-base
           Sound icon by Icons8: https://icons8.com/icon/Zp6GOGzBD2LK/audio
+          Gray unlock icon by Icons8: https://icons8.com/icon/fbv9wSpSd3DR/unlock
+          Gold unlock icon by Icons8: https://icons8.com/icon/b0F1PoUomiAl/unlock
+          Gray padlock icon by Icons8: https://icons8.com/icon/FZtworQ4BNfz/padlock
 
           Theme song: "Generic Futuristic Hero's Theme", by Marc Armitage
         </>
