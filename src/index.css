@@ -67,12 +67,22 @@ table {
   z-index: 9999;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#loadingDiv {
+#loadingMask p {
+  font-family: "Silkscreen", system-ui;
   font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#loadingDiv {
+  font-family: "Silkscreen", system-ui;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 #loadingBar {
@@ -109,6 +119,8 @@ table {
   padding: 50px;
   border-radius: 100%;
   animation: rotate 4s linear infinite;
+
+  font-size: 1.5rem;
 }
 
 #screensaverPic {

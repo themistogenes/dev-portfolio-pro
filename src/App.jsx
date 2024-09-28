@@ -295,18 +295,19 @@ function App() {
     <>
       <div id="loadingMask">
         {/* Loading Bar */}
-        {/* 
-          <div id="loadingDiv">
-            <p>Loading portfolio...</p>
-            <div id="loadingBar">
-              <div id="loadingProgress"></div>
-            </div>
-          </div> 
+        {/*
+        <div id="loadingDiv">
+          <p>Loading...</p>
+          <div id="loadingBar">
+            <div id="loadingProgress"></div>
+          </div>
+        </div> 
         */}
         {/* Rotating Helmet */}
-          <div id="screensaverDiv">
-            <img id="screensaverPic" src={helmetGreen} />
-          </div>
+        <p>Loading...</p>
+        <div id="screensaverDiv">
+          <img id="screensaverPic" src={helmetGreen} />
+        </div>
       </div>
 
       { showScreensaver && (
