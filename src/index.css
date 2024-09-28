@@ -159,7 +159,7 @@ body {
 }
 
 #headerDiv,
-#meanderDiv,
+.meanderDiv,
 #contactMeDiv, 
 #aboutMeDiv,
 #toolsetDiv,
@@ -176,8 +176,12 @@ body {
 }
 
 #headerDiv,
-#meanderDiv {
+.meanderDiv {
   margin: 0 auto;
+}
+
+#meanderDivTop {
+  margin-top: 2vh;
 }
 
 #contactMeDiv, 
@@ -317,7 +321,7 @@ li {
   height: 1rem;
 }
 
-#meanderDiv {
+.meanderDiv {
   height: 2.3rem;
   background-image: url(assets/meanderGreen.svg);
   background-repeat: repeat-x;
@@ -914,7 +918,7 @@ li {
 
 @media screen and (max-width: 1000px) {
   #headerDiv,
-  #meanderDiv,
+  .meanderDiv,
   #contactMeDiv, 
   #aboutMeDiv,
   #toolsetDiv,
@@ -931,7 +935,7 @@ li {
   }
 
   #headerDiv,
-  #meanderDiv {
+  .meanderDiv {
     margin: 0 auto;
   }
 

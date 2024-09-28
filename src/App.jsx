@@ -329,7 +329,7 @@ function App() {
         </div>
         )
       }
-      
+
       {
         !isSelfDestructing ? (
         <>
@@ -484,7 +484,7 @@ function App() {
               setShowTerminal(false);
             }}
           >
-            <div id="meanderDiv"></div>
+            <div id="meanderDivTop" className="meanderDiv"></div>
             <div id="headerDiv">
               <span>
                 <br />
@@ -497,7 +497,7 @@ function App() {
                 <br />
               </span>
             </div>
-            <div id="meanderDiv"></div>
+            <div className="meanderDiv"></div>
             <div id="soundDiv" onClick={handleTheme}></div>
             <div id="contactMeDiv">
               <h4>Contact Me</h4>
