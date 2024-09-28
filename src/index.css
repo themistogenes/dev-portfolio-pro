@@ -203,6 +203,10 @@ li {
   line-height: 1.5rem;
 }
 
+.invisible {
+  display: none;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,

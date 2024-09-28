@@ -31,6 +31,20 @@ function App() {
   const [themeIsPlaying, setThemeIsPlaying] = useState(false);
   const [timeAtPause, setTimeAtPause] = useState(0);
 
+  const navigationRef = useRef(null);
+  const videoRef = useRef(null);
+  const gameRef = useRef(null);
+  const musicRef = useRef(null);
+  const chatRef = useRef(null);
+  const selfDestructRef = useRef(null);
+
+  function scrollToTarget(ref) {
+    ref.current.scrollIntoView({
+      alignToTop: true,
+      behavior: "smooth"
+    })
+  }
+
   function toggleNavModal() {
     setShowNavModal(!showNavModal);
   }
@@ -79,6 +93,8 @@ function App() {
         if (themeIsPlaying) {
           handleTheme();
         }
+        // scrollToTarget(musicRef);
+        window.location.href="#musicRef";
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -86,7 +102,6 @@ function App() {
         ]);
       }
       setShowMusic(!showMusic);
-      () => {window.location.href('#musicDiv')}
     }
     
     else if (terminalInput === 'video') {
@@ -95,6 +110,8 @@ function App() {
           ...terminalOutput,
           'video > Enjoy the video.'
         ]);
+        // scrollToTarget(videoRef);
+        window.location.href="#videoRef";
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -102,7 +119,6 @@ function App() {
         ]);
       }
       setShowVideo(!showVideo);
-      () => {window.location.href('#videoDiv')}
     }
     
     else if (terminalInput === 'game') {
@@ -111,6 +127,8 @@ function App() {
           ...terminalOutput,
           'game > Enjoy the game.'
         ]);
+        // scrollToTarget(gameRef);
+        window.location.href="#gameRef";
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -118,7 +136,6 @@ function App() {
         ]);
       }
       setShowGame(!showGame);
-      () => {window.location.href('#gameDiv')}
     }
 
     else if (terminalInput === 'chat') {
@@ -127,6 +144,8 @@ function App() {
           ...terminalOutput,
           'chat > Enjoy the chat.'
         ]);
+        // scrollToTarget(chatRef);
+        window.location.href="#chatRef";
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -134,7 +153,6 @@ function App() {
         ]);
       }
       setShowChat(!showChat);
-      () => {window.location.href('#chatDiv')}
     }
 
     else if (terminalInput === 'selfdestruct') {
@@ -143,6 +161,8 @@ function App() {
           ...terminalOutput,
           'selfdestruct > I\'d be careful if I were you...'
         ]);
+        // scrollToTarget(selfDestructRef);
+        window.location.href="#selfDestructRef";
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -150,7 +170,6 @@ function App() {
         ]);
       }
       setShowSelfDestruct(!showSelfDestruct);
-      () => {window.location.href('#selfDestructDiv')}
     }
     
     else if (terminalInput === 'clear') {
@@ -171,7 +190,8 @@ function App() {
         setShowChat(true);
         setShowSelfDestruct(true);
         setUnlock(true);
-        () => {window.location.href('#navigationDiv')};
+        // scrollToTarget(navigationRef);
+        // window.location.href="#navigationRef";
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -190,6 +210,7 @@ function App() {
       setShowGame(false);
       setShowMusic(false);
       setShowChat(false);
+      setShowSelfDestruct(false);
       setUnlock(false);
     } 
 
@@ -271,379 +292,385 @@ function App() {
           </div>
         )
       }
-  {
-    !isSelfDestructing ? (
-    <>
-      <div id="navigationDiv">
-        <button id="navigateButton" onClick={toggleNavModal}>
-          Navigate
-          {
-            showNavModal ? (
-              <span 
-                id="arrow-up-icon"
-                className="material-symbols-outlined"
-              >
-                  arrow_drop_up
-              </span>
-            ) : (
-              <span 
-                id="arrow-down-icon"  
-                className="material-symbols-outlined"
-              >
-                arrow_drop_down
-              </span>
-            )
-          } 
-        </button>
-        {
-          showNavModal && (
-            <div id="navigationModal">
-              <button 
-                id="contactMeButton" 
-                onClick={() => {
-                  window.location.href="#contactMeDiv";
-                  setShowNavModal(false);
-                }}
-              >
-                Contact Me
-              </button>
-              <button 
-                id="aboutMeButton"
-                onClick={() => {
-                  window.location.href="#aboutMeDiv";
-                  setShowNavModal(false);
-                }}
-              >
-                About Me
-              </button>
-              <button 
-                id="toolsetButton"
-                onClick={() => {
-                  window.location.href="#toolsetDiv";
-                  setShowNavModal(false);
-                }}
-              >
-                Toolset
-              </button>
-              <button 
-                id="projectsButton"
-                onClick={() => {
-                  window.location.href="#projectsDiv";
-                  setShowNavModal(false);
-                }}
-              >
-                Projects
-              </button>
-              <button 
-                id="expCertButton"
-                onClick={() => {
-                  window.location.href="#expCertDiv";
-                  setShowNavModal(false);
-                }}
-              >
-                Experience & Certification
-              </button>
-              {
-                showVideo && (
-                  <button 
-                  id="videoButton"
-                  onClick={() => {
-                    window.location.href="#videoDiv";
-                    setShowNavModal(false);
-                  }}
-                >
-                  <span className="gray">*unlocked*</span> Video
-                </button>
-                )
-              }
-              {
-                showGame && (
-                  <button 
-                  id="gameButton"
-                  onClick={() => {
-                    window.location.href="#gameDiv";
-                    setShowNavModal(false);
-                  }}
-                >
-                  <span className="gray">*unlocked*</span> Game
-                </button>
-                )
-              }
-              {
-                showMusic && (
-                  <button 
-                  id="musicButton"
-                  onClick={() => {
-                    window.location.href="#musicDiv";
-                    setShowNavModal(false);
-                  }}
-                >
-                  <span className="gray">*unlocked*</span> Music
-                </button>
-                )
-              }
-              {
-                showChat && (
-                  <button 
-                  id="chatButton"
-                  onClick={() => {
-                    window.location.href="#chatDiv";
-                    setShowNavModal(false);
-                  }}
-                >
-                  <span className="gray">*unlocked*</span> Chat
-                </button>
-                )
-              }
-              {
-                showSelfDestruct && (
-                  <button 
-                  id="selfDestructButton"
-                  onClick={() => {
-                    window.location.href="#selfDestructDiv";
-                    setShowNavModal(false);
-                  }}
-                >
-                  <span className="gray">*unlocked*</span> Self-Destruct
-                </button>
-                )
-              }
-            </div>
-          )
-        }
-      </div>
-      <div 
-        id="containerDiv" 
-        onClick={() => {
-          setShowNavModal(false);
-          setShowTerminal(false);
-        }}
-      >
-        <div id="meanderDiv"></div>
-        <div id="headerDiv">
-          <span>
-            <br />
-            <h1 className="outline">Justin Alimaras</h1>
-            <h2 className="outline">
-              <div className="typedTextDiv">
-                <p className="typedText">Web & Software Developer</p>
-              </div>
-            </h2>
-            <br />
-          </span>
-        </div>
-        <div id="meanderDiv"></div>
-        <div id="soundDiv" onClick={handleTheme}></div>
-        <div id="contactMeDiv">
-          <h4>Contact Me</h4>
-          <div id="contactMeInfoDiv">
-            <div id="contactMeLeftDiv">
-              <ul>
-                <li>
-                    <span className="material-symbols-outlined">location_on</span> 
-                    Location: <button>Cincinnati, OH</button>
-                </li>
-                <li>
-                  <span className="material-symbols-outlined">code_blocks</span>
-                  GitHub: <button>themistogenes</button>
-                </li>
-                <li>
-                  <span className="material-symbols-outlined">mail</span>
-                  Email: <button>jalimaras@gmail.com</button>
-                </li>
-              </ul>
-            </div>
-            <div id="contactMeRightDiv">
-              <ul>
-              <li>
-                <span className="material-symbols-outlined">group</span>
-                LinkedIn: <button>Justin Alimaras</button>
-              </li>
-              <li>
-                <span className="material-symbols-outlined">description</span>
-                  Resume: <button>Download PDF</button>
-              </li>
-              </ul>
-            </div>
-          </div>
-        </div>  
-        <h4 id="aboutMeHeaderSmall">About Me</h4>
-        <div id="aboutMeDiv">
-          <div id="aboutMeTextDiv">
-            <h4>About Me</h4>
-            <p>
-            I am a web & software developer. For a long time I studied Classics (Greek and Roman Studies) formally. Once free of the shackles of academia, I found sustenance in a large warehouse, laboring at night by fluorescent lighting. The yarn I brought into the labyrinth, that I might one day find my way out, was a desire to code. That desire evolved into a new passion. Joy in Classics comes from appreciation, that is, from reading dead languages and marveling at the deeds of bygone times. What I enjoy about coding is creation, bringing new web projects and applications to life. I specialize in the M.E.R.N. stack.
-            </p>
-          </div>
-          <div id="aboutMePicDiv">
-            <img id="aboutMePic" src={aboutMePic} alt="picture of Justin Alimaras" />
-          </div>
-        </div>
-        <div id="toolsetDiv">
-          <h4>Toolset</h4>
-          <div id="toolsetScrollerDiv">
-            <img src={htmlIcon} alt="HTML icon" />
-            <img src={cssIcon} alt="CSS icon" />
-            <img src={bootstrapIcon} alt="Bootstrap icon" />
-            <img src={javaScriptIcon} alt="javaScript icon" />
-            <img src={reactIcon} alt="React icon" />
-            <img src={nextJSIcon} alt="NextJS icon" />
-            <img src={expressJSIcon} alt="ExpressJS icon" />
-            <img src={nodeJSIcon} alt="NodeJS icon" />
-            <img src={mongoDBIcon} alt="MongoDB icon" />
-            <img src={firebaseIcon} alt="Firebase icon" />
-          </div>
-        </div>
-        <div id="projectsDiv">
-          <h4>Projects</h4>
-          <Slider />
-        </div>
-        <div id="expCertDiv">
-          <h4>Experience & Certifications</h4>
-          <ul>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              Node.js API Masterclass with Express & MongoDB, Brad Traversy
-            </li>
-            <li>
-            <span className="material-symbols-outlined">history_edu</span>
-              Next.js from Scratch, Brad Traversy
-            </li>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              MERN Stack from Scratch: eCommerce, Brad Traversy
-            </li>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              Modern JavaScript from the Beginning, Brad Traversy
-            </li>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              React Front to Back, Brad Traversy
-            </li>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              The Web Developer Bootcamp (online bootcamp), Colt Steele
-            </li>
-            <li>
-              <span className="material-symbols-outlined">history_edu</span>
-              Full Stack Development with MERN: Professional Certificate in Coding (8 month online bootcamp), M.I.T.
-            </li>
-          </ul>
-        </div>
-        {
-          showVideo && (
-            <div id="videoDiv">
-              <h4>Video</h4>
-              <div id="videoClipDiv">
-                <iframe src="https://www.youtube.com/embed/sEBsURFVTLI?si=lHksngFkm5QzktHf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                <div id="videoScreenDiv"></div>
-              </div>
-            </div>
-          )
-        }
-        {
-          showGame && (
-            <div id="gameDiv">
-              <h4>Game</h4>
-              <div id="gameClipDiv">
-                <p>Tap/Click around to move</p>
-                <iframe src="./src/game/index.html" frameBorder="0"></iframe>
-              </div>
-            </div>
-          )
-        }
-        { showMusic && (
-          <div id="musicDiv">
-            <div id="musicClipDiv">
-              <h4>Music</h4>
-              <iframe src="./src/musicPlayer/index.html" frameBorder="0" scrolling="no"></iframe>
-            </div>
-          </div>
-          )
-        }
-        { showChat && (
-          <div id="chatDiv">
-            <div id="chatClipDiv">
-              <h4>Chat</h4>
-            <iframe src="./src/chat/index.html" frameBorder="0" scrolling="yes"></iframe>
-            </div>
-          </div>
-          )
-        }
-        { showSelfDestruct && (
-          <div id="selfDestructDiv">
-            <div id="self-destruct-div">
-              <h4>Are you sure?</h4>
-              <button id="self-destruct-button" onClick={handleSelfDestruct}>
-                <span id="sd-button-front">
-                  Self-Destruct
-                </span>
-              </button>
-            </div>
-          </div>
-          )
-        }
-        <div id="signatureDiv">
-          <div id="signaturePicDiv">
-            <img id="signaturePic" src={periclesIcon} />
-          </div>
-          <div id="signatureTextDiv">
-            <p>Built by <button id="signatureButton">Themistogenes</button> a.k.a. Justin</p>
-          </div>
-        </div>
-      </div>
-      <div id="footerDiv">
       {
-        showTerminal && (
-          <div id="terminalDiv">
-            <div id="terminalOutputDiv">
-              <div id="terminalOutputContent">
-                {
-                  terminalOutput.map((item, index) => (
-                    <p key={index}>{item}</p>
-                  ))
-                }             
+        !isSelfDestructing ? (
+        <>
+          <div id="navigationRef" className="invisible" ref={navigationRef}></div>
+          <div id="navigationDiv">
+            <button id="navigateButton" onClick={toggleNavModal}>
+              Navigate
+              {
+                showNavModal ? (
+                  <span 
+                    id="arrow-up-icon"
+                    className="material-symbols-outlined"
+                  >
+                      arrow_drop_up
+                  </span>
+                ) : (
+                  <span 
+                    id="arrow-down-icon"  
+                    className="material-symbols-outlined"
+                  >
+                    arrow_drop_down
+                  </span>
+                )
+              } 
+            </button>
+            {
+              showNavModal && (
+                <div id="navigationModal">
+                  <button 
+                    id="contactMeButton" 
+                    onClick={() => {
+                      window.location.href="#contactMeDiv";
+                      setShowNavModal(false);
+                    }}
+                  >
+                    Contact Me
+                  </button>
+                  <button 
+                    id="aboutMeButton"
+                    onClick={() => {
+                      window.location.href="#aboutMeDiv";
+                      setShowNavModal(false);
+                    }}
+                  >
+                    About Me
+                  </button>
+                  <button 
+                    id="toolsetButton"
+                    onClick={() => {
+                      window.location.href="#toolsetDiv";
+                      setShowNavModal(false);
+                    }}
+                  >
+                    Toolset
+                  </button>
+                  <button 
+                    id="projectsButton"
+                    onClick={() => {
+                      window.location.href="#projectsDiv";
+                      setShowNavModal(false);
+                    }}
+                  >
+                    Projects
+                  </button>
+                  <button 
+                    id="expCertButton"
+                    onClick={() => {
+                      window.location.href="#expCertDiv";
+                      setShowNavModal(false);
+                    }}
+                  >
+                    Experience & Certification
+                  </button>
+                  {
+                    showVideo && (
+                      <button 
+                      id="videoButton"
+                      onClick={() => {
+                        window.location.href="#videoDiv";
+                        setShowNavModal(false);
+                      }}
+                    >
+                      <span className="gray">*unlocked*</span> Video
+                    </button>
+                    )
+                  }
+                  {
+                    showGame && (
+                      <button 
+                      id="gameButton"
+                      onClick={() => {
+                        window.location.href="#gameDiv";
+                        setShowNavModal(false);
+                      }}
+                    >
+                      <span className="gray">*unlocked*</span> Game
+                    </button>
+                    )
+                  }
+                  {
+                    showMusic && (
+                      <button 
+                      id="musicButton"
+                      onClick={() => {
+                        window.location.href="#musicDiv";
+                        setShowNavModal(false);
+                      }}
+                    >
+                      <span className="gray">*unlocked*</span> Music
+                    </button>
+                    )
+                  }
+                  {
+                    showChat && (
+                      <button 
+                      id="chatButton"
+                      onClick={() => {
+                        window.location.href="#chatDiv";
+                        setShowNavModal(false);
+                      }}
+                    >
+                      <span className="gray">*unlocked*</span> Chat
+                    </button>
+                    )
+                  }
+                  {
+                    showSelfDestruct && (
+                      <button 
+                      id="selfDestructButton"
+                      onClick={() => {
+                        window.location.href="#selfDestructDiv";
+                        setShowNavModal(false);
+                      }}
+                    >
+                      <span className="gray">*unlocked*</span> Self-Destruct
+                    </button>
+                    )
+                  }
+                </div>
+              )
+            }
+          </div>
+          <div 
+            id="containerDiv" 
+            onClick={() => {
+              setShowNavModal(false);
+              setShowTerminal(false);
+            }}
+          >
+            <div id="meanderDiv"></div>
+            <div id="headerDiv">
+              <span>
+                <br />
+                <h1 className="outline">Justin Alimaras</h1>
+                <h2 className="outline">
+                  <div className="typedTextDiv">
+                    <p className="typedText">Web & Software Developer</p>
+                  </div>
+                </h2>
+                <br />
+              </span>
+            </div>
+            <div id="meanderDiv"></div>
+            <div id="soundDiv" onClick={handleTheme}></div>
+            <div id="contactMeDiv">
+              <h4>Contact Me</h4>
+              <div id="contactMeInfoDiv">
+                <div id="contactMeLeftDiv">
+                  <ul>
+                    <li>
+                        <span className="material-symbols-outlined">location_on</span> 
+                        Location: <button>Cincinnati, OH</button>
+                    </li>
+                    <li>
+                      <span className="material-symbols-outlined">code_blocks</span>
+                      GitHub: <button>themistogenes</button>
+                    </li>
+                    <li>
+                      <span className="material-symbols-outlined">mail</span>
+                      Email: <button>jalimaras@gmail.com</button>
+                    </li>
+                  </ul>
+                </div>
+                <div id="contactMeRightDiv">
+                  <ul>
+                  <li>
+                    <span className="material-symbols-outlined">group</span>
+                    LinkedIn: <button>Justin Alimaras</button>
+                  </li>
+                  <li>
+                    <span className="material-symbols-outlined">description</span>
+                      Resume: <button>Download PDF</button>
+                  </li>
+                  </ul>
+                </div>
+              </div>
+            </div>  
+            <h4 id="aboutMeHeaderSmall">About Me</h4>
+            <div id="aboutMeDiv">
+              <div id="aboutMeTextDiv">
+                <h4>About Me</h4>
+                <p>
+                I am a web & software developer. For a long time I studied Classics (Greek and Roman Studies) formally. Once free of the shackles of academia, I found sustenance in a large warehouse, laboring at night by fluorescent lighting. The yarn I brought into the labyrinth, that I might one day find my way out, was a desire to code. That desire evolved into a new passion. Joy in Classics comes from appreciation, that is, from reading dead languages and marveling at the deeds of bygone times. What I enjoy about coding is creation, bringing new web projects and applications to life. I specialize in the M.E.R.N. stack.
+                </p>
+              </div>
+              <div id="aboutMePicDiv">
+                <img id="aboutMePic" src={aboutMePic} alt="picture of Justin Alimaras" />
               </div>
             </div>
-            <div id="terminalInputDiv">
-              <input 
-                type="text"
-                placeholder="Type here..." 
-                value={terminalInput} 
-                onChange={(e) => {
-                  setTerminalInput(e.target.value);
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
-                    handleTerminalInput();
-                  }
-                }}
-              />
-              <button
-                onClick={handleTerminalInput}
-              >
-                Enter
-              </button>
+            <div id="toolsetDiv">
+              <h4>Toolset</h4>
+              <div id="toolsetScrollerDiv">
+                <img src={htmlIcon} alt="HTML icon" />
+                <img src={cssIcon} alt="CSS icon" />
+                <img src={bootstrapIcon} alt="Bootstrap icon" />
+                <img src={javaScriptIcon} alt="javaScript icon" />
+                <img src={reactIcon} alt="React icon" />
+                <img src={nextJSIcon} alt="NextJS icon" />
+                <img src={expressJSIcon} alt="ExpressJS icon" />
+                <img src={nodeJSIcon} alt="NodeJS icon" />
+                <img src={mongoDBIcon} alt="MongoDB icon" />
+                <img src={firebaseIcon} alt="Firebase icon" />
+              </div>
+            </div>
+            <div id="projectsDiv">
+              <h4>Projects</h4>
+              <Slider />
+            </div>
+            <div id="expCertDiv">
+              <h4>Experience & Certifications</h4>
+              <ul>
+                <li>
+                  <span className="material-symbols-outlined">history_edu</span>
+                  Node.js API Masterclass with Express & MongoDB, Brad Traversy
+                </li>
+                <li>
+                <span className="material-symbols-outlined">history_edu</span>
+                  Next.js from Scratch, Brad Traversy
+                </li>
+                <li>
+                  <span className="material-symbols-outlined">history_edu</span>
+                  MERN Stack from Scratch: eCommerce, Brad Traversy
+                </li>
+                <li>
+                  <span className="material-symbols-outlined">history_edu</span>
+                  Modern JavaScript from the Beginning, Brad Traversy
+                </li>
+                <li>
+                  <span className="material-symbols-outlined">history_edu</span>
+                  React Front to Back, Brad Traversy
+                </li>
+                <li>
+                  <span className="material-symbols-outlined">history_edu</span>
+                  The Web Developer Bootcamp (online bootcamp), Colt Steele
+                </li>
+                <li>
+                  <span className="material-symbols-outlined">history_edu</span>
+                  Full Stack Development with MERN: Professional Certificate in Coding (8 month online bootcamp), M.I.T.
+                </li>
+              </ul>
+            </div>
+            <div id="videoRef" className="invisible" ref={videoRef}></div>
+            {
+              showVideo && (
+                <div id="videoDiv">
+                  <h4>Video</h4>
+                  <div id="videoClipDiv">
+                    <iframe src="https://www.youtube.com/embed/sEBsURFVTLI?si=lHksngFkm5QzktHf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    <div id="videoScreenDiv"></div>
+                  </div>
+                </div>
+              )
+            }
+            <div id="gameRef" className="invisible" ref={gameRef}></div>
+            {
+              showGame && (
+                <div id="gameDiv">
+                  <h4>Game</h4>
+                  <div id="gameClipDiv">
+                    <p>Tap/Click around to move</p>
+                    <iframe src="./src/game/index.html" frameBorder="0"></iframe>
+                  </div>
+                </div>
+              )
+            }
+            <div id="musicRef" className="invisible" ref={musicRef}></div>
+            { showMusic && (
+              <div id="musicDiv">
+                <div id="musicClipDiv">
+                  <h4>Music</h4>
+                  <iframe src="./src/musicPlayer/index.html" frameBorder="0" scrolling="no"></iframe>
+                </div>
+              </div>
+              )
+            }
+            <div id="chatRef" className="invisible" ref={chatRef}></div>
+            { showChat && (
+              <div id="chatDiv">
+                <div id="chatClipDiv">
+                  <h4>Chat</h4>
+                <iframe src="./src/chat/index.html" frameBorder="0" scrolling="yes"></iframe>
+                </div>
+              </div>
+              )
+            }
+            <div id="selfDestructRef" className="invisible" ref={selfDestructRef}></div>
+            { showSelfDestruct && (
+              <div id="selfDestructDiv">
+                <div id="self-destruct-div">
+                  <h4>Are you sure?</h4>
+                  <button id="self-destruct-button" onClick={handleSelfDestruct}>
+                    <span id="sd-button-front">
+                      Self-Destruct
+                    </span>
+                  </button>
+                </div>
+              </div>
+              )
+            }
+            <div id="signatureDiv">
+              <div id="signaturePicDiv">
+                <img id="signaturePic" src={periclesIcon} />
+              </div>
+              <div id="signatureTextDiv">
+                <p>Built by <button id="signatureButton">Themistogenes</button> a.k.a. Justin</p>
+              </div>
+            </div>
+          </div>
+          <div id="footerDiv">
+          {
+            showTerminal && (
+              <div id="terminalDiv">
+                <div id="terminalOutputDiv">
+                  <div id="terminalOutputContent">
+                    {
+                      terminalOutput.map((item, index) => (
+                        <p key={index}>{item}</p>
+                      ))
+                    }             
+                  </div>
+                </div>
+                <div id="terminalInputDiv">
+                  <input 
+                    type="text"
+                    placeholder="Type here..." 
+                    value={terminalInput} 
+                    onChange={(e) => {
+                      setTerminalInput(e.target.value);
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        handleTerminalInput();
+                      }
+                    }}
+                  />
+                  <button
+                    onClick={handleTerminalInput}
+                  >
+                    Enter
+                  </button>
+                </div>
+              </div>
+            )
+          }
+            <button
+              onClick={toggleShowTerminal}
+            >
+              {showTerminal ? ('Hide Terminal') : ('Terminal')}
+            </button>
+          </div>      
+        </>
+        ) : (
+          <div id="afterSelfDestructDiv">
+            <div id="afterSelfDestructTextDiv">
+              System Error
             </div>
           </div>
         )
       }
-        <button
-          onClick={toggleShowTerminal}
-        >
-          {showTerminal ? ('Hide Terminal') : ('Terminal')}
-        </button>
-      </div>      
-    </>
-    ) : (
-      <div id="afterSelfDestructDiv">
-        <div id="afterSelfDestructTextDiv">
-          System Error
-        </div>
-      </div>
-    )
-  }
 
       {/* Next.js icon by Icons8: https://icons8.com/icon/gwR0hbBi5JeZ/next.js */}
       {/* Firebase icon by Icons8: https://icons8.com/icon/3Gh7IUPjoIx4/firebase */}
