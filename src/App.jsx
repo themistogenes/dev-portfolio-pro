@@ -294,13 +294,21 @@ function App() {
   return (
     <>
       <div id="loadingMask">
-        <div id="loadingDiv">
-          <p>Loading portfolio...</p>
-          <div id="loadingBar">
-            <div id="loadingProgress"></div>
+        {/* Loading Bar */}
+        {/* 
+          <div id="loadingDiv">
+            <p>Loading portfolio...</p>
+            <div id="loadingBar">
+              <div id="loadingProgress"></div>
+            </div>
+          </div> 
+        */}
+        {/* Rotating Helmet */}
+          <div id="screensaverDiv">
+            <img id="screensaverPic" src={helmetGreen} />
           </div>
-        </div>
       </div>
+
       { showScreensaver && (
           <div id="screensaverContainerDiv" onClick={() => {setShowScreensaver(false)}}>
             <div id="screensaverDiv">
@@ -309,6 +317,7 @@ function App() {
           </div>
         )
       }
+
       { showUnlockAlert && (
         <div 
           id="unlockContainerDiv"
@@ -320,6 +329,7 @@ function App() {
         </div>
         )
       }
+      
       {
         !isSelfDestructing ? (
         <>
