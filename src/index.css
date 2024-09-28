@@ -435,7 +435,7 @@ li {
   height: 16px;
   padding: 10px;
   position: fixed;
-  z-index: 11;
+  z-index: 4;
   top: 32px;
   right: 6px;
   display: flex;
