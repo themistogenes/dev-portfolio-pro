@@ -28,6 +28,8 @@ function App() {
   const [showChat, setShowChat] = useState(false);
   const [showSelfDestruct, setShowSelfDestruct] = useState(false);
   const [unlock, setUnlock] = useState(false);
+  const [showUnlockAlert, setShowUnlockAlert] = useState(false);
+  const [unlockAlertMessage, setUnlockAlertMessage] = useState('Feature unlocked!');
   const [themeIsPlaying, setThemeIsPlaying] = useState(false);
   const [timeAtPause, setTimeAtPause] = useState(0);
 
@@ -74,6 +76,8 @@ function App() {
           ...terminalOutput,
           'theme > Enjoy the theme song.'
         ]);
+        setUnlockAlertMessage('Theme song unlocked!');
+        setShowUnlockAlert(true);
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -94,6 +98,8 @@ function App() {
           handleTheme();
         }
         // scrollToTarget(musicRef);
+        setUnlockAlertMessage('Music unlocked!');
+        setShowUnlockAlert(true);
         window.location.href="#musicRef";
       } else {
         setTerminalOutput([
@@ -111,6 +117,8 @@ function App() {
           'video > Enjoy the video.'
         ]);
         // scrollToTarget(videoRef);
+        setUnlockAlertMessage('Video unlocked!');
+        setShowUnlockAlert(true);
         window.location.href="#videoRef";
       } else {
         setTerminalOutput([
@@ -128,6 +136,8 @@ function App() {
           'game > Enjoy the game.'
         ]);
         // scrollToTarget(gameRef);
+        setUnlockAlertMessage('Game unlocked!');
+        setShowUnlockAlert(true);
         window.location.href="#gameRef";
       } else {
         setTerminalOutput([
@@ -145,6 +155,8 @@ function App() {
           'chat > Enjoy the chat.'
         ]);
         // scrollToTarget(chatRef);
+        setUnlockAlertMessage('Chat unlocked!');
+        setShowUnlockAlert(true);
         window.location.href="#chatRef";
       } else {
         setTerminalOutput([
@@ -162,6 +174,8 @@ function App() {
           'selfdestruct > I\'d be careful if I were you...'
         ]);
         // scrollToTarget(selfDestructRef);
+        setUnlockAlertMessage('Self-Destruct unlocked!');
+        setShowUnlockAlert(true);
         window.location.href="#selfDestructRef";
       } else {
         setTerminalOutput([
@@ -184,6 +198,8 @@ function App() {
           ...terminalOutput,
           'unlock > Enjoy all the unlocked features.'
         ]);
+        setUnlockAlertMessage('All features unlocked!');
+        setShowUnlockAlert(true);
         setShowVideo(true);
         setShowGame(true);
         setShowMusic(true);
@@ -290,6 +306,17 @@ function App() {
               <img id="screensaverPic" src={helmetGreen} />
             </div>
           </div>
+        )
+      }
+      { showUnlockAlert && (
+        <div 
+          id="unlockContainerDiv"
+          onClick={() => {setShowUnlockAlert(false)}}
+        >
+          <div id="unlockDiv">
+            {unlockAlertMessage}
+          </div>
+        </div>
         )
       }
       {
@@ -672,23 +699,27 @@ function App() {
         )
       }
 
-      {/* Next.js icon by Icons8: https://icons8.com/icon/gwR0hbBi5JeZ/next.js */}
-      {/* Firebase icon by Icons8: https://icons8.com/icon/3Gh7IUPjoIx4/firebase */}
-      {/* MongoDB icon by Icons8: https://icons8.com/icon/bosfpvRzNOG8/mongo-db */}
-      {/* NodeJS icon by Icons8: https://icons8.com/icon/t9oCxEN7McHZ/nodejs */}
-      {/* ExpressJS icon by Icons8: https://icons8.com/icon/kg46nzoJrmTR/express-js */}
-      {/* React icon by Icons8: https://icons8.com/icon/35989/react-native */}
-      {/* Bootstrap icon by Icons8: https://icons8.com/icon/OODqBWCdRF8o/bootstrap */}
-      {/* HTML icon by Icons8: https://icons8.com/icon/7hA5Ny9rDAmV/html-5p */}
-      {/* CSS icon by Icons8: https://icons8.com/icon/38272/css3 */}
-      {/* javaScript icon by Icons8: https://icons8.com/icon/106036/javascript-logo */}
-      {/* Greek Helmet icon (multi-color) by Icons8: https://icons8.com/icon/ZaOCyh5XGHMQ/greek-helmet */}
-      {/* Greek Helmet icon (single color) by Icons8: https://icons8.com/icon/GSiELqDFNtdO/greek-helmet */}
-      {/* Pericles icon (single color) by Icons8: https://icons8.com/icon/2DeY03FlmllF/pericles */}
-      {/* Greek pillar base icon by Icons8: https://icons8.com/icon/60859/greek-pillar-base */}
-      {/* Sound icon by Icons8: https://icons8.com/icon/Zp6GOGzBD2LK/audio */}
+      {/* Attributes 
+        <>
+          Next.js icon by Icons8: https://icons8.com/icon/gwR0hbBi5JeZ/next.js
+          Firebase icon by Icons8: https://icons8.com/icon/3Gh7IUPjoIx4/firebase
+          MongoDB icon by Icons8: https://icons8.com/icon/bosfpvRzNOG8/mongo-db
+          NodeJS icon by Icons8: https://icons8.com/icon/t9oCxEN7McHZ/nodejs
+          ExpressJS icon by Icons8: https://icons8.com/icon/kg46nzoJrmTR/express-js
+          React icon by Icons8: https://icons8.com/icon/35989/react-native
+          Bootstrap icon by Icons8: https://icons8.com/icon/OODqBWCdRF8o/bootstrap
+          HTML icon by Icons8: https://icons8.com/icon/7hA5Ny9rDAmV/html-5p
+          CSS icon by Icons8: https://icons8.com/icon/38272/css3
+          javaScript icon by Icons8: https://icons8.com/icon/106036/javascript-logo
+          Greek Helmet icon (multi-color) by Icons8: https://icons8.com/icon/ZaOCyh5XGHMQ/greek-helmet
+          Greek Helmet icon (single color) by Icons8: https://icons8.com/icon/GSiELqDFNtdO/greek-helmet
+          Pericles icon (single color) by Icons8: https://icons8.com/icon/2DeY03FlmllF/pericles
+          Greek pillar base icon by Icons8: https://icons8.com/icon/60859/greek-pillar-base
+          Sound icon by Icons8: https://icons8.com/icon/Zp6GOGzBD2LK/audio
 
-      {/* Theme song: "Generic Futuristic Hero's Theme", by Marc Armitage */}
+          Theme song: "Generic Futuristic Hero's Theme", by Marc Armitage
+        </>
+      */}
     </>
   )
 }
