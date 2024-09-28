@@ -98,9 +98,9 @@ function App() {
           handleTheme();
         }
         // scrollToTarget(musicRef);
+        // window.location.href="#musicRef";
         setUnlockAlertMessage('Music unlocked!');
         setShowUnlockAlert(true);
-        window.location.href="#musicRef";
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -117,9 +117,9 @@ function App() {
           'video > Enjoy the video.'
         ]);
         // scrollToTarget(videoRef);
+        // window.location.href="#videoRef";
         setUnlockAlertMessage('Video unlocked!');
         setShowUnlockAlert(true);
-        window.location.href="#videoRef";
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -136,9 +136,9 @@ function App() {
           'game > Enjoy the game.'
         ]);
         // scrollToTarget(gameRef);
+        // window.location.href="#gameRef";
         setUnlockAlertMessage('Game unlocked!');
         setShowUnlockAlert(true);
-        window.location.href="#gameRef";
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -155,9 +155,9 @@ function App() {
           'chat > Enjoy the chat.'
         ]);
         // scrollToTarget(chatRef);
+        // window.location.href="#chatRef";
         setUnlockAlertMessage('Chat unlocked!');
         setShowUnlockAlert(true);
-        window.location.href="#chatRef";
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -174,9 +174,9 @@ function App() {
           'selfdestruct > I\'d be careful if I were you...'
         ]);
         // scrollToTarget(selfDestructRef);
+        // window.location.href="#selfDestructRef";
         setUnlockAlertMessage('Self-Destruct unlocked!');
         setShowUnlockAlert(true);
-        window.location.href="#selfDestructRef";
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -586,7 +586,15 @@ function App() {
                 <div id="videoDiv">
                   <h4>Video</h4>
                   <div id="videoClipDiv">
-                    <iframe src="https://www.youtube.com/embed/sEBsURFVTLI?si=lHksngFkm5QzktHf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    <iframe 
+                      src="https://www.youtube.com/embed/sEBsURFVTLI?si=lHksngFkm5QzktHf"
+                      title="YouTube video player" 
+                      frameBorder="0"
+                      scrolling="no" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
                     <div id="videoScreenDiv"></div>
                   </div>
                 </div>
@@ -599,7 +607,8 @@ function App() {
                   <h4>Game</h4>
                   <div id="gameClipDiv">
                     <p>Tap/Click around to move</p>
-                    <iframe src="./src/game/index.html" frameBorder="0"></iframe>
+                    <iframe src="./src/game/index.html" frameBorder="0" scrolling="no">
+                    </iframe>
                   </div>
                 </div>
               )
@@ -609,7 +618,8 @@ function App() {
               <div id="musicDiv">
                 <div id="musicClipDiv">
                   <h4>Music</h4>
-                  <iframe src="./src/musicPlayer/index.html" frameBorder="0" scrolling="no"></iframe>
+                  <iframe src="./src/musicPlayer/index.html" frameBorder="0" scrolling="no">
+                  </iframe>
                 </div>
               </div>
               )

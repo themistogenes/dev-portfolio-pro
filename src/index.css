@@ -135,7 +135,7 @@ table {
   justify-content: center;
   align-items: center;
 
-  animation: disappear 2s linear forwards;
+  animation: disappear 1s linear forwards;
 }
 
 #unlockDiv {
@@ -939,6 +939,8 @@ li {
 
   display: flex;
   flex-direction: column-reverse;
+
+  text-align: left;
 }
 
 #terminalInputDiv {
