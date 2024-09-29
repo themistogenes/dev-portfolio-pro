@@ -23,6 +23,7 @@ function App() {
   const [terminalInput, setTerminalInput] = useState('');
   const [terminalOutput, setTerminalOutput] = useState(['Try saying \'hello\'...']);
   const [showScreensaver, setShowScreensaver] = useState(false);
+  const [showDevMode, setShowDevMode] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
   const [showGame, setShowGame] = useState(false);
   const [showMusic, setShowMusic] = useState(false);
@@ -67,7 +68,7 @@ function App() {
     else if (terminalInput === 'commands') {
       setTerminalOutput([
         ...terminalOutput,
-        'commands > hello, commands, clear, theme, music, video, game, chat, unlock, lock, hide, screensaver, reload, selfdestruct'
+        'commands > hello, commands, clear, theme, devmode, music, video, game, chat, unlock, lock, hide, screensaver, reload, selfdestruct'
       ]);
     }
 
@@ -86,6 +87,23 @@ function App() {
         ]);
       }
       handleTheme();
+    }
+
+    else if (terminalInput === 'devmode') {
+      if (!showDevMode) {
+        setTerminalOutput([
+          ...terminalOutput,
+          'devmode > So, you think you\'re a web developer now?'
+        ]);
+        setUnlockAlertMessage('Developer Mode unlocked!');
+        setShowUnlockAlert(true);
+      } else {
+        setTerminalOutput([
+          ...terminalOutput,
+          'devmode > Developer Mode off.'
+        ]);
+      }
+      setShowDevMode(!showDevMode);
     }
     
     else if (terminalInput === 'music') {
@@ -228,7 +246,6 @@ function App() {
       setShowMusic(false);
       setShowChat(false);
       setShowSelfDestruct(false);
-      setUnlock(false);
     } 
 
     else if (terminalInput === 'hide') {
@@ -255,7 +272,6 @@ function App() {
         `${terminalInput} > Sorry, I don\'t recognize that command.`
       ]);
     }
-
   }
 
   const theme = useRef(new Audio(themeSong)).current;
@@ -286,10 +302,10 @@ function App() {
     setIsSelfDestructing(true);
   }
 
-  useEffect(() => {
-    // console.log('themeIsPlaying', themeIsPlaying);
-    // console.log('timeAtPause', timeAtPause);
-  }, [themeIsPlaying, timeAtPause]);
+  // useEffect(() => {
+  //   console.log('themeIsPlaying', themeIsPlaying);
+  //   console.log('timeAtPause', timeAtPause);
+  // }, [themeIsPlaying, timeAtPause]);
 
   return (
     <>
@@ -483,12 +499,12 @@ function App() {
               )
             }
           </div>
-          <div 
-            id="containerDiv" 
+          <div id="containerDiv" 
             onClick={() => {
               setShowNavModal(false);
               setShowTerminal(false);
             }}
+            className={showDevMode ? "devMode" : ""}
           >
             <div id="meanderDivTop" className="meanderDiv"></div>
             <div id="headerDiv">

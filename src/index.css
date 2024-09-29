@@ -147,7 +147,7 @@ table {
   justify-content: center;
   align-items: center;
 
-  animation: disappear 1s linear forwards;
+  /* animation: disappear 1s linear forwards; */
 }
 
 #unlockDiv {
@@ -274,6 +274,21 @@ li {
 
 .grayText {
   color: gray;
+}
+
+.devMode,
+.devMode h1,
+.devMode h4,
+.devMode div,
+.devMode span,
+.devMode p,
+.devMode a,
+.devMode ul,
+.devMode li,
+.devMode button,
+.devMode img {
+  box-sizing: border-box;
+  border: 1px solid chartreuse;
 }
 
 #navigationDiv {
