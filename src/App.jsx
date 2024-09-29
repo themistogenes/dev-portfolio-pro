@@ -358,122 +358,127 @@ function App() {
             </button>
             {
               showNavModal && (
-                <div id="navigationModal">
-                  <button 
-                    id="contactMeButton" 
-                    onClick={() => {
-                      window.location.href="#contactMeDiv";
-                      setShowNavModal(false);
-                    }}
-                  >
-                    Contact Me
-                  </button>
-                  <button 
-                    id="aboutMeButton"
-                    onClick={() => {
-                      window.location.href="#aboutMeDiv";
-                      setShowNavModal(false);
-                    }}
-                  >
-                    About Me
-                  </button>
-                  <button 
-                    id="toolsetButton"
-                    onClick={() => {
-                      window.location.href="#toolsetDiv";
-                      setShowNavModal(false);
-                    }}
-                  >
-                    Toolset
-                  </button>
-                  <button 
-                    id="projectsButton"
-                    onClick={() => {
-                      window.location.href="#projectsDiv";
-                      setShowNavModal(false);
-                    }}
-                  >
-                    Projects
-                  </button>
-                  <button 
-                    id="expCertButton"
-                    onClick={() => {
-                      window.location.href="#expCertDiv";
-                      setShowNavModal(false);
-                    }}
-                  >
-                    Experience & Certification
-                  </button>
-                  {
-                    showVideo && (
-                      <button 
-                      id="videoButton"
+                <div 
+                  id="navigationModalContainer"
+                  onClick={() => {setShowNavModal(!showNavModal);}}
+                >
+                  <div id="navigationModal">
+                    <button 
+                      id="contactMeButton" 
                       onClick={() => {
-                        window.location.href="#videoDiv";
+                        window.location.href="#contactMeDiv";
                         setShowNavModal(false);
                       }}
                     >
-                      <img src={goldUnlockIcon} className="unlockIcon" />
-                      Video
+                      Contact Me
                     </button>
-                    )
-                  }
-                  {
-                    showGame && (
-                      <button 
-                      id="gameButton"
+                    <button 
+                      id="aboutMeButton"
                       onClick={() => {
-                        window.location.href="#gameDiv";
+                        window.location.href="#aboutMeDiv";
                         setShowNavModal(false);
                       }}
                     >
-                      <img src={goldUnlockIcon} className="unlockIcon" />
-                      Game
+                      About Me
                     </button>
-                    )
-                  }
-                  {
-                    showMusic && (
-                      <button 
-                      id="musicButton"
+                    <button 
+                      id="toolsetButton"
                       onClick={() => {
-                        window.location.href="#musicDiv";
+                        window.location.href="#toolsetDiv";
                         setShowNavModal(false);
                       }}
                     >
-                      <img src={goldUnlockIcon} className="unlockIcon" />
-                      Music
+                      Toolset
                     </button>
-                    )
-                  }
-                  {
-                    showChat && (
-                      <button 
-                      id="chatButton"
+                    <button 
+                      id="projectsButton"
                       onClick={() => {
-                        window.location.href="#chatDiv";
+                        window.location.href="#projectsDiv";
                         setShowNavModal(false);
                       }}
                     >
-                      <img src={goldUnlockIcon} className="unlockIcon" />
-                      Chat
+                      Projects
                     </button>
-                    )
-                  }
-                  {
-                    showSelfDestruct && (
-                      <button 
-                      id="selfDestructButton"
+                    <button 
+                      id="expCertButton"
                       onClick={() => {
-                        window.location.href="#selfDestructDiv";
+                        window.location.href="#expCertDiv";
                         setShowNavModal(false);
                       }}
                     >
-                      <img src={goldUnlockIcon} className="unlockIcon" />
-                      Self-Destruct
+                      Experience & Certification
                     </button>
-                    )
-                  }
+                    {
+                      showVideo && (
+                        <button 
+                        id="videoButton"
+                        onClick={() => {
+                          window.location.href="#videoDiv";
+                          setShowNavModal(false);
+                        }}
+                      >
+                        <img src={goldUnlockIcon} className="unlockIcon" />
+                        Video
+                      </button>
+                      )
+                    }
+                    {
+                      showGame && (
+                        <button 
+                        id="gameButton"
+                        onClick={() => {
+                          window.location.href="#gameDiv";
+                          setShowNavModal(false);
+                        }}
+                      >
+                        <img src={goldUnlockIcon} className="unlockIcon" />
+                        Game
+                      </button>
+                      )
+                    }
+                    {
+                      showMusic && (
+                        <button 
+                        id="musicButton"
+                        onClick={() => {
+                          window.location.href="#musicDiv";
+                          setShowNavModal(false);
+                        }}
+                      >
+                        <img src={goldUnlockIcon} className="unlockIcon" />
+                        Music
+                      </button>
+                      )
+                    }
+                    {
+                      showChat && (
+                        <button 
+                        id="chatButton"
+                        onClick={() => {
+                          window.location.href="#chatDiv";
+                          setShowNavModal(false);
+                        }}
+                      >
+                        <img src={goldUnlockIcon} className="unlockIcon" />
+                        Chat
+                      </button>
+                      )
+                    }
+                    {
+                      showSelfDestruct && (
+                        <button 
+                        id="selfDestructButton"
+                        onClick={() => {
+                          window.location.href="#selfDestructDiv";
+                          setShowNavModal(false);
+                        }}
+                      >
+                        <img src={goldUnlockIcon} className="unlockIcon" />
+                        Self-Destruct
+                      </button>
+                      )
+                    }
+                  </div>
                 </div>
               )
             }
