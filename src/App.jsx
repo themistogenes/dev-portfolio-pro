@@ -302,11 +302,6 @@ function App() {
     setIsSelfDestructing(true);
   }
 
-  // useEffect(() => {
-  //   console.log('themeIsPlaying', themeIsPlaying);
-  //   console.log('timeAtPause', timeAtPause);
-  // }, [themeIsPlaying, timeAtPause]);
-
   return (
     <>
       <div id="loadingMask">
