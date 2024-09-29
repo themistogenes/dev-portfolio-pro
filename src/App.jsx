@@ -343,6 +343,7 @@ function App() {
           <div id="unlockDiv">
             {unlockAlertMessage}
           </div>
+          <img src={goldUnlockIcon} alt="" />
         </div>
         )
       }
