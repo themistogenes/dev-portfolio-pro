@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react"
+import React, { useRef, useState } from "react"
 import Slider from "./components/Slider"
 import themeSong from "./assets/themeSong.flac"
 import helmetGreen from "./assets/helmetGreen.png"
@@ -32,21 +32,12 @@ function App() {
   const [unlock, setUnlock] = useState(false);
   const [showUnlockAlert, setShowUnlockAlert] = useState(false);
   const [unlockAlertMessage, setUnlockAlertMessage] = useState('Feature unlocked!');
+  const [navigationTarget, setNavigationTarget] = useState(null);
   const [themeIsPlaying, setThemeIsPlaying] = useState(false);
   const [timeAtPause, setTimeAtPause] = useState(0);
 
-  const navigationRef = useRef(null);
-  const videoRef = useRef(null);
-  const gameRef = useRef(null);
-  const musicRef = useRef(null);
-  const chatRef = useRef(null);
-  const selfDestructRef = useRef(null);
-
-  function scrollToTarget(ref) {
-    ref.current.scrollIntoView({
-      alignToTop: true,
-      behavior: "smooth"
-    })
+  function jumpTo(target) {
+    window.location.href = `${target}`;
   }
 
   function toggleNavModal() {
@@ -100,7 +91,7 @@ function App() {
       } else {
         setTerminalOutput([
           ...terminalOutput,
-          'devmode > Developer Mode off.'
+          'devmode > Developer mode off.'
         ]);
       }
       setShowDevMode(!showDevMode);
@@ -116,9 +107,8 @@ function App() {
         if (themeIsPlaying) {
           handleTheme();
         }
-        // scrollToTarget(musicRef);
-        // window.location.href="#musicRef";
         setUnlockAlertMessage('Music unlocked!');
+        setNavigationTarget('#musicDiv');
         setShowUnlockAlert(true);
       } else {
         setTerminalOutput([
@@ -135,9 +125,8 @@ function App() {
           ...terminalOutput,
           'video > Enjoy the video.'
         ]);
-        // scrollToTarget(videoRef);
-        // window.location.href="#videoRef";
         setUnlockAlertMessage('Video unlocked!');
+        setNavigationTarget('#videoDiv');
         setShowUnlockAlert(true);
       } else {
         setTerminalOutput([
@@ -154,9 +143,8 @@ function App() {
           ...terminalOutput,
           'game > Enjoy the game.'
         ]);
-        // scrollToTarget(gameRef);
-        // window.location.href="#gameRef";
         setUnlockAlertMessage('Game unlocked!');
+        setNavigationTarget('#gameDiv');
         setShowUnlockAlert(true);
       } else {
         setTerminalOutput([
@@ -173,9 +161,8 @@ function App() {
           ...terminalOutput,
           'chat > Enjoy the chat.'
         ]);
-        // scrollToTarget(chatRef);
-        // window.location.href="#chatRef";
         setUnlockAlertMessage('Chat unlocked!');
+        setNavigationTarget('#chatDiv');
         setShowUnlockAlert(true);
       } else {
         setTerminalOutput([
@@ -192,9 +179,8 @@ function App() {
           ...terminalOutput,
           'selfdestruct > I\'d be careful if I were you...'
         ]);
-        // scrollToTarget(selfDestructRef);
-        // window.location.href="#selfDestructRef";
         setUnlockAlertMessage('Self-Destruct unlocked!');
+        setNavigationTarget('#selfDestructDiv');
         setShowUnlockAlert(true);
       } else {
         setTerminalOutput([
@@ -217,16 +203,15 @@ function App() {
           ...terminalOutput,
           'unlock > Enjoy all the unlocked features.'
         ]);
-        setUnlockAlertMessage('All features unlocked!');
-        setShowUnlockAlert(true);
         setShowVideo(true);
         setShowGame(true);
         setShowMusic(true);
         setShowChat(true);
         setShowSelfDestruct(true);
         setUnlock(true);
-        // scrollToTarget(navigationRef);
-        // window.location.href="#navigationRef";
+        setUnlockAlertMessage('All features unlocked!');
+        setNavigationTarget('#meanderDivTop');
+        setShowUnlockAlert(true);
       } else {
         setTerminalOutput([
           ...terminalOutput,
@@ -333,12 +318,16 @@ function App() {
       { showUnlockAlert && (
         <div 
           id="unlockContainerDiv"
-          onClick={() => {setShowUnlockAlert(false)}}
+          onClick={() => {
+            setShowUnlockAlert(false);
+            navigationTarget && jumpTo(navigationTarget);
+          }}
         >
           <div id="unlockDiv">
             {unlockAlertMessage}
           </div>
           <img src={goldUnlockIcon} alt="" />
+          <p>(click to close)</p>
         </div>
         )
       }
@@ -346,7 +335,6 @@ function App() {
       {
         !isSelfDestructing ? (
         <>
-          <div id="navigationRef" className="invisible" ref={navigationRef}></div>
           <div id="navigationDiv">
             <button id="navigateButton" onClick={toggleNavModal}>
               Navigate
@@ -614,7 +602,7 @@ function App() {
                 </li>
               </ul>
             </div>
-            <div id="videoRef" className="invisible" ref={videoRef}></div>
+
             {
               showVideo && (
                 <div id="videoDiv">
@@ -634,7 +622,7 @@ function App() {
                 </div>
               )
             }
-            <div id="gameRef" className="invisible" ref={gameRef}></div>
+
             {
               showGame && (
                 <div id="gameDiv">
@@ -647,7 +635,7 @@ function App() {
                 </div>
               )
             }
-            <div id="musicRef" className="invisible" ref={musicRef}></div>
+
             { showMusic && (
               <div id="musicDiv">
                 <div id="musicClipDiv">
@@ -658,7 +646,7 @@ function App() {
               </div>
               )
             }
-            <div id="chatRef" className="invisible" ref={chatRef}></div>
+
             { showChat && (
               <div id="chatDiv">
                 <div id="chatClipDiv">
@@ -668,7 +656,7 @@ function App() {
               </div>
               )
             }
-            <div id="selfDestructRef" className="invisible" ref={selfDestructRef}></div>
+
             { showSelfDestruct && (
               <div id="selfDestructDiv">
                 <div id="self-destruct-div">
@@ -682,6 +670,7 @@ function App() {
               </div>
               )
             }
+
             <div id="signatureDiv">
               <div id="signaturePicDiv">
                 <img id="signaturePic" src={periclesIcon} />
