@@ -186,7 +186,10 @@ body {
   margin-top: 2vh;
 }
 
-#contactMeDiv, 
+#contactMeDiv {
+  margin: 5vh auto 0 auto;
+}
+
 #aboutMeDiv,
 #toolsetDiv,
 #projectsDiv,
@@ -196,9 +199,13 @@ body {
 #musicDiv,
 #chatDiv,
 #selfDestructDiv,
-#signatureDiv,
-#dev-initials-div {
-  margin: 5vh auto;
+#signatureDiv {
+  margin: 0 auto;
+  padding-top: 5vh;
+}
+
+#signatureDiv {
+  margin-bottom: 5vh;
 }
 
 button {
@@ -952,8 +959,7 @@ li {
   #musicDiv,
   #chatDiv,
   #selfDestructDiv,
-  #signatureDiv,
-  #dev-initials-div {
+  #signatureDiv {
     width: auto;
   }
 
@@ -962,8 +968,19 @@ li {
     margin: 0 auto;
   }
 
-  #contactMeDiv, 
-  #aboutMeDiv,
+  #contactMeDiv{
+    margin: 3.5vh 5vw 0 5vw;
+  }
+
+  #aboutMeHeaderSmall {
+    margin-top: 3.5vh;
+  }
+
+  #aboutMeDiv {
+    margin: 0 5vw;
+    padding-top: 5vh;
+  }
+
   #toolsetDiv,
   #projectsDiv,
   #expCertDiv,
@@ -972,9 +989,13 @@ li {
   #musicDiv,
   #chatDiv,
   #selfDestructDiv,
-  #signatureDiv,
-  #dev-initials-div {
-    margin: 3.5vh 5vw;
+  #signatureDiv {
+    margin: 0 5vw;
+    padding-top: 3.5vh;
+  }
+
+  #signatureDiv {
+    margin-bottom: 3.5vh;
   }
 
   #navigationModal {
@@ -996,10 +1017,6 @@ li {
     padding: 0;
   }
 
-  #aboutMeHeaderSmall {
-    display: block;
-  }
-
   #aboutMeDiv {
     flex-wrap: wrap;
     flex-direction: column-reverse;
@@ -1008,10 +1025,6 @@ li {
 
   #aboutMeTextDiv {
     flex-basis: 100%;
-  }
-
-  #aboutMeTextDiv h4 {
-    display: none;
   }
 
   #aboutMePicDiv {
