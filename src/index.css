@@ -149,7 +149,6 @@ table {
 }
 
 /* ===== Main CSS ===== */
-
 body {
   overflow-x: hidden;
   box-sizing: border-box;
@@ -530,6 +529,8 @@ li {
   margin: 0 auto;
   width: 100%;
   max-width: 25vw;
+  max-width: 400px;
+  
   border-radius: 0% 0% 100% 100%;
   animation: strobe 2s linear infinite;
 }
@@ -1020,7 +1021,8 @@ li {
 
   #aboutMePic {
     display: block;
-    max-width: 35vw;
+    width: 250px;
+    height: 230px;
   }
 
   #expCertDiv {
@@ -1029,6 +1031,7 @@ li {
 
   #videoClipDiv {
     width: auto;
+    max-width: 324px;
   }
 
   #videoClipDiv iframe {
@@ -1077,13 +1080,6 @@ li {
 
   #signatureTextDiv {
     text-align: center;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #aboutMePic {
-    display: block;
-    max-width: 60vw;
   }
 }
 
