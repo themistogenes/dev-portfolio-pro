@@ -190,6 +190,7 @@ body {
 
 #contactMeDiv {
   margin: 5vh auto 0 auto;
+  width: fit-content;
 }
 
 #aboutMeDiv,
@@ -960,7 +961,8 @@ li {
   }
 
   #contactMeDiv{
-    margin: 3.5vh 5vw 0 5vw;
+    margin: 3.5vh auto 0 auto;
+    width: fit-content;
   }
 
   #aboutMeHeaderSmall {
@@ -1104,6 +1106,11 @@ li {
   #navigationModal {
     width: 90vw;
     margin-bottom: 15vh;
+  }
+
+  #contactMeDiv {
+    width: fit-content;
+    max-width: 90vw;
   }
 
   @keyframes toolsetScroll {

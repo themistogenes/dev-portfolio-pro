@@ -366,7 +366,7 @@ function App() {
                     <button 
                       id="contactMeButton" 
                       onClick={() => {
-                        window.location.href="#contactMeDiv";
+                        window.location.href="#meanderDivBottom";
                         setShowNavModal(false);
                       }}
                     >
@@ -503,7 +503,7 @@ function App() {
                 <br />
               </span>
             </div>
-            <div className="meanderDiv"></div>
+            <div id="meanderDivBottom" className="meanderDiv"></div>
             <div id="soundDiv" onClick={handleTheme}></div>
             <div id="contactMeDiv">
               <h4>Contact Me</h4>
