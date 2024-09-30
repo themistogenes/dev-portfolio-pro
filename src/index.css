@@ -205,6 +205,7 @@ body {
 }
 
 #signatureDiv {
+  padding-top: 10vh;
   margin-bottom: 5vh;
 }
 
@@ -547,62 +548,44 @@ li {
 }
 
 @keyframes toolsetScroll {
-  0% {
-    margin-right: 0;
-    margin-left: 100%;
-  }
-  12% {
-    margin-right: 25%;
-    margin-left: 50%;
-  }
-  24% {
-    margin-right: 50%;
-    margin-left: 0%;
-  }
-  36% {
-    margin-right: 75%;
-    margin-left: -50%;
-  }
-  50% {
-    margin-right: 100%;
-    margin-left: -100%;
-  }
-  64% {
-    margin-right: 75%;
-    margin-left: -50%;
-  }
-  76% {
-    margin-right: 50%;
-    margin-left: 0%;
-  }
-  88% {
-    margin-right: 25%;
-    margin-left: 50%;
-  }
-  100% {
-    margin-right: 0%;
-    margin-left: 100%;
-  }
+from {
+  margin-left: -150%;
+  margin-right: 150%;
+}
+to {
+  margin-left: 150%;
+  margin-right: -150%;
+}
 }
 
 #toolsetScrollerDiv {
   display: flex;
-  margin-left: 100%;
   width: fit-content;
-  animation: toolsetScroll 35s linear infinite;
+
+  margin-left: -150%;
+  margin-right: 150%;
+  
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 3vh 3vh;
+
+  animation: toolsetScroll 20s linear infinite;
 }
 
 #toolsetScrollerDiv img {
   height: 48px;
   width: 48px;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 #toolsetScrollerDiv img:hover {
   box-sizing: border-box;
-  border: 2px solid yellowgreen;
   border-radius: 2px;
-  cursor: pointer;
+
+  position: relative;
+  transform: scale(1.5);
+
+  cursor: grab;
 }
 
 .swiper {
@@ -1000,7 +983,8 @@ li {
   }
 
   #signatureDiv {
-    margin-bottom: 3.5vh;
+    padding-top: 10vh;
+    margin-bottom: 5vh;
   }
 
   #navigationModal {

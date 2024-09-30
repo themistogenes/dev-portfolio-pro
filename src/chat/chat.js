@@ -1,4 +1,4 @@
-console.log('Chat script working...');
+// console.log('Chat script working...');
 
 (function () {
   // Firebase configuration

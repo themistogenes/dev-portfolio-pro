@@ -3,7 +3,7 @@ import { k } from './kaboomCtx';
 import { displayDialogue } from './utils';
 import { setCamScale } from './utils';
 
-console.log('Game script working...');
+// console.log('Game script working...');
 
 k.loadSprite('spritesheet', './spritesheet.png', {
   sliceX: 39,

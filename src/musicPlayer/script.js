@@ -1,4 +1,4 @@
-console.log('Music script working...');
+// console.log('Music script working...');
 
 const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
