@@ -548,28 +548,27 @@ li {
 }
 
 @keyframes toolsetScroll {
-from {
-  margin-left: -150%;
-  margin-right: 150%;
-}
-to {
-  margin-left: 150%;
-  margin-right: -150%;
-}
+  0% {
+    margin-left: -150%;
+  }
+  60% {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  100% {
+    margin-left: 100%;
+  }
 }
 
 #toolsetScrollerDiv {
   display: flex;
   width: fit-content;
-
-  margin-left: -150%;
-  margin-right: 150%;
   
   overflow-y: hidden;
   overflow-x: hidden;
   padding: 3vh 3vh;
 
-  animation: toolsetScroll 20s linear infinite;
+  animation: toolsetScroll 15s linear forwards infinite;
 }
 
 #toolsetScrollerDiv img {
@@ -1101,5 +1100,18 @@ to {
   #navigationModal {
     width: 90vw;
     margin-bottom: 15vh;
+  }
+
+  @keyframes toolsetScroll {
+    0% {
+      margin-left: -300%;
+    }
+    60% {
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    100% {
+      margin-left: 100%;
+    }
   }
 }
