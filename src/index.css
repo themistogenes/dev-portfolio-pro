@@ -207,6 +207,10 @@ body {
   padding-top: 5vh;
 }
 
+#musicDiv {
+  margin-bottom: -5vh;
+}
+
 #signatureDiv {
   padding-top: 10vh;
   margin-bottom: 5vh;
