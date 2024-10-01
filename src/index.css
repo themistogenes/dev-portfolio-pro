@@ -540,8 +540,33 @@ li {
   line-height: 2.5rem;
 }
 
-#contactMeDiv button:hover {
+@keyframes push {
+  0% {
+    box-shadow: 2px 4px 0 gray;
+  }
+  50% {
+    box-shadow: 1px 2px 0 gray;
+    left: 1px;
+    top: -2px;
+  }
+  100% {
+    box-shadow: 0px 1px 0 gray;
+    left: 1px;
+    top: -1px;
+  }
+}
+
+#contactMeDiv button {
+  box-sizing: border-box;
+  position: relative;
+  top: -4px;
   box-shadow: 2px 4px 0 gray;
+}
+
+#contactMeDiv button:hover {
+  box-sizing: border-box;
+  position: relative;
+  animation: push .25s linear forwards;
 }
 
 #aboutMeHeaderSmall {
@@ -664,13 +689,26 @@ li {
   margin: 10px 0;
 }
 
+#contactMeDiv button:hover {
+  box-sizing: border-box;
+  position: relative;
+  animation: push .25s linear forwards;
+}
+
 .swiper-slide button {
-  margin: 6px 0;
+  margin: 6px 2px;
   margin-right: 20px;
+
+  box-sizing: border-box;
+  position: relative;
+  top: -4px;
+  box-shadow: 2px 4px 0 gray;
 }
 
 .swiper-slide button:hover {
-  box-shadow: 2px 4px 0 gray;
+  box-sizing: border-box;
+  position: relative;
+  animation: push .25s linear forwards;
 }
 
 .swiper-slide button a {
@@ -890,8 +928,17 @@ li {
   gap: 5px;
 }
 
-#signatureButton:hover {
+#signatureButton {
+  box-sizing: border-box;
+  position: relative;
+  top: -4px;
   box-shadow: 2px 4px 0 gray;
+}
+
+#signatureButton:hover {
+  box-sizing: border-box;
+  position: relative;
+  animation: push .25s linear forwards;
 }
 
 @keyframes rotate {

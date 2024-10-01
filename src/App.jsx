@@ -588,15 +588,39 @@ function App() {
                   <ul>
                     <li>
                         <span className="material-symbols-outlined">location_on</span> 
-                        Location: <button>Cincinnati, OH</button>
+                        Location:
+                        {' '} 
+                        <button
+                          onClick={() => {
+                            window.open("https://maps.app.goo.gl/Buv36tx9JHCRq3yG6", "_blank");
+                          }}
+                        >
+                          Cincinnati, OH
+                        </button>
                     </li>
                     <li>
                       <span className="material-symbols-outlined">code_blocks</span>
-                      GitHub: <button>themistogenes</button>
+                      GitHub: 
+                      {' '}
+                      <button
+                        onClick={() => {
+                          window.open("https://github.com/themistogenes", "_blank");
+                        }}
+                      >
+                        themistogenes
+                      </button>
                     </li>
                     <li>
                       <span className="material-symbols-outlined">mail</span>
-                      Email: <button>jalimaras@gmail.com</button>
+                      Email: 
+                      {' '}
+                      <button
+                        onClick={() => {
+                          window.open("mailto:jalimaras@gmail.com");
+                        }}
+                      >
+                        jalimaras@gmail.com
+                        </button>
                     </li>
                   </ul>
                 </div>
@@ -604,11 +628,20 @@ function App() {
                   <ul>
                   <li>
                     <span className="material-symbols-outlined">group</span>
-                    LinkedIn: <button>Justin Alimaras</button>
+                    LinkedIn: 
+                    {' '}
+                    <button
+                      onClick={() => {
+                        window.open("https://www.linkedin.com/in/justin-alimaras", "_blank");
+                      }}
+                    >
+                      Justin Alimaras</button>
                   </li>
                   <li>
                     <span className="material-symbols-outlined">description</span>
-                      Resume: <button>Download PDF</button>
+                      Resume: 
+                      {' '}
+                      <button>Download PDF - update link</button>
                   </li>
                   </ul>
                 </div>
