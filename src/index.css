@@ -653,7 +653,7 @@ li {
 }
 
 .swiper-slide:hover {
-  box-shadow: 0 0px 16px rgba(127, 255, 0, 0.25);
+  box-shadow: 4px 4px 8px gray;
 }
 
 .swiper-slide img {

@@ -38,8 +38,31 @@ function App() {
   const [themeIsPlaying, setThemeIsPlaying] = useState(false);
   const [timeAtPause, setTimeAtPause] = useState(0);
 
+  const theme = useRef(new Audio(themeSong)).current;
+
   function jumpTo(target) {
     window.location.href = `${target}`;
+  }
+
+  function handleTheme() {    
+    if (themeIsPlaying) {
+      setThemeIsPlaying(false);
+      setTimeAtPause(theme.currentTime);
+      theme.pause();
+      // console.log('Theme song has been paused.');
+    } else {
+      setThemeIsPlaying(true);
+      if (timeAtPause > 5) {
+        setTimeAtPause(theme.currentTime)
+        // console.log('Theme song re-started after pause.');
+      } else {
+        theme.currentTime = 5;
+        // console.log('Theme song starting from beginning.');
+      }
+      theme.loop = true;
+      theme.play();
+      // console.log('Theme song has been turned on.');
+    }
   }
 
   function toggleNavModal() {
@@ -48,6 +71,11 @@ function App() {
 
   function toggleShowTerminal() {
     setShowTerminal(!showTerminal);
+  }
+
+  function handleSelfDestruct() {
+    setTerminalOutput([...terminalOutput, 'So long!']);
+    setIsSelfDestructing(true);
   }
 
   function handleTerminalInput() {
@@ -259,34 +287,6 @@ function App() {
         `${terminalInput} > Sorry, I don\'t recognize that command.`
       ]);
     }
-  }
-
-  const theme = useRef(new Audio(themeSong)).current;
-
-  function handleTheme() {    
-    if (themeIsPlaying) {
-      setThemeIsPlaying(false);
-      setTimeAtPause(theme.currentTime);
-      theme.pause();
-      // console.log('Theme song has been paused.');
-    } else {
-      setThemeIsPlaying(true);
-      if (timeAtPause > 5) {
-        setTimeAtPause(theme.currentTime)
-        // console.log('Theme song re-started after pause.');
-      } else {
-        theme.currentTime = 5;
-        // console.log('Theme song starting from beginning.');
-      }
-      theme.loop = true;
-      theme.play();
-      // console.log('Theme song has been turned on.');
-    }
-  }
-
-  function handleSelfDestruct() {
-    setTerminalOutput([...terminalOutput, 'So long!']);
-    setIsSelfDestructing(true);
   }
 
   return (
@@ -565,6 +565,7 @@ function App() {
             }}
             className={showDevMode ? "devMode" : ""}
           >
+            
             <div id="meanderDivTop" className="meanderDiv"></div>
             <div id="headerDiv">
               <span>
@@ -753,6 +754,7 @@ function App() {
                 <p>Built by <button id="signatureButton">Themistogenes</button> a.k.a. Justin</p>
               </div>
             </div>
+
           </div>
           <div id="footerDiv">
           {

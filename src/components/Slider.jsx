@@ -7,12 +7,13 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
+import propertypulseThumb from "../assets/propertypulseThumb.png"
+import proshopThumb from "../assets/proshopthumb.png"
 import housemarketThumb from "../assets/housemarketThumb.png"
+import supportdeskThumb from "../assets/supportdeskThumb.png"
 import yelpcampThumb from "../assets/yelpcampThumb.png"
 import badbankThumb from "../assets/badbankThumb.png"
-import supportdeskThumb from "../assets/supportdeskThumb.png"
-import feedbackThumb from "../assets/feedbackThumb.png"
-import githubfinderThumb from "../assets/githubfinderThumb.png"
+import swolenormousThumb from "../assets/swolenormousThumb.png"
 
 export default function Slider() {
   return (
@@ -21,12 +22,42 @@ export default function Slider() {
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1.2}
+      scrollbar={{ draggable: true }}
       // navigation
       // pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
       // onSwiper={(swiper) => console.log(swiper)}
       // onSlideChange={() => console.log('slide change')}
     >
+      <SwiperSlide>
+        <img src={propertypulseThumb} />
+        <p>
+          <span className="bold">Toolset</span> HTML, CSS, ...
+        </p>
+        <p>
+          <span className="boldGreen">PropertyPulse</span> is a website...
+        </p>
+        <button>
+          <a href="https://property-pulse-olive.vercel.app" target="_blank">View Project</a>
+        </button>
+        <button>
+          <a href="https://github.com/themistogenes/property-pulse" target="_blank">View GitHub</a>
+        </button>
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={proshopThumb} />
+        <p>
+          <span className="bold">Toolset</span> HTML, CSS, ...
+        </p>
+        <p>
+          <span className="boldGreen">ProShop</span> is a website...
+        </p>
+        <button>
+          <a href="https://proshop-ijre.onrender.com" target="_blank">View Project</a>
+        </button>
+        <button>
+          <a href="https://github.com/themistogenes/proshop-v2" target="_blank">View GitHub</a>
+        </button>
+      </SwiperSlide>
       <SwiperSlide>
         <img src={housemarketThumb} />
         <p>
@@ -40,6 +71,21 @@ export default function Slider() {
         </button>
         <button>
           <a href="https://github.com/themistogenes/house-marketplace" target="_blank">View GitHub</a>
+        </button>
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={supportdeskThumb} />
+        <p>
+          <span className="bold">Toolset</span> HTML, CSS, javaScript, React, Express, MongoDB, NodeJS, Heroku
+        </p>
+        <p>
+          <span className="boldGreen">SupportDesk</span> is a ticket system built for an IT support desk.  Users (i.e. support desk employees) can create a ticket for a tech device, add a description, add further notes, and eventually, close the ticket.
+        </p>
+        <button>
+          <a href="https://support-deskv1.herokuapp.com/" target="_blank">View Project</a>
+        </button>
+        <button>
+          <a href="https://github.com/themistogenes/support-desk" target="_blank">View GitHub</a>
         </button>
       </SwiperSlide>
       <SwiperSlide>
@@ -76,48 +122,18 @@ export default function Slider() {
         </button>
       </SwiperSlide>
       <SwiperSlide>
-        <img src={supportdeskThumb} />
+        <img src={swolenormousThumb} />
         <p>
-          <span className="bold">Toolset</span> HTML, CSS, javaScript, React, Express, MongoDB, NodeJS, Heroku
+          <span className="bold">Toolset</span> HTML, CSS, ...
         </p>
         <p>
-          <span className="boldGreen">SupportDesk</span> is a ticket system built for an IT support desk.  Users (i.e. support desk employees) can create a ticket for a tech device, add a description, add further notes, and eventually, close the ticket.
+          <span className="boldGreen">Swolenormous</span> is a website...
         </p>
         <button>
-          <a href="https://support-deskv1.herokuapp.com/" target="_blank">View Project</a>
+          <a href="https://www.google.com" target="_blank">View Project - update link</a>
         </button>
         <button>
-          <a href="https://github.com/themistogenes/support-desk" target="_blank">View GitHub</a>
-        </button>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={feedbackThumb} />
-        <p>
-          <span className="bold">Toolset</span> HTML, CSS, javaScript, React, NodeJS, Heroku
-        </p>
-        <p>
-          <span className="boldGreen">FeedbackUI</span> is the front-end of a rating app.  Users can rate their service and write a review.  The review is then listed along with prior reviews and the average review rating is recalculated.
-        </p>
-        <button>
-          <a href="https://feedback-app-frontend.herokuapp.com/" target="_blank">View Project</a>
-        </button>
-        <button>
-          <a href="https://github.com/themistogenes/feedback-app-frontend" target="_blank">View GitHub</a>
-        </button>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={githubfinderThumb} />
-        <p>
-          <span className="bold">Toolset</span> HTML, CSS, TailwindCSS, daisyUI, javaScript, React, Axios, NodeJS, GitHub API, Heroku
-        </p>
-        <p>
-          <span className="boldGreen">GitHub Finder</span> uses the GitHub API to search GitHub for a specific user's profile.  A stream-lined version of that user's profile can be viewed, complete with links to their latest repositories.
-        </p>
-        <button>
-          <a href="https://github-finder.herokuapp.com/" target="_blank">View Project</a>
-        </button>
-        <button>
-          <a href="https://github.com/themistogenes/github-finder" target="_blank">View GitHub</a>
+          <a href="https://github.com/themistogenes/gym-app" target="_blank">View GitHub</a>
         </button>
       </SwiperSlide>
     </Swiper>
