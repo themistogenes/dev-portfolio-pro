@@ -12,6 +12,8 @@ import proshopThumb from "../assets/proshopthumb.png"
 import housemarketThumb from "../assets/housemarketThumb.png"
 import supportdeskThumb from "../assets/supportdeskThumb.png"
 import yelpcampThumb from "../assets/yelpcampThumb.png"
+import devcamperapiThumb from "../assets/devcamperapiThumb.png"
+import flixxThumb from "../assets/flixxThumb.png"
 import badbankThumb from "../assets/badbankThumb.png"
 import swolenormousThumb from "../assets/swolenormousThumb.png"
 
@@ -104,6 +106,33 @@ export default function Slider() {
         </button>
       </SwiperSlide>
       <SwiperSlide>
+        <img src={devcamperapiThumb} />
+        <p>
+          <span className="bold">Toolset</span> ...
+        </p>
+        <p>
+          <span className="boldGreen">DevCamperAPI</span> is a website...
+        </p>
+        <button>
+          <a href="https://github.com/themistogenes/devcamper-api" target="_blank">View GitHub</a>
+        </button>
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={flixxThumb} />
+        <p>
+          <span className="bold">Toolset</span> HTML, CSS, ...
+        </p>
+        <p>
+          <span className="boldGreen">Flixx</span> is a website ...
+        </p>
+        <button>
+          <a href="https://google.com" target="_blank">View Project - update link</a>
+        </button>
+        <button>
+          <a href="https://github.com/themistogenes/flixx-app" target="_blank">View GitHub</a>
+        </button>
+      </SwiperSlide>
+      <SwiperSlide>
         <img src={badbankThumb} />
         <p>
           <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, React, Express, MongoDB, Firebase, NodeJS, Heroku
@@ -118,7 +147,7 @@ export default function Slider() {
           <a href="https://github.com/themistogenes/BadBank2" target="_blank">View GitHub</a>
         </button>
         <button>
-          <a href="https://github.com/themistogenes/BadBank2" target="_blank">View Presentation</a>
+          <a href="https://github.com/themistogenes/BadBank2" target="_blank">View Presentation - update link</a>
         </button>
       </SwiperSlide>
       <SwiperSlide>
