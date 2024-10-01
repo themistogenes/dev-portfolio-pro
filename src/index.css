@@ -344,6 +344,23 @@ li {
 
   display: flex;
   flex-direction: column;
+
+  background-color: indigo;
+}
+
+#projectsDropdown {
+  z-index: 10;
+  box-sizing: border-box;
+  margin: 1px auto;
+  border: 0;
+  border-radius: 2px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+#projectsDropdown button {
+  background-color: #7851a9;
 }
 
 .unlockIcon {

@@ -19,6 +19,7 @@ import periclesIcon from "./assets/icons8/icons8-pericles-96.png"
 function App() {
   const [isSelfDestructing, setIsSelfDestructing] = useState(false);
   const [showNavModal, setShowNavModal] = useState(false);
+  const [showProjectsDropdown, setShowProjectsDropdown] = useState(false);
   const [showTerminal, setShowTerminal] = useState(true);
   const [terminalInput, setTerminalInput] = useState('');
   const [terminalOutput, setTerminalOutput] = useState(['Try saying \'hello\'...']);
@@ -344,7 +345,7 @@ function App() {
                     id="arrow-up-icon"
                     className="material-symbols-outlined"
                   >
-                      arrow_drop_up
+                    arrow_drop_up
                   </span>
                 ) : (
                   <span 
@@ -360,7 +361,7 @@ function App() {
               showNavModal && (
                 <div 
                   id="navigationModalContainer"
-                  onClick={() => {setShowNavModal(!showNavModal);}}
+                  // onClick={() => {setShowNavModal(!showNavModal);}}
                 >
                   <div id="navigationModal">
                     <button 
@@ -393,12 +394,79 @@ function App() {
                     <button 
                       id="projectsButton"
                       onClick={() => {
-                        window.location.href="#projectsDiv";
-                        setShowNavModal(false);
+                        setShowProjectsDropdown(!showProjectsDropdown);
+                        setShowNavModal(true);
                       }}
                     >
                       Projects
+                      {
+                        showProjectsDropdown ? (
+                          <span 
+                            id="arrow-up-icon"
+                            className="material-symbols-outlined"
+                          >
+                            arrow_drop_up
+                          </span>
+                        ) : (
+                          <span 
+                            id="arrow-down-icon"  
+                            className="material-symbols-outlined"
+                          >
+                            arrow_drop_down
+                          </span>
+                        )
+                      } 
                     </button>
+                    { showProjectsDropdown && (
+                      <div id="projectsDropdownContainer">
+                        <div id="projectsDropdown">
+                          <button
+                            onClick={() => {
+                              window.location.href="#projectsDiv";
+                              setShowNavModal(false);
+                            }}
+                          >
+                            All Projects
+                          </button>
+                          <button
+                            onClick={() => {
+                              window.open("https://house-marketplacev1.herokuapp.com", "_blank");
+                              setShowProjectsDropdown(false);
+                              setShowNavModal(false);
+                            }}
+                          >
+                            House Marketplace
+                          </button>
+                          <button
+                            onClick={() => {
+                              window.open("https://yelp-campgrounds-v2.herokuapp.com", "_blank");
+                              setShowProjectsDropdown(false);
+                              setShowNavModal(false);
+                            }}
+                          >
+                            YelpCamp
+                          </button>
+                          <button
+                            onClick={() => {
+                              window.open("https://badbank2.herokuapp.com", "_blank");
+                              setShowProjectsDropdown(false);
+                              setShowNavModal(false);
+                            }}
+                          >
+                            BadBank
+                          </button>
+                          <button
+                            onClick={() => {
+                              window.open("https://support-deskv1.herokuapp.com", "_blank");
+                              setShowProjectsDropdown(false);
+                              setShowNavModal(false);
+                            }}
+                          >
+                            SupportDesk
+                          </button>
+                        </div>
+                      </div>
+                    )}
                     <button 
                       id="expCertButton"
                       onClick={() => {
