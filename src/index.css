@@ -689,12 +689,6 @@ li {
   margin: 10px 0;
 }
 
-#contactMeDiv button:hover {
-  box-sizing: border-box;
-  position: relative;
-  animation: push .25s linear forwards;
-}
-
 .swiper-slide button {
   margin: 6px 2px;
   margin-right: 20px;
