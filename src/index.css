@@ -286,6 +286,10 @@ li {
   border: 1px solid chartreuse;
 }
 
+.devMode #videoClipDiv {
+  height: 260px;
+}
+
 #navigationDiv {
   position: sticky;
   top: 0;
@@ -666,14 +670,19 @@ li {
 #videoClipDiv {
   margin: 0 auto;
   width: fit-content;
+
   height: 215px;
+
   padding: 25px;
   border-radius: 5px;
 
   background-image: url("assets/videoMonitorLarge.jpg");
   background-size: 100% 100%;
+  
   background-repeat: no-repeat;
   background-attachment: scroll;
+
+  /* overflow-y: hidden; */
 }
 
 #videoClipDiv iframe {
