@@ -362,7 +362,7 @@ function App() {
               showNavModal && (
                 <div 
                   id="navigationModalContainer"
-                  // onClick={() => {setShowNavModal(!showNavModal);}}
+                  onClick={() => {setShowNavModal(false);}}
                 >
                   <div id="navigationModal">
                     <button 
@@ -394,7 +394,8 @@ function App() {
                     </button>
                     <button 
                       id="projectsButton"
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.stopPropagation();
                         setShowProjectsDropdown(!showProjectsDropdown);
                         setShowNavModal(true);
                       }}
@@ -471,6 +472,7 @@ function App() {
                           </button>
                         </div>
                       </div>
+
                     )}
                     <button 
                       id="expCertButton"
