@@ -577,7 +577,7 @@ li {
   overflow-x: hidden;
   padding: 3vh 3vh;
 
-  animation: toolsetScroll 15s linear forwards infinite;
+  animation: toolsetScroll 20s linear forwards infinite;
 }
 
 #toolsetScrollerDiv img {
