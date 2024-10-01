@@ -357,10 +357,18 @@ li {
   
   display: flex;
   flex-direction: column;
+
+  background-color: #7851a9;
 }
 
 #projectsDropdown button {
   background-color: #7851a9;
+}
+
+.linkIcon {
+  position: absolute;
+  margin-left: 10px;
+  height: 1rem;
 }
 
 .unlockIcon {

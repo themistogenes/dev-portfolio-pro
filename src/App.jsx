@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import Slider from "./components/Slider"
 import themeSong from "./assets/themeSong.flac"
 import helmetGreen from "./assets/helmetGreen.png"
+import linkIcon from "./assets/icons8/icons8-link-48.png"
 import goldUnlockIcon from "./assets/icons8/icons8-unlock-48-gold.png"
 import aboutMePic from "./assets/aboutMePic.png"
 import bootstrapIcon from "./assets/icons8/icons8-bootstrap-50.png"
@@ -426,7 +427,7 @@ function App() {
                               setShowNavModal(false);
                             }}
                           >
-                            All Projects
+                            Project Gallery
                           </button>
                           <button
                             onClick={() => {
@@ -436,6 +437,7 @@ function App() {
                             }}
                           >
                             House Marketplace
+                            <img src={linkIcon} className="linkIcon" />
                           </button>
                           <button
                             onClick={() => {
@@ -445,6 +447,7 @@ function App() {
                             }}
                           >
                             YelpCamp
+                            <img src={linkIcon} className="linkIcon" />
                           </button>
                           <button
                             onClick={() => {
@@ -454,6 +457,7 @@ function App() {
                             }}
                           >
                             BadBank
+                            <img src={linkIcon} className="linkIcon" />
                           </button>
                           <button
                             onClick={() => {
@@ -463,6 +467,7 @@ function App() {
                             }}
                           >
                             SupportDesk
+                            <img src={linkIcon} className="linkIcon" />
                           </button>
                         </div>
                       </div>
