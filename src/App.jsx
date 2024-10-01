@@ -826,6 +826,7 @@ function App() {
           Gray unlock icon by Icons8: https://icons8.com/icon/fbv9wSpSd3DR/unlock
           Gold unlock icon by Icons8: https://icons8.com/icon/b0F1PoUomiAl/unlock
           Gray padlock icon by Icons8: https://icons8.com/icon/FZtworQ4BNfz/padlock
+          Link icon by Icons8: https://icons8.com/icon/gn8gPOw64fHx/link
 
           Theme song: "Generic Futuristic Hero's Theme", by Marc Armitage
         </>
