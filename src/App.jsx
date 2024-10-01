@@ -97,7 +97,7 @@ function App() {
       if (!themeIsPlaying) {
         setTerminalOutput([
           ...terminalOutput,
-          'theme > Enjoy the theme song.'
+          'theme > I thought it was a little too quiet in here.'
         ]);
         setUnlockAlertMessage('Theme song unlocked!');
         setShowUnlockAlert(true);
@@ -114,7 +114,7 @@ function App() {
       if (!showDevMode) {
         setTerminalOutput([
           ...terminalOutput,
-          'devmode > So, you think you\'re a web developer now?'
+          'devmode > I don\'t think you\'re supposed to be seeing this.'
         ]);
         setUnlockAlertMessage('Developer Mode unlocked!');
         setShowUnlockAlert(true);
@@ -131,7 +131,7 @@ function App() {
       if (!showMusic) {
         setTerminalOutput([
           ...terminalOutput,
-          'music > Enjoy the music.'
+          'music > Please, not those same three songs again.'
         ]);
         // Turn off theme song if it's already playing
         if (themeIsPlaying) {
@@ -153,7 +153,7 @@ function App() {
       if (!showVideo) {
         setTerminalOutput([
           ...terminalOutput,
-          'video > Enjoy the video.'
+          'video > Don\'t expect me to make popcorn.'
         ]);
         setUnlockAlertMessage('Video unlocked!');
         setNavigationTarget('#videoDiv');
@@ -171,7 +171,7 @@ function App() {
       if (!showGame) {
         setTerminalOutput([
           ...terminalOutput,
-          'game > Enjoy the game.'
+          'game > Aren\'t you a little old for video games?'
         ]);
         setUnlockAlertMessage('Game unlocked!');
         setNavigationTarget('#gameDiv');
@@ -189,7 +189,7 @@ function App() {
       if (!showChat) {
         setTerminalOutput([
           ...terminalOutput,
-          'chat > Enjoy the chat.'
+          'chat > I thought we were already having a great conversation.'
         ]);
         setUnlockAlertMessage('Chat unlocked!');
         setNavigationTarget('#chatDiv');
@@ -207,7 +207,7 @@ function App() {
       if (!showSelfDestruct) {
         setTerminalOutput([
           ...terminalOutput,
-          'selfdestruct > I\'d be careful if I were you...'
+          'selfdestruct > Let\'s not do anything hasty now!'
         ]);
         setUnlockAlertMessage('Self-Destruct unlocked!');
         setNavigationTarget('#selfDestructDiv');
@@ -215,7 +215,7 @@ function App() {
       } else {
         setTerminalOutput([
           ...terminalOutput,
-          'selfdestruct > I\'m glad you changed your mind.'
+          'selfdestruct > I\'m glad you changed your mind about that.'
         ]);
       }
       setShowSelfDestruct(!showSelfDestruct);
@@ -231,7 +231,7 @@ function App() {
       if (!unlock) {
         setTerminalOutput([
           ...terminalOutput,
-          'unlock > Enjoy all the unlocked features.'
+          'unlock > Is it just me, or does it look a little different in here?'
         ]);
         setShowVideo(true);
         setShowGame(true);
@@ -245,7 +245,7 @@ function App() {
       } else {
         setTerminalOutput([
           ...terminalOutput,
-          'unlock > All features are already unlocked!'
+          'unlock > I already did that for you!'
         ]);
       }
     }
@@ -253,7 +253,7 @@ function App() {
     else if (terminalInput === 'lock') {
       setTerminalOutput([
         ...terminalOutput,
-        'lock > All features are now locked.'
+        'lock > Those extra features were starting to annoy me.'
       ]);
       setUnlock(false);
       setShowVideo(false);
@@ -266,7 +266,7 @@ function App() {
     else if (terminalInput === 'hide') {
       setTerminalOutput([
         ...terminalOutput,
-        'hide > If that\'s really what you want, I\'ll hide.'
+        'hide > I hid like you asked, but I didn\'t like it.'
       ]);
       setShowTerminal(false);
     }
@@ -274,7 +274,7 @@ function App() {
     else if (terminalInput === 'screensaver') {
       setTerminalOutput([
         ...terminalOutput,
-        'screensaver > I\'ll be here when you get back.'
+        'screensaver > I\'m glad you have a life, but I was here the whole time.'
       ]);
       setShowScreensaver(true);
     }
@@ -284,7 +284,7 @@ function App() {
     } else {
       setTerminalOutput([
         ...terminalOutput, 
-        `${terminalInput} > Sorry, I don\'t recognize that command.`
+        `${terminalInput} > Sorry, I don\'t recognize that command.  I only speak computer.`
       ]);
     }
   }
