@@ -33,7 +33,7 @@ export default function Slider() {
       <SwiperSlide>
         <img src={propertypulseThumb} />
         <p>
-          <span className="bold">Toolset</span> HTML, CSS, TailwindCSS, javaScript, React, Next.js, Cloudinary, Mapbox, Photoswipe, NodeJS, MongoDB, Vercel
+          <span className="bold">Toolset</span> HTML, CSS, TailwindCSS, javaScript, React, Next.js, Cloudinary, Mapbox, Photoswipe, Node.js, MongoDB, Vercel
         </p>
         <hr />
         <p>
@@ -49,11 +49,11 @@ export default function Slider() {
       <SwiperSlide>
         <img src={proshopThumb} />
         <p>
-          <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, React, Paypal, NodeJS, Express, MongoDB, Render
+          <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, React, Paypal, Stripe, Node.js, Express.js, MongoDB, Render
         </p>
         <hr />
         <p>
-          <span className="boldGreen">ProShop</span>, a full-stack MERN application, is an e-commerce platform where customers can search for products, add them to their cart and checkout, and review products.  Admin functionality for the shop's owner includes the ability to edit users, products, and order informatinon.
+          <span className="boldGreen">ProShop</span>, a full-stack MERN application, is an e-commerce website where customers can search for products, add them to their cart and checkout, and review products.  Admin functionality for the shop's owner includes the ability to edit users, products, and order informatinon.
         </p>
         <button>
           <a href="https://proshop-ijre.onrender.com" target="_blank">View Project</a>
@@ -65,7 +65,7 @@ export default function Slider() {
       <SwiperSlide>
         <img src={housemarketThumb} />
         <p>
-          <span className="bold">Toolset</span> HTML, CSS, javaScript, React, Leaflet, Swiper, Firebase, NodeJs, Heroku
+          <span className="bold">Toolset</span> HTML, CSS, javaScript, React, Leaflet, Swiper, Firebase, Node.js, Heroku
         </p>
         <hr />
         <p>
@@ -81,7 +81,7 @@ export default function Slider() {
       <SwiperSlide>
         <img src={supportdeskThumb} />
         <p>
-          <span className="bold">Toolset</span> HTML, CSS, javaScript, React, NodeJS, Express, MongoDB, Heroku
+          <span className="bold">Toolset</span> HTML, CSS, javaScript, React, Node.js, Express.js, MongoDB, Heroku
         </p>
         <hr />
         <p>
@@ -97,7 +97,7 @@ export default function Slider() {
       <SwiperSlide>
         <img src={yelpcampThumb} />
         <p>
-          <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, EJS, Cloudinary, Mapbox, NodeJS, Express, MongoDB, Heroku
+          <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, EJS, Cloudinary, Mapbox, Node.js, Express.js, MongoDB, Heroku
         </p>
         <hr />
         <p>
@@ -113,11 +113,11 @@ export default function Slider() {
       <SwiperSlide>
         <img src={devcamperapiThumb} />
         <p>
-          <span className="bold">Toolset</span> NodeJS, Express, MongoDB
+          <span className="bold">Toolset</span> Node.js, Express.js, MongoDB
         </p>
         <hr />
         <p>
-          <span className="boldGreen">DevCamperAPI</span> is a NodeJS-based RESTful API for information on coding bootcamps.  Functionality includes registering users, logging in/out, updating users' information and password, CRUDing users, CRUDing bootcamps, getting bootcamps within a geographic radius, CRUDing bootcamp courses, and CRUDing user reviews for bootcamps.
+          <span className="boldGreen">DevCamperAPI</span> is a backend Node.js-based RESTful API for information on coding bootcamps.  Functionality includes registering users, logging in/out, updating users' information and password, CRUDing users, CRUDing bootcamps, getting bootcamps within a geographic radius, CRUDing bootcamp courses, and CRUDing user reviews for bootcamps.
         </p>
         <button>
           <a href="https://github.com/themistogenes/devcamper-api" target="_blank">View GitHub</a>
@@ -142,11 +142,11 @@ export default function Slider() {
       <SwiperSlide>
         <img src={badbankThumb} />
         <p>
-          <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, React, NodeJS, Express, MongoDB, Firebase, Heroku
+          <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, React, Node.js, Express.js, MongoDB, Firebase, Heroku
         </p>
         <hr />
         <p>
-          <span className="boldGreen">BadBank</span>, a full-stack MERN application, is an online banking platform without bank-level security (hence the name).  Users can check their balance or make deposits and withdrawals.  The bank manager (admin) can view the account information of all users.
+          <span className="boldGreen">BadBank</span>, a full-stack MERN application, is an online banking website without bank-level security (hence the name).  Users can check their balance or make deposits and withdrawals.  The bank manager (admin) can view the account information of all users.
         </p>
         <button>
           <a href="https://badbank2.herokuapp.com" target="_blank">View Project</a>

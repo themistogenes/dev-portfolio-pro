@@ -2,15 +2,12 @@ import React, { useRef, useState } from "react"
 import Slider from "./components/Slider"
 
 import helmetGreen from "./assets/helmetGreen.png"
-import themeSong from "./assets/themeSong.flac"
-
+import aboutMePic from "./assets/aboutMePic.png"
 import navIconIndigoBg from "./assets/icons8/icons8-navigation-48-indigo-bg.png"
 import navIconGreenBg from "./assets/icons8/icons8-navigation-48-green-bg.png"
 import linkIcon from "./assets/icons8/icons8-link-48.png"
 import goldUnlockIcon from "./assets/icons8/icons8-unlock-48-gold.png"
-
-import aboutMePic from "./assets/aboutMePic.png"
-
+import periclesIcon from "./assets/icons8/icons8-pericles-96.png"
 import htmlLogo from "./assets/icons8/logos/htmlLogo.png"
 import cssLogo from "./assets/icons8/logos/cssLogo.png"
 import javascriptLogo from "./assets/icons8/logos/jsLogo.png"
@@ -24,18 +21,8 @@ import mongodbLogo from "./assets/icons8/logos/mongodbLogo.png"
 import firebaseLogo from "./assets/icons8/logos/firebaseLogo.png"
 import herokuLogo from "./assets/icons8/logos/herokuLogo.png"
 
-// import htmlIcon from "./assets/icons8/icons8-html-5-50.png"
-// import cssIcon from "./assets/icons8/icons8-css3-50.png"
-// import bootstrapIcon from "./assets/icons8/icons8-bootstrap-50.png"
-// import javaScriptIcon from "./assets/icons8/icons8-javascript-logo-50.png"
-// import reactIcon from "./assets/icons8/icons8-react-native-50.png"
-// import nextJSIcon from "./assets/icons8/icons8-nextjs-48.png"
-// import nodeJSIcon from "./assets/icons8/icons8-nodejs-64.png"
-// import expressJSIcon from "./assets/icons8/icons8-express-js-50.png"
-// import mongoDBIcon from "./assets/icons8/icons8-mongo-db-48.png"
-// import firebaseIcon from "./assets/icons8/icons8-firebase-48.png"
-
-import periclesIcon from "./assets/icons8/icons8-pericles-96.png"
+import themeSong from "./assets/themeSong.flac"
+import resume from "./JustinAlimarasWebSoftwareDeveloper.pdf"
 
 function App() {
   const [isSelfDestructing, setIsSelfDestructing] = useState(false);
@@ -715,7 +702,16 @@ function App() {
                     <span className="material-symbols-outlined">description</span>
                       Resume: 
                       {' '}
-                      <button>Download PDF</button>
+                      <button
+                        onClick={() => {
+                          try {
+                            window.open(resume, "_blank");
+                          } catch (error) {
+                            console.log(error);
+                          }
+                          
+                        }}
+                      >Download PDF</button>
                   </li>
                   </ul>
                 </div>
@@ -747,18 +743,6 @@ function App() {
                 <img src={mongodbLogo} alt="MongoDB logo" />
                 <img src={firebaseLogo} alt="Firebase logo" />
                 <img src={herokuLogo} alt="Heroku logo" />
-                {/* 
-                <img src={htmlIcon} alt="HTML icon" />
-                <img src={cssIcon} alt="CSS icon" />
-                <img src={bootstrapIcon} alt="Bootstrap icon" />
-                <img src={javaScriptIcon} alt="javaScript icon" />
-                <img src={reactIcon} alt="React icon" />
-                <img src={nextJSIcon} alt="NextJS icon" />
-                <img src={expressJSIcon} alt="ExpressJS icon" />
-                <img src={nodeJSIcon} alt="NodeJS icon" />
-                <img src={mongoDBIcon} alt="MongoDB icon" />
-                <img src={firebaseIcon} alt="Firebase icon" /> 
-                */}
               </div>
             </div>
             <div id="projectsDiv">
@@ -931,6 +915,14 @@ function App() {
 
       {/* Attributes 
         <>
+          Fav icon by Icons8: https://icons8.com/icon/3ulAFpe8tLUm/greek-helmet
+          Greek Helmet icon by Icons8: https://icons8.com/icon/GSiELqDFNtdO/greek-helmet
+          Pericles icon by Icons8: https://icons8.com/icon/2DeY03FlmllF/pericles
+          Nav icon by Icons8: https://icons8.com/icon/ppHsKVdjtcQa/navigate
+          Link icon by Icons8: https://icons8.com/icon/gn8gPOw64fHx/link
+          Gold unlock icon by Icons8: https://icons8.com/icon/b0F1PoUomiAl/unlock
+          Sound icon by Icons8: https://icons8.com/icon/Zp6GOGzBD2LK/audio
+
           HTML logo by Icons8: https://icons8.com/icon/20909/html-5
           CSS logo by Icons8: https://icons8.com/icon/21278/css3
           Bootstrap logo by Icons8: https://icons8.com/icon/84710/bootstrap
@@ -944,27 +936,7 @@ function App() {
           Firebase logo by Icons8: https://icons8.com/icon/62452/firebase
           Heroku logo by Icons8: https://icons8.com/icon/31085/heroku
 
-          Next.js icon by Icons8: https://icons8.com/icon/gwR0hbBi5JeZ/next.js
-          Firebase icon by Icons8: https://icons8.com/icon/3Gh7IUPjoIx4/firebase
-          MongoDB icon by Icons8: https://icons8.com/icon/bosfpvRzNOG8/mongo-db
-          NodeJS icon by Icons8: https://icons8.com/icon/t9oCxEN7McHZ/nodejs
-          ExpressJS icon by Icons8: https://icons8.com/icon/kg46nzoJrmTR/express-js
-          React icon by Icons8: https://icons8.com/icon/35989/react-native
-          Bootstrap icon by Icons8: https://icons8.com/icon/OODqBWCdRF8o/bootstrap
-          HTML icon by Icons8: https://icons8.com/icon/7hA5Ny9rDAmV/html-5p
-          CSS icon by Icons8: https://icons8.com/icon/38272/css3
-          javaScript icon by Icons8: https://icons8.com/icon/106036/javascript-logo
-
-          Greek Helmet icon (single color) by Icons8: https://icons8.com/icon/GSiELqDFNtdO/greek-helmet
-          Pericles icon (single color) by Icons8: https://icons8.com/icon/2DeY03FlmllF/pericles
-          Sound icon by Icons8: https://icons8.com/icon/Zp6GOGzBD2LK/audio
-          Gold unlock icon by Icons8: https://icons8.com/icon/b0F1PoUomiAl/unlock
-          Link icon by Icons8: https://icons8.com/icon/gn8gPOw64fHx/link
-          Nav icon by Icons8: https://icons8.com/icon/ppHsKVdjtcQa/navigate
-
           Theme song: "Generic Futuristic Hero's Theme", by Marc Armitage
-
-          Fav icon by Icons8: https://icons8.com/icon/3ulAFpe8tLUm/greek-helmet
         </>
       */}
     </>
