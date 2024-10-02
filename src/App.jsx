@@ -1,22 +1,40 @@
 import React, { useRef, useState } from "react"
 import Slider from "./components/Slider"
+
 import helmetGreen from "./assets/helmetGreen.png"
 import themeSong from "./assets/themeSong.flac"
+
 import navIconIndigoBg from "./assets/icons8/icons8-navigation-48-indigo-bg.png"
 import navIconGreenBg from "./assets/icons8/icons8-navigation-48-green-bg.png"
 import linkIcon from "./assets/icons8/icons8-link-48.png"
 import goldUnlockIcon from "./assets/icons8/icons8-unlock-48-gold.png"
+
 import aboutMePic from "./assets/aboutMePic.png"
-import bootstrapIcon from "./assets/icons8/icons8-bootstrap-50.png"
-import cssIcon from "./assets/icons8/icons8-css3-50.png"
-import expressJSIcon from "./assets/icons8/icons8-express-js-50.png"
-import firebaseIcon from "./assets/icons8/icons8-firebase-48.png"
-import htmlIcon from "./assets/icons8/icons8-html-5-50.png"
-import javaScriptIcon from "./assets/icons8/icons8-javascript-logo-50.png"
-import mongoDBIcon from "./assets/icons8/icons8-mongo-db-48.png"
-import nextJSIcon from "./assets/icons8/icons8-nextjs-48.png"
-import nodeJSIcon from "./assets/icons8/icons8-nodejs-64.png"
-import reactIcon from "./assets/icons8/icons8-react-native-50.png"
+
+import htmlLogo from "./assets/icons8/logos/htmlLogo.png"
+import cssLogo from "./assets/icons8/logos/cssLogo.png"
+import javascriptLogo from "./assets/icons8/logos/jsLogo.png"
+import bootstrapLogo from "./assets/icons8/logos/bootstrapLogo.png"
+import tailwindLogo from "./assets/icons8/logos/tailwindLogo.png"
+import reactLogo from "./assets/icons8/logos/reactLogo.png"
+import nextLogo from "./assets/icons8/logos/nextLogo.png"
+import nodeLogo from "./assets/icons8/logos/nodeLogo.png"
+import expressLogo from "./assets/icons8/logos/expressLogo.png"
+import mongodbLogo from "./assets/icons8/logos/mongodbLogo.png"
+import firebaseLogo from "./assets/icons8/logos/firebaseLogo.png"
+import herokuLogo from "./assets/icons8/logos/herokuLogo.png"
+
+// import htmlIcon from "./assets/icons8/icons8-html-5-50.png"
+// import cssIcon from "./assets/icons8/icons8-css3-50.png"
+// import bootstrapIcon from "./assets/icons8/icons8-bootstrap-50.png"
+// import javaScriptIcon from "./assets/icons8/icons8-javascript-logo-50.png"
+// import reactIcon from "./assets/icons8/icons8-react-native-50.png"
+// import nextJSIcon from "./assets/icons8/icons8-nextjs-48.png"
+// import nodeJSIcon from "./assets/icons8/icons8-nodejs-64.png"
+// import expressJSIcon from "./assets/icons8/icons8-express-js-50.png"
+// import mongoDBIcon from "./assets/icons8/icons8-mongo-db-48.png"
+// import firebaseIcon from "./assets/icons8/icons8-firebase-48.png"
+
 import periclesIcon from "./assets/icons8/icons8-pericles-96.png"
 
 function App() {
@@ -353,7 +371,8 @@ function App() {
               ) : (
                 <img src={navIconIndigoBg} alt="" />
                 )}
-              {/* {
+              {/*
+              {
                 showNavModal ? (
                   <span 
                     id="arrow-up-icon"
@@ -369,7 +388,8 @@ function App() {
                     arrow_drop_down
                   </span>
                 )
-              }  */}
+              }  
+              */}
             </button>
             {
               showNavModal && (
@@ -715,6 +735,19 @@ function App() {
             <div id="toolsetDiv">
               <h4>Toolset</h4>
               <div id="toolsetScrollerDiv">
+                <img src={htmlLogo} alt="HTML logo" />
+                <img src={cssLogo} alt="CSS logo" />
+                <img src={bootstrapLogo} alt="Bootstrap logo" />
+                <img src={tailwindLogo} alt="TailwindCSS logo" />
+                <img src={javascriptLogo} alt="javaScript logo" />
+                <img src={reactLogo} alt="React logo" />
+                <img src={nextLogo} alt="Next.js logo" />
+                <img src={nodeLogo} alt="Node.js logo" />
+                <img src={expressLogo} alt="Express.js logo" />
+                <img src={mongodbLogo} alt="MongoDB logo" />
+                <img src={firebaseLogo} alt="Firebase logo" />
+                <img src={herokuLogo} alt="Heroku logo" />
+                {/* 
                 <img src={htmlIcon} alt="HTML icon" />
                 <img src={cssIcon} alt="CSS icon" />
                 <img src={bootstrapIcon} alt="Bootstrap icon" />
@@ -724,7 +757,8 @@ function App() {
                 <img src={expressJSIcon} alt="ExpressJS icon" />
                 <img src={nodeJSIcon} alt="NodeJS icon" />
                 <img src={mongoDBIcon} alt="MongoDB icon" />
-                <img src={firebaseIcon} alt="Firebase icon" />
+                <img src={firebaseIcon} alt="Firebase icon" /> 
+                */}
               </div>
             </div>
             <div id="projectsDiv">
@@ -897,6 +931,19 @@ function App() {
 
       {/* Attributes 
         <>
+          HTML logo by Icons8: https://icons8.com/icon/20909/html-5
+          CSS logo by Icons8: https://icons8.com/icon/21278/css3
+          Bootstrap logo by Icons8: https://icons8.com/icon/84710/bootstrap
+          TailwindCSS logo by Icons8: https://icons8.com/icon/4PiNHtUJVbLs/tailwind-css
+          javaScript logo by Icons8: https://icons8.com/icon/108784/javascript
+          React logo by Icons8: https://icons8.com/icon/123603/react-native
+          NextJS logo by Icons8: https://icons8.com/icon/MWiBjkuHeMVq/next.js
+          NodeJS logo by Icons8: https://icons8.com/icon/54087/nodejs
+          ExpressJS logo by Icons8: https://icons8.com/icon/SDVmtZ6VBGXt/express-js
+          MongoDB logo by Icons8: https://icons8.com/icon/74402/mongodb
+          Firebase logo by Icons8: https://icons8.com/icon/62452/firebase
+          Heroku logo by Icons8: https://icons8.com/icon/31085/heroku
+
           Next.js icon by Icons8: https://icons8.com/icon/gwR0hbBi5JeZ/next.js
           Firebase icon by Icons8: https://icons8.com/icon/3Gh7IUPjoIx4/firebase
           MongoDB icon by Icons8: https://icons8.com/icon/bosfpvRzNOG8/mongo-db
@@ -907,14 +954,11 @@ function App() {
           HTML icon by Icons8: https://icons8.com/icon/7hA5Ny9rDAmV/html-5p
           CSS icon by Icons8: https://icons8.com/icon/38272/css3
           javaScript icon by Icons8: https://icons8.com/icon/106036/javascript-logo
-          Greek Helmet icon (multi-color) by Icons8: https://icons8.com/icon/ZaOCyh5XGHMQ/greek-helmet
+
           Greek Helmet icon (single color) by Icons8: https://icons8.com/icon/GSiELqDFNtdO/greek-helmet
           Pericles icon (single color) by Icons8: https://icons8.com/icon/2DeY03FlmllF/pericles
-          Greek pillar base icon by Icons8: https://icons8.com/icon/60859/greek-pillar-base
           Sound icon by Icons8: https://icons8.com/icon/Zp6GOGzBD2LK/audio
-          Gray unlock icon by Icons8: https://icons8.com/icon/fbv9wSpSd3DR/unlock
           Gold unlock icon by Icons8: https://icons8.com/icon/b0F1PoUomiAl/unlock
-          Gray padlock icon by Icons8: https://icons8.com/icon/FZtworQ4BNfz/padlock
           Link icon by Icons8: https://icons8.com/icon/gn8gPOw64fHx/link
           Nav icon by Icons8: https://icons8.com/icon/ppHsKVdjtcQa/navigate
 

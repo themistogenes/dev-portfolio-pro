@@ -631,9 +631,9 @@ li {
 
 @keyframes toolsetScroll {
   0% {
-    margin-left: -150%;
+    margin-left: -200%;
   }
-  60% {
+  66% {
     margin-left: 0%;
     margin-right: 0%;
   }
@@ -661,7 +661,6 @@ li {
 
 #toolsetScrollerDiv img:hover {
   box-sizing: border-box;
-  border-radius: 2px;
 
   position: relative;
   transform: scale(1.5);
