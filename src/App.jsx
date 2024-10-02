@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react"
 import Slider from "./components/Slider"
-import themeSong from "./assets/themeSong.flac"
 import helmetGreen from "./assets/helmetGreen.png"
+import themeSong from "./assets/themeSong.flac"
+import navIconIndigoBg from "./assets/icons8/icons8-navigation-48-indigo-bg.png"
+import navIconGreenBg from "./assets/icons8/icons8-navigation-48-green-bg.png"
 import linkIcon from "./assets/icons8/icons8-link-48.png"
 import goldUnlockIcon from "./assets/icons8/icons8-unlock-48-gold.png"
 import aboutMePic from "./assets/aboutMePic.png"
@@ -19,6 +21,7 @@ import periclesIcon from "./assets/icons8/icons8-pericles-96.png"
 
 function App() {
   const [isSelfDestructing, setIsSelfDestructing] = useState(false);
+  const [navButtonIsHovered, setNavButtonIsHovered] = useState(false);
   const [showNavModal, setShowNavModal] = useState(false);
   const [showProjectsDropdown, setShowProjectsDropdown] = useState(false);
   const [showTerminal, setShowTerminal] = useState(true);
@@ -338,9 +341,19 @@ function App() {
         !isSelfDestructing ? (
         <>
           <div id="navigationDiv">
-            <button id="navigateButton" onClick={toggleNavModal}>
+            <button 
+              id="navigateButton" 
+              onClick={toggleNavModal}
+              onMouseEnter={() => {setNavButtonIsHovered(!navButtonIsHovered)}}
+              onMouseLeave={() => {setNavButtonIsHovered(!navButtonIsHovered)}}
+            >
               Navigate
-              {
+              {navButtonIsHovered ? (
+                <img src={navIconGreenBg} alt="" />
+              ) : (
+                <img src={navIconIndigoBg} alt="" />
+                )}
+              {/* {
                 showNavModal ? (
                   <span 
                     id="arrow-up-icon"
@@ -356,7 +369,7 @@ function App() {
                     arrow_drop_down
                   </span>
                 )
-              } 
+              }  */}
             </button>
             {
               showNavModal && (
@@ -862,8 +875,11 @@ function App() {
           Gold unlock icon by Icons8: https://icons8.com/icon/b0F1PoUomiAl/unlock
           Gray padlock icon by Icons8: https://icons8.com/icon/FZtworQ4BNfz/padlock
           Link icon by Icons8: https://icons8.com/icon/gn8gPOw64fHx/link
+          Nav icon by Icons8: https://icons8.com/icon/ppHsKVdjtcQa/navigate
 
           Theme song: "Generic Futuristic Hero's Theme", by Marc Armitage
+
+          Fav icon by Icons8: https://icons8.com/icon/3ulAFpe8tLUm/greek-helmet
         </>
       */}
     </>

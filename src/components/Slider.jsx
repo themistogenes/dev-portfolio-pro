@@ -39,7 +39,7 @@ export default function Slider() {
           <span className="boldGreen">PropertyPulse</span> is a website...
         </p>
         <button>
-          <a href="https://property-pulse-olive.vercel.app" target="_blank">View Project</a>
+          <a href="https://property-pulse-hub.vercel.app" target="_blank">View Project</a>
         </button>
         <button>
           <a href="https://github.com/themistogenes/property-pulse" target="_blank">View GitHub</a>
@@ -126,7 +126,7 @@ export default function Slider() {
           <span className="boldGreen">Flixx</span> is a website ...
         </p>
         <button>
-          <a href="https://google.com" target="_blank">View Project - update link</a>
+          <a href="https://flixxfilms.vercel.app/" target="_blank">View Project</a>
         </button>
         <button>
           <a href="https://github.com/themistogenes/flixx-app" target="_blank">View GitHub</a>
@@ -147,7 +147,7 @@ export default function Slider() {
           <a href="https://github.com/themistogenes/BadBank2" target="_blank">View GitHub</a>
         </button>
         <button>
-          <a href="https://github.com/themistogenes/BadBank2" target="_blank">View Presentation - update link</a>
+          <a href="https://www.youtube.com/playlist?list=PLn6PLPwvu-4JYVvbNKl5wAtT5vxMr0enV" target="_blank">View Presentation</a>
         </button>
       </SwiperSlide>
       <SwiperSlide>
@@ -159,7 +159,7 @@ export default function Slider() {
           <span className="boldGreen">Swolenormous</span> is a website...
         </p>
         <button>
-          <a href="https://www.google.com" target="_blank">View Project - update link</a>
+          <a href="https://swolenormous-fit.vercel.app" target="_blank">View Project</a>
         </button>
         <button>
           <a href="https://github.com/themistogenes/gym-app" target="_blank">View GitHub</a>

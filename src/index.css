@@ -308,6 +308,23 @@ li {
   width: 60vw;
 }
 
+#navigateButton img {
+  height: 1rem;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+#navigateButton:hover img {
+  animation: spin .25s linear;
+}
+
 #navigationDiv button,
 #navigationDiv button #arrow-up-icon, 
 #navigationDiv button #arrow-down-icon {
