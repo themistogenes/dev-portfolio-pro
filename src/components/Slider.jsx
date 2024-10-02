@@ -51,6 +51,7 @@ export default function Slider() {
         <p>
           <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, React, Paypal, NodeJS, Express, MongoDB, Render
         </p>
+        <hr />
         <p>
           <span className="boldGreen">ProShop</span>, a full-stack MERN application, is an e-commerce platform where customers can search for products, add them to their cart and checkout, and review products.  Admin functionality for the shop's owner includes the ability to edit users, products, and order informatinon.
         </p>
@@ -66,6 +67,7 @@ export default function Slider() {
         <p>
           <span className="bold">Toolset</span> HTML, CSS, javaScript, React, Leaflet, Swiper, Firebase, NodeJs, Heroku
         </p>
+        <hr />
         <p>
           <span className="boldGreen">House Marketplace</span>, a full-stack MERN application, connects homebuyers with homesellers and renters with landlords.  Property owners can create a profile and list their properties.  Interested renters and buyers can browse listed properties and contact the owner.
         </p>
@@ -81,6 +83,7 @@ export default function Slider() {
         <p>
           <span className="bold">Toolset</span> HTML, CSS, javaScript, React, NodeJS, Express, MongoDB, Heroku
         </p>
+        <hr />
         <p>
           <span className="boldGreen">SupportDesk</span>, a full-stack MERN application, is a ticket system built for an IT support desk.  Users (i.e. support desk employees) can create a ticket for a tech device, add a description, add further notes, and eventually, close the ticket.
         </p>
@@ -96,6 +99,7 @@ export default function Slider() {
         <p>
           <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, EJS, Cloudinary, Mapbox, NodeJS, Express, MongoDB, Heroku
         </p>
+        <hr />
         <p>
           <span className="boldGreen">YelpCamp</span>, a full-stack EJS application, is a yelp-like website for campgrounds.  Users can browse campgrounds by geographic location as well as add their own campgrounds.  Users can also view and add campground reviews.
         </p>
@@ -111,6 +115,7 @@ export default function Slider() {
         <p>
           <span className="bold">Toolset</span> NodeJS, Express, MongoDB
         </p>
+        <hr />
         <p>
           <span className="boldGreen">DevCamperAPI</span> is a NodeJS-based RESTful API for information on coding bootcamps.  Functionality includes registering users, logging in/out, updating users' information and password, CRUDing users, CRUDing bootcamps, getting bootcamps within a geographic radius, CRUDing bootcamp courses, and CRUDing user reviews for bootcamps.
         </p>
@@ -123,6 +128,7 @@ export default function Slider() {
         <p>
           <span className="bold">Toolset</span> HTML, CSS, javaScript, Vercel
         </p>
+        <hr />
         <p>
           <span className="boldGreen">Flixx</span>, a vanilla JS app, showcases movies currently in theaters as well as popular TV shows.  Users can search for TV shows and movies.
         </p>
@@ -138,6 +144,7 @@ export default function Slider() {
         <p>
           <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, React, NodeJS, Express, MongoDB, Firebase, Heroku
         </p>
+        <hr />
         <p>
           <span className="boldGreen">BadBank</span>, a full-stack MERN application, is an online banking platform without bank-level security (hence the name).  Users can check their balance or make deposits and withdrawals.  The bank manager (admin) can view the account information of all users.
         </p>
@@ -156,6 +163,7 @@ export default function Slider() {
         <p>
           <span className="bold">Toolset</span> HTML, CSS, TailwindCSS, javaScript, React, Vercel
         </p>
+        <hr />
         <p>
           <span className="boldGreen">Swolenormous</span>, a React application, is a personal workout generator.  Users can specify their desired workout type, muscle groups to target, and their ultimate workout objective (strength and power, growth hypertrophy, or cardiovascular endurance).  Once a custom workout complete with exercise descriptions is generated, users can keep track of sets completed.
         </p>

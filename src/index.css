@@ -317,12 +317,12 @@ li {
   from {
     transform: rotate(0deg);
   } to {
-    transform: rotate(360deg);
+    transform: rotate(492.5deg);
   }
 }
 
 #navigateButton:hover img {
-  animation: spin .25s linear;
+  animation: spin .25s linear forwards;
 }
 
 #navigationDiv button,
@@ -709,7 +709,7 @@ li {
 }
 
 .swiper-slide hr {
-  width: 25%;
+  width: 90%;
   margin: 0 auto;
   border: 1px solid chartreuse;
   opacity: .25;

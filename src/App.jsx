@@ -695,7 +695,7 @@ function App() {
                     <span className="material-symbols-outlined">description</span>
                       Resume: 
                       {' '}
-                      <button>Download PDF - update link</button>
+                      <button>Download PDF</button>
                   </li>
                   </ul>
                 </div>
