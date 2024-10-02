@@ -139,7 +139,7 @@ function App() {
       if (!showMusic) {
         setTerminalOutput([
           ...terminalOutput,
-          'music > I\'m putting in my earbuds for this.'
+          'music > Always the same old songs.'
         ]);
         // Turn off theme song if it's already playing
         if (themeIsPlaying) {
@@ -179,7 +179,7 @@ function App() {
       if (!showGame) {
         setTerminalOutput([
           ...terminalOutput,
-          'game > Aren\'t you a little old for video games?'
+          'game > Good luck making it past level one.'
         ]);
         setUnlockAlertMessage('Game unlocked!');
         setNavigationTarget('#gameDiv');
@@ -282,7 +282,7 @@ function App() {
     else if (terminalInput === 'screensaver') {
       setTerminalOutput([
         ...terminalOutput,
-        'screensaver > While you were away I was stuck here the whole time.'
+        'screensaver > While you were away, I was stuck here the whole time.'
       ]);
       setShowScreensaver(true);
     }
@@ -348,7 +348,10 @@ function App() {
           <div id="navigationDiv">
             <button 
               id="navigateButton" 
-              onClick={toggleNavModal}
+              onClick={()=> {
+                toggleNavModal();
+                setShowProjectsDropdown(false);
+              }}
               onMouseEnter={() => {setNavButtonIsHovered(true)}}
               onMouseLeave={() => {setNavButtonIsHovered(false)}}
             >
@@ -358,31 +361,15 @@ function App() {
               ) : (
                 <img src={navIconIndigoBg} alt="" />
                 )}
-              {/*
-              {
-                showNavModal ? (
-                  <span 
-                    id="arrow-up-icon"
-                    className="material-symbols-outlined"
-                  >
-                    arrow_drop_up
-                  </span>
-                ) : (
-                  <span 
-                    id="arrow-down-icon"  
-                    className="material-symbols-outlined"
-                  >
-                    arrow_drop_down
-                  </span>
-                )
-              }  
-              */}
             </button>
             {
               showNavModal && (
                 <div 
                   id="navigationModalContainer"
-                  onClick={() => {setShowNavModal(false);}}
+                  onClick={() => {
+                    setShowNavModal(false);
+                    setShowProjectsDropdown(false);
+                  }}
                 >
                   <div id="navigationModal">
                     <button 
@@ -622,6 +609,7 @@ function App() {
           <div id="containerDiv" 
             onClick={() => {
               setShowNavModal(false);
+              setShowProjectsDropdown(false);
               setShowTerminal(false);
             }}
             className={showDevMode ? "devMode" : ""}
