@@ -856,7 +856,7 @@ function App() {
                 <img id="signaturePic" src={periclesIcon} />
               </div>
               <div id="signatureTextDiv">
-                <p>Built by <button id="signatureButton">Themistogenes</button> a.k.a. Justin</p>
+                <p>Built by <button id="signatureButton" onClick={() => {window.open("https://github.com/themistogenes", "_blank")}}>Themistogenes</button> a.k.a. Justin</p>
               </div>
             </div>
 
