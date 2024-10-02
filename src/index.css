@@ -378,6 +378,12 @@ li {
   background-color: #7851a9;
 }
 
+#projectsDropdown hr {
+  width: 25%;
+  border: 1px solid indigo;
+  margin: 0 auto;
+}
+
 #projectsDropdown button {
   background-color: #7851a9;
 }

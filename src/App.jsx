@@ -344,8 +344,8 @@ function App() {
             <button 
               id="navigateButton" 
               onClick={toggleNavModal}
-              onMouseEnter={() => {setNavButtonIsHovered(!navButtonIsHovered)}}
-              onMouseLeave={() => {setNavButtonIsHovered(!navButtonIsHovered)}}
+              onMouseEnter={() => {setNavButtonIsHovered(true)}}
+              onMouseLeave={() => {setNavButtonIsHovered(false)}}
             >
               Navigate
               {navButtonIsHovered ? (
@@ -443,6 +443,27 @@ function App() {
                           >
                             Project Gallery
                           </button>
+                          <hr />
+                          <button
+                            onClick={() => {
+                              window.open("https://property-pulse-hub.vercel.app", "_blank");
+                              setShowProjectsDropdown(false);
+                              setShowNavModal(false);
+                            }}
+                          >
+                            PropertyPulse
+                            <img src={linkIcon} className="linkIcon" />
+                          </button>
+                          <button
+                            onClick={() => {
+                              window.open("https://proshop-ijre.onrender.com", "_blank");
+                              setShowProjectsDropdown(false);
+                              setShowNavModal(false);
+                            }}
+                          >
+                            ProShop
+                            <img src={linkIcon} className="linkIcon" />
+                          </button>
                           <button
                             onClick={() => {
                               window.open("https://house-marketplacev1.herokuapp.com", "_blank");
@@ -451,6 +472,16 @@ function App() {
                             }}
                           >
                             House Marketplace
+                            <img src={linkIcon} className="linkIcon" />
+                          </button>
+                          <button
+                            onClick={() => {
+                              window.open("https://support-deskv1.herokuapp.com", "_blank");
+                              setShowProjectsDropdown(false);
+                              setShowNavModal(false);
+                            }}
+                          >
+                            SupportDesk
                             <img src={linkIcon} className="linkIcon" />
                           </button>
                           <button
@@ -465,6 +496,16 @@ function App() {
                           </button>
                           <button
                             onClick={() => {
+                              window.open("https://flixxfilms.vercel.app", "_blank");
+                              setShowProjectsDropdown(false);
+                              setShowNavModal(false);
+                            }}
+                          >
+                            Flixx
+                            <img src={linkIcon} className="linkIcon" />
+                          </button>
+                          <button
+                            onClick={() => {
                               window.open("https://badbank2.herokuapp.com", "_blank");
                               setShowProjectsDropdown(false);
                               setShowNavModal(false);
@@ -475,12 +516,12 @@ function App() {
                           </button>
                           <button
                             onClick={() => {
-                              window.open("https://support-deskv1.herokuapp.com", "_blank");
+                              window.open("https://swolenormous-fit.vercel.app", "_blank");
                               setShowProjectsDropdown(false);
                               setShowNavModal(false);
                             }}
                           >
-                            SupportDesk
+                            Swolenormous
                             <img src={linkIcon} className="linkIcon" />
                           </button>
                         </div>
