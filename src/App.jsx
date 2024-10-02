@@ -828,10 +828,10 @@ function App() {
             { showSelfDestruct && (
               <div id="selfDestructDiv">
                 <div id="self-destruct-div">
-                  <h4>Are you sure?</h4>
+                  <h4>Warning! Danger!</h4>
                   <button id="self-destruct-button" onClick={handleSelfDestruct}>
                     <span id="sd-button-front">
-                      Self-Destruct
+                      SELF-DESTRUCT
                     </span>
                   </button>
                 </div>
