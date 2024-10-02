@@ -631,7 +631,7 @@ function App() {
             <div id="meanderDivBottom" className="meanderDiv"></div>
             <div id="soundDiv" onClick={handleTheme}></div>
             <div id="contactMeDiv">
-              <h4>Contact Me</h4>
+              <h4 className="invisible">Contact Me</h4>
               <div id="contactMeInfoDiv">
                 <div id="contactMeLeftDiv">
                   <ul>
