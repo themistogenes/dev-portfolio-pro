@@ -234,11 +234,14 @@ button:hover {
 
 h4 {
   text-align: center;
-  padding: 10px;
+  /* padding: 10px; */
   font-family: "Silkscreen", system-ui;
   color: chartreuse;
 
   background-color: rgba(255, 255, 255, .05);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 100px;
 }
 
 p {
