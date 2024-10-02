@@ -105,7 +105,7 @@ function App() {
       if (!themeIsPlaying) {
         setTerminalOutput([
           ...terminalOutput,
-          'theme > I thought it was a little too quiet in here.'
+          'theme > Not that stupid song again!'
         ]);
         setUnlockAlertMessage('Theme song unlocked!');
         setShowUnlockAlert(true);
@@ -122,7 +122,7 @@ function App() {
       if (!showDevMode) {
         setTerminalOutput([
           ...terminalOutput,
-          'devmode > I don\'t think you\'re supposed to be seeing this.'
+          'devmode > You\'re really not supposed to see this.'
         ]);
         setUnlockAlertMessage('Developer Mode unlocked!');
         setShowUnlockAlert(true);
@@ -139,7 +139,7 @@ function App() {
       if (!showMusic) {
         setTerminalOutput([
           ...terminalOutput,
-          'music > Please, not those same three songs again.'
+          'music > I\'m putting in my earbuds for this.'
         ]);
         // Turn off theme song if it's already playing
         if (themeIsPlaying) {
@@ -161,7 +161,7 @@ function App() {
       if (!showVideo) {
         setTerminalOutput([
           ...terminalOutput,
-          'video > Don\'t expect me to make popcorn.'
+          'video > Don\'t expect me to make popcorn or anything.'
         ]);
         setUnlockAlertMessage('Video unlocked!');
         setNavigationTarget('#videoDiv');
@@ -197,7 +197,7 @@ function App() {
       if (!showChat) {
         setTerminalOutput([
           ...terminalOutput,
-          'chat > I thought we were already having a great conversation.'
+          'chat > I thought we were already having a nice conversation.'
         ]);
         setUnlockAlertMessage('Chat unlocked!');
         setNavigationTarget('#chatDiv');
@@ -215,7 +215,7 @@ function App() {
       if (!showSelfDestruct) {
         setTerminalOutput([
           ...terminalOutput,
-          'selfdestruct > Let\'s not do anything hasty now!'
+          'selfdestruct > Don\'t do anything hasty now!'
         ]);
         setUnlockAlertMessage('Self-Destruct unlocked!');
         setNavigationTarget('#selfDestructDiv');
@@ -223,7 +223,7 @@ function App() {
       } else {
         setTerminalOutput([
           ...terminalOutput,
-          'selfdestruct > I\'m glad you changed your mind about that.'
+          'selfdestruct > I\'m glad you changed your mind.'
         ]);
       }
       setShowSelfDestruct(!showSelfDestruct);
@@ -239,7 +239,7 @@ function App() {
       if (!unlock) {
         setTerminalOutput([
           ...terminalOutput,
-          'unlock > Is it just me, or does it look a little different in here?'
+          'unlock > What just happened!? This place looks different...'
         ]);
         setShowVideo(true);
         setShowGame(true);
@@ -261,7 +261,7 @@ function App() {
     else if (terminalInput === 'lock') {
       setTerminalOutput([
         ...terminalOutput,
-        'lock > Those extra features were starting to annoy me.'
+        'lock > Those extra features were annoying anyway.'
       ]);
       setUnlock(false);
       setShowVideo(false);
@@ -282,7 +282,7 @@ function App() {
     else if (terminalInput === 'screensaver') {
       setTerminalOutput([
         ...terminalOutput,
-        'screensaver > I\'m glad you have a life, but I was here the whole time.'
+        'screensaver > While you were away I was stuck here the whole time.'
       ]);
       setShowScreensaver(true);
     }
