@@ -8,7 +8,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
 import propertypulseThumb from "../assets/propertypulseThumb.png"
-import proshopThumb from "../assets/proshopthumb.png"
+import proshopThumb from "../assets/proshopThumb.png"
 import housemarketThumb from "../assets/housemarketThumb.png"
 import supportdeskThumb from "../assets/supportdeskThumb.png"
 import yelpcampThumb from "../assets/yelpcampThumb.png"
