@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/src/assets/chat/:path*",
+      "destination": "/src/assets/chat/:path*"
+    },
+    {
+      "source": "/src/assets/game/:path*",
+      "destination": "/src/assets/game/:path*"
+    },
+    {
+      "source": "/src/assets/musicPlayer/:path*",
+      "destination": "/src/assets/musicPlayer/:path*"
+    }
+  ]
+}
