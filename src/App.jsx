@@ -630,7 +630,7 @@ function App() {
             }}
             className={showDevMode ? "devMode" : ""}
           >
-            
+
             <div id="meanderDivTop" className="meanderDiv"></div>
             <div id="headerDiv">
               <span>
@@ -813,7 +813,7 @@ function App() {
                   <h4>Game</h4>
                   <div id="gameClipDiv">
                     <p>Tap/Click around to move</p>
-                    <iframe src="./src/assets/game/index.html"  frameBorder="0" scrolling="no" referrerPolicy="strict-origin-when-cross-origin">
+                    <iframe src="src/assets/game/index.html"  frameBorder="0" scrolling="no" referrerPolicy="strict-origin-when-cross-origin" loading="lazy">
                     </iframe>
                   </div>
                 </div>
@@ -824,7 +824,7 @@ function App() {
               <div id="musicDiv">
                 <div id="musicClipDiv">
                   <h4>Music</h4>
-                  <iframe src="./src/assets/musicPlayer/index.html" frameBorder="0" scrolling="no" referrerPolicy="strict-origin-when-cross-origin">
+                  <iframe src="src/assets/musicPlayer/index.html" frameBorder="0" scrolling="no" referrerPolicy="strict-origin-when-cross-origin" loading="lazy">
                   </iframe>
                 </div>
               </div>
@@ -835,7 +835,7 @@ function App() {
               <div id="chatDiv">
                 <div id="chatClipDiv">
                   <h4>Chat</h4>
-                <iframe src="./src/assets/chat/index.html" frameBorder="0" scrolling="yes" referrerPolicy="strict-origin-when-cross-origin"></iframe>
+                <iframe src="src/assets/chat/index.html" frameBorder="0" scrolling="yes" referrerPolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
                 </div>
               </div>
               )
