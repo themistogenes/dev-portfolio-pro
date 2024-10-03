@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import Slider from "./components/Slider"
 
 import helmetGreen from "./assets/helmetGreen.png"
@@ -25,6 +25,7 @@ import themeSong from "./assets/themeSong.flac"
 import resume from "./JustinAlimarasWebSoftwareDeveloper.pdf"
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [isSelfDestructing, setIsSelfDestructing] = useState(false);
   const [navButtonIsHovered, setNavButtonIsHovered] = useState(false);
   const [showNavModal, setShowNavModal] = useState(false);
@@ -297,24 +298,32 @@ function App() {
     }
   }
 
+  useEffect(() => {
+    window.onload = () => {setIsLoading(false)}
+  }, [])
+
   return (
     <>
-      <div id="loadingMask">
-        {/* Loading Bar */}
-        {/*
-        <div id="loadingDiv">
+      {
+        isLoading && (
+          <div id="loadingMask">
+          {/* Loading Bar */}
+          {/*
+          <div id="loadingDiv">
+            <p>Loading...</p>
+            <div id="loadingBar">
+              <div id="loadingProgress"></div>
+            </div>
+          </div> 
+          */}
+          {/* Rotating Helmet */}
           <p>Loading...</p>
-          <div id="loadingBar">
-            <div id="loadingProgress"></div>
+          <div id="screensaverDiv">
+            <img id="screensaverPic" src={helmetGreen} />
           </div>
-        </div> 
-        */}
-        {/* Rotating Helmet */}
-        <p>Loading...</p>
-        <div id="screensaverDiv">
-          <img id="screensaverPic" src={helmetGreen} />
         </div>
-      </div>
+        )
+      }
 
       { showScreensaver && (
           <div id="screensaverContainerDiv" onClick={() => {setShowScreensaver(false)}}>
