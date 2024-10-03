@@ -26,6 +26,7 @@ import resume from "./JustinAlimarasWebSoftwareDeveloper.pdf"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [scrollbarIsHidden, setScrollbarIsHidden] = useState(true);
   const [isSelfDestructing, setIsSelfDestructing] = useState(false);
   const [navButtonIsHovered, setNavButtonIsHovered] = useState(false);
   const [showNavModal, setShowNavModal] = useState(false);
@@ -51,6 +52,11 @@ function App() {
 
   function jumpTo(target) {
     window.location.href = `${target}`;
+  }
+
+  function showScrollbar() {
+    document.body.style.overflowY = "auto";
+    setScrollbarIsHidden(false);
   }
 
   function handleTheme() {    
@@ -299,7 +305,8 @@ function App() {
   }
 
   useEffect(() => {
-    window.onload = () => {setIsLoading(false)}
+    setIsLoading(false);
+    showScrollbar();
   }, [])
 
   return (
