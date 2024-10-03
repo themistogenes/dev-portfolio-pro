@@ -49,11 +49,11 @@ export default function Slider() {
       <SwiperSlide>
         <img src={proshopThumb} />
         <p>
-          <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, React, Paypal, Stripe, Node.js, Express.js, MongoDB, Render
+          <span className="bold">Toolset</span> HTML, CSS, Bootstrap, javaScript, React, Stripe, Node.js, Express.js, MongoDB, Render
         </p>
         <hr />
         <p>
-          <span className="boldGreen">ProShop</span>, a full-stack MERN application, is an e-commerce website where customers can search for products, add them to their cart and checkout, and review products.  Admin functionality for the shop's owner includes the ability to edit users, products, and order informatinon.
+          <span className="boldGreen">ProShop</span>, a full-stack MERN application, is an e-commerce website where customers can search for products, add them to their cart and checkout, and review products.  Admin functionality for the shop's owner includes the ability to edit users, products, and order information.
         </p>
         <button>
           <a href="https://proshop-ijre.onrender.com" target="_blank">View Project</a>
@@ -117,7 +117,7 @@ export default function Slider() {
         </p>
         <hr />
         <p>
-          <span className="boldGreen">DevCamperAPI</span> is a backend Node.js-based RESTful API for information on coding bootcamps.  Functionality includes registering users, logging in/out, updating users' information and password, CRUDing users, CRUDing bootcamps, getting bootcamps within a geographic radius, CRUDing bootcamp courses, and CRUDing user reviews for bootcamps.
+          <span className="boldGreen">DevCamperAPI</span> is a backend Node.js-based RESTful API for a coding bootcamp directory.  Functionality includes registering users, logging in/out, updating users' information and password, CRUDing users, CRUDing bootcamps, getting bootcamps within a geographic radius, CRUDing bootcamp courses, and CRUDing user reviews for bootcamps.
         </p>
         <button>
           <a href="https://github.com/themistogenes/devcamper-api" target="_blank">View GitHub</a>
@@ -165,7 +165,7 @@ export default function Slider() {
         </p>
         <hr />
         <p>
-          <span className="boldGreen">Swolenormous</span>, a React application, is a personal workout generator.  Users can specify their desired workout type, muscle groups to target, and their ultimate workout objective (strength and power, growth hypertrophy, or cardiovascular endurance).  Once a custom workout complete with exercise descriptions is generated, users can keep track of sets completed.
+          <span className="boldGreen">Swolenormous</span>, a React application, is a personal workout generator.  Users can specify their desired workout type, muscle groups to target, and their ultimate workout objective (strength and power, growth hypertrophy, or cardiovascular endurance).  Once a custom workout and exercise descriptions are generated, users can keep track of sets completed.
         </p>
         <button>
           <a href="https://swolenormous-fit.vercel.app" target="_blank">View Project</a>

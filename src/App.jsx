@@ -122,7 +122,7 @@ function App() {
       if (!showDevMode) {
         setTerminalOutput([
           ...terminalOutput,
-          'devmode > You\'re really not supposed to see this.'
+          'devmode > You\'re probably not supposed to see this.'
         ]);
         setUnlockAlertMessage('Developer Mode unlocked!');
         setShowUnlockAlert(true);
@@ -179,7 +179,7 @@ function App() {
       if (!showGame) {
         setTerminalOutput([
           ...terminalOutput,
-          'game > Good luck making it past level one.'
+          'game > I hate games with bad graphics.'
         ]);
         setUnlockAlertMessage('Game unlocked!');
         setNavigationTarget('#gameDiv');
@@ -197,7 +197,7 @@ function App() {
       if (!showChat) {
         setTerminalOutput([
           ...terminalOutput,
-          'chat > I thought we were already having a nice conversation.'
+          'chat > I thought we were having a nice conversation.'
         ]);
         setUnlockAlertMessage('Chat unlocked!');
         setNavigationTarget('#chatDiv');
@@ -239,7 +239,7 @@ function App() {
       if (!unlock) {
         setTerminalOutput([
           ...terminalOutput,
-          'unlock > What just happened!? This place looks different...'
+          'unlock > That\'s funny...this place looks different...'
         ]);
         setShowVideo(true);
         setShowGame(true);
@@ -253,7 +253,7 @@ function App() {
       } else {
         setTerminalOutput([
           ...terminalOutput,
-          'unlock > I already did that for you!'
+          'unlock > I already unlocked everything for you!'
         ]);
       }
     }
