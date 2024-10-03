@@ -813,7 +813,7 @@ function App() {
                   <h4>Game</h4>
                   <div id="gameClipDiv">
                     <p>Tap/Click around to move</p>
-                    <iframe src="./src/assets/game/index.html"  frameBorder="0" scrolling="no">
+                    <iframe src="./src/assets/game/index.html"  frameBorder="0" scrolling="no" x-vercel-set-bypass-cookie="samesitenone">
                     </iframe>
                   </div>
                 </div>
