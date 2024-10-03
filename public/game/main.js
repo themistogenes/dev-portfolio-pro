@@ -1,7 +1,7 @@
-import { scaleFactor, dialogueData } from './constants';
-import { k } from './kaboomCtx';
-import { displayDialogue } from './utils';
-import { setCamScale } from './utils';
+import { scaleFactor, dialogueData } from './constants.js';
+import { k } from './kaboomCtx.js';
+import { displayDialogue } from './utils.js';
+import { setCamScale } from './utils.js';
 
 // console.log('Game script working...');
 
