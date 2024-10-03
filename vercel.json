@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "src/assets/:path*",
+      "source": "assets/:path*",
       "destination": "https://themistogenes.vercel.app/assets/:path*"
     }
   ]
