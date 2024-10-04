@@ -69,7 +69,7 @@ export default function Slider() {
         </p>
         <hr />
         <p>
-          <span className="boldGreen">House Marketplace</span>, a full-stack MERN application, connects homebuyers with homesellers and renters with landlords.  Property owners can create a profile and list their properties.  Interested renters and buyers can browse listed properties and contact the owner.
+          <span className="boldGreen">House Marketplace</span>, a full-stack React application, connects homebuyers with homesellers and renters with landlords.  Property owners can create a profile and list their properties.  Interested renters and buyers can browse listed properties and contact the owner.
         </p>
         <button>
           <a href="https://house-marketplacev1.herokuapp.com" target="_blank">View Project</a>
