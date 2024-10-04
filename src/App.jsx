@@ -22,7 +22,7 @@ import firebaseLogo from "./assets/icons8/logos/firebaseLogo.png"
 import herokuLogo from "./assets/icons8/logos/herokuLogo.png"
 
 import themeSong from "./assets/themeSong.flac"
-import resume from "./JustinAlimarasWebSoftwareDeveloper.pdf"
+import resume from "../public/JustinAlimarasWebSoftwareDeveloper.pdf"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -821,7 +821,7 @@ function App() {
                     <iframe src={'http://localhost:5174'}  frameBorder="0" scrolling="no" referrerPolicy="strict-origin-when-cross-origin">
                     </iframe>
                     */}
-                    <iframe src={'game-portfolio/index.html'}  frameBorder="0" scrolling="no" referrerPolicy="strict-origin-when-cross-origin">
+                    <iframe src={'https://dev-game-portfolio.vercel.app'}  frameBorder="0" scrolling="no" referrerPolicy="strict-origin-when-cross-origin">
                     </iframe>
                   </div>
                 </div>
