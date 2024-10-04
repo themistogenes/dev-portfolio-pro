@@ -1,5 +1,33 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
+  ],
+
+  "builds": [
+    {
+      "src": "/",
+      "use": "@vercel/static",
+      "config": { "cleanUrls": true }
+    },
+    {
+      "src": "/game-portfolio",
+      "use": "@vercel/node",
+      "config": { "zeroConfig": true }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/game-portfolio/index.html"
+    },
+    { "handle": "filesystem" },
+    {
+      "src": "/(.*)",
+      "dest": "/game-portfolio/index.html"
+    },
+    {
+      "src": "/game-portfolio/.*",
+      "dest": "/game-portfolio/$1"
+    }
   ]
 }

@@ -813,7 +813,15 @@ function App() {
                   <h4>Game</h4>
                   <div id="gameClipDiv">
                     <p>Tap/Click around to move</p>
+                    {/*  
                     <iframe src={'game/index.html'}  frameBorder="0" scrolling="no" referrerPolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                    */}
+                    {/*  
+                    <iframe src={'http://localhost:5174'}  frameBorder="0" scrolling="no" referrerPolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                    */}
+                    <iframe src={'game-portfolio/index.html'}  frameBorder="0" scrolling="no" referrerPolicy="strict-origin-when-cross-origin">
                     </iframe>
                   </div>
                 </div>
