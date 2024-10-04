@@ -65,7 +65,7 @@ export default function Slider() {
       <SwiperSlide>
         <img src={housemarketThumb} />
         <p>
-          <span className="bold">Toolset</span> HTML, CSS, javaScript, React, Leaflet, Swiper, Firebase, Node.js, Heroku
+          <span className="bold">Toolset</span> HTML, CSS, javaScript, React, Leaflet, Swiper, Node.js, Firebase, Heroku
         </p>
         <hr />
         <p>
