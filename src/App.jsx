@@ -935,7 +935,7 @@ function App() {
           React logo by Icons8: https://icons8.com/icon/123603/react-native
           NextJS logo by Icons8: https://icons8.com/icon/MWiBjkuHeMVq/next.js
           NodeJS logo by Icons8: https://icons8.com/icon/54087/nodejs
-          ExpressJS logo by Icons8: https://icons8.com/icon/SDVmtZ6VBGXt/express-js
+          ExpressJS logo by Icons8: https://icons8.com/icon/WNoJgbzDr3i2/express-js
           MongoDB logo by Icons8: https://icons8.com/icon/74402/mongodb
           Firebase logo by Icons8: https://icons8.com/icon/62452/firebase
           Heroku logo by Icons8: https://icons8.com/icon/31085/heroku
