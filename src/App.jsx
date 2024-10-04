@@ -22,7 +22,7 @@ import firebaseLogo from "./assets/icons8/logos/firebaseLogo.png"
 import herokuLogo from "./assets/icons8/logos/herokuLogo.png"
 
 import themeSong from "./assets/themeSong.flac"
-import resume from "../public/JustinAlimarasWebSoftwareDeveloper.pdf"
+import resume from "/JustinAlimarasWebSoftwareDeveloper.pdf"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
