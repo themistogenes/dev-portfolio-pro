@@ -1211,6 +1211,10 @@ li {
 }
 
 @media screen and (max-width: 768px) {
+  #screensaverDiv {
+    margin-top: -84px;
+  }
+
   #navigationModalContainer {
     position: absolute;
     z-index: 10;
